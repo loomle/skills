@@ -26,3 +26,8 @@ jobs:
 
       - name: Check registry index
         run: python scripts/generate_registry.py --check
+
+      - name: Smoke test installer
+        run: |
+          python scripts/install_skill.py list
+          python scripts/install_skill.py install material-weaver --source local --dest /tmp/loomle-skills-test --force
