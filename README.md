@@ -34,6 +34,16 @@ cp -R skills/blueprint-weaver ~/.codex/skills/
 cp -R skills/pcg-weaver ~/.codex/skills/
 ```
 
+## Validation
+
+This repository includes a minimal GitHub Actions workflow that validates every skill on push and pull request.
+
+You can run the same check locally:
+
+```bash
+python scripts/validate_skills.py
+```
+
 ## Included skills
 
 ### material-weaver
