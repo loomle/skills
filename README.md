@@ -44,6 +44,16 @@ You can run the same check locally:
 python scripts/validate_skills.py
 ```
 
+## Registry Index
+
+The repository also publishes a generated machine-readable index at `registry/index.json`.
+
+Regenerate it locally after adding or editing skills:
+
+```bash
+python scripts/generate_registry.py
+```
+
 ## Included skills
 
 ### material-weaver

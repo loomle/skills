@@ -23,3 +23,6 @@ jobs:
 
       - name: Validate skills
         run: python scripts/validate_skills.py
+
+      - name: Check registry index
+        run: python scripts/generate_registry.py --check

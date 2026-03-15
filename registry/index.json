@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "repo": {
+    "name": "loomle/skills",
+    "url": "https://github.com/loomle/skills",
+    "branch": "main"
+  },
+  "skills": [
+    {
+      "name": "blueprint-weaver",
+      "description": "Blueprint graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or extending Blueprint graphs. Prefer Loomle graph.query/mutate for interactive edits, preserve external exec/data interfaces during local rewrites, and verify every structural change with readback plus compile.",
+      "display_name": "Blueprint Weaver",
+      "short_description": "UE Blueprint graph refactors with Loomle-first workflows.",
+      "default_prompt": "Read, repair, refactor, and extend Unreal Engine Blueprint graphs using Loomle-first workflows. Prefer graph.query/mutate for local rewrites, verify with readback plus compile, and preserve external graph interfaces during subgraph changes.",
+      "path": "skills/blueprint-weaver",
+      "source_url": "https://github.com/loomle/skills/tree/main/skills/blueprint-weaver"
+    },
+    {
+      "name": "material-weaver",
+      "description": "Material graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or generating Material graphs. Prefer Loomle graph.query/mutate for interactive edits and verification; fall back to bundled UE Python scripts when deterministic bulk generation, command-line execution, or direct MaterialEditingLibrary control is safer.",
+      "display_name": "Material Weaver",
+      "short_description": "UE Material graphs with Loomle-first and Python fallback.",
+      "default_prompt": "Read, repair, refactor, or generate Unreal Engine Material graphs. Prefer Loomle graph.query/mutate for interactive edits, use bundled UE Python helpers for deterministic bulk generation or fallback, and always verify with readback plus compile.",
+      "path": "skills/material-weaver",
+      "source_url": "https://github.com/loomle/skills/tree/main/skills/material-weaver"
+    },
+    {
+      "name": "pcg-weaver",
+      "description": "PCG graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or extending PCG graphs. Prefer Loomle graph.query/mutate for pipeline rewrites, preserve external dataflow interfaces during local changes, and verify every structural edit with readback plus compile.",
+      "display_name": "PCG Weaver",
+      "short_description": "UE PCG graph rewrites with Loomle-first workflows.",
+      "default_prompt": "Read, repair, refactor, and extend Unreal Engine PCG graphs using Loomle-first workflows. Prefer graph.query/mutate for pipeline rewrites, verify with readback plus compile, and preserve external dataflow interfaces during local graph changes.",
+      "path": "skills/pcg-weaver",
+      "source_url": "https://github.com/loomle/skills/tree/main/skills/pcg-weaver"
+    }
+  ]
+}
