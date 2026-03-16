@@ -34,6 +34,7 @@ Make a local Material change with:
 - query old boundary first
 - prefer the address form that already succeeds in the current session
 - for well-known new nodes, prefer `graph.ops.resolve` and carry its `preferredPlan` into mutate
+- treat that resolved plan as first-pass node creation guidance, then verify actual pin names and preserved interfaces with fresh readback
 - add replacement nodes first
 - re-query exact new node IDs and pin behavior before wiring unfamiliar nodes
 - reconnect preserved external inputs

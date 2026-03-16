@@ -66,7 +66,7 @@ Recommended rhythm:
 
 Use `graph.query` and `context` to discover graph refs instead of guessing addresses. For Material assets, prefer the address forms that already work in the current session.
 Always pass `graphType="material"` on Material `graph.query`, `graph.actions`, and `graph.mutate` calls.
-When `graph.ops.resolve` returns a stable `preferredPlan`, treat that as the default source of node-creation truth. Fall back to direct `addNode.byClass` only when:
+When `graph.ops.resolve` returns a stable `preferredPlan`, treat that as the default source of node-creation truth. Treat it as a semantic vocabulary layer, not as a full rewrite planner: it should decide what node to introduce and offer first-pass pin hints, while the skill still owns subgraph boundaries, preserved interfaces, and verification. Fall back to direct `addNode.byClass` only when:
 - the op is not in the curated catalog
 - resolve returns `resolved=false`
 - the task needs a node shape that the semantic catalog does not express yet
@@ -149,6 +149,7 @@ If the task used `UE Python mode`, also require:
 
 ## Troubleshooting
 - If wires appear missing with no obvious runtime failure, check pin names first.
+- If `graph.ops.resolve` returns pin hints that disagree with fresh readback, trust the fresh `graph.query` snapshot and continue with the actual returned pins.
 - If a unary node refuses to connect, try the UE 5.7 empty-pin rule from the reference file.
 - If selection returns `/Engine/Transient...` paths, prefer `resolvedGraphRefs` or a direct root-asset query over transient node-path resolution.
 - Material Function node selection is expected to come through in current Loomle builds; if it does not, fall back to direct function-asset query and continue from returned graph refs.

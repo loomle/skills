@@ -7,6 +7,7 @@ Make a local PCG pipeline change with:
 - explicit readback
 - small-batch safety
 - compile validation
+- runtime validation when generated output matters
 
 ## Standard Loop
 1. Query the target PCG graph with `graphType="pcg"`.
@@ -21,7 +22,8 @@ Make a local PCG pipeline change with:
    - removed edges are gone
    - preserved interfaces still connect correctly
 8. Compile.
-9. Repeat only if the previous batch verified cleanly.
+9. If the edit affects generated runtime output, capture `graph.runtime` before and after regenerate and compare counts or executed node summaries.
+10. Repeat only if the previous batch verified cleanly.
 
 ## Good Batch Shapes
 
@@ -33,6 +35,7 @@ Make a local PCG pipeline change with:
 ### Safe pipeline replacement
 - query old boundary first
 - prefer `graph.ops.resolve` for known stages such as `Add Tag` or `Filter By Tag`
+- if resolve asks for narrower context, retry with `fromPin` or `toPin` rather than guessing the stage class path
 - add replacement nodes first
 - re-query exact new node IDs and pin names if any stage is unfamiliar
 - remove the old middle stage or short chain only after the replacement nodes exist
@@ -72,3 +75,4 @@ You can also use `nodeRef` for nodes created earlier in the same batch.
 - For PCG specifically, confirm output pin names from the returned snapshot when introducing unfamiliar nodes.
 - If `graph.ops.resolve` supplied `verificationHints`, treat them as required follow-up work, not optional advice.
 - For layout or move verification, read `position` or `layout.position`; `nodePosX/nodePosY` may be null.
+- For runtime-sensitive PCG edits, prefer `graph.runtime.managedResources` and `inspection` as the final acceptance check.

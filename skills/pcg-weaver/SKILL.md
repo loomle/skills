@@ -11,6 +11,7 @@ Use this skill as the strategy layer for Unreal PCG graph work.
 - Default to `Loomle` for graph reading, local pipeline rewrites, verification, layout, and compile loops.
 - Keep edits small and verifiable: `query -> mutate -> query -> compile`.
 - Preserve external dataflow interfaces whenever replacing a local pipeline segment.
+- Use `graph.runtime` as the preferred runtime validation layer whenever the edit affects generated output, spawned actors, or instanced meshes.
 
 ## Workflow
 1. Confirm scope and target PCG asset plus graph name.
@@ -73,17 +74,20 @@ Always pass `graphType="pcg"` on PCG `graph.query`, `graph.actions`, and `graph.
 Prefer the simplest node-creation path that is reliable in the current graph.
 
 - Use `graph.ops.resolve` first when the stage is a stable semantic operation. Copy the returned `preferredPlan` into `graph.mutate` instead of hardcoding class paths.
+- Treat `graph.ops.resolve` as a semantic planning layer. It can usually choose the right stage and provide first-pass settings and pins, but the skill still owns preserved interface rewiring, re-query, and downstream validation.
 - Use `addNode.byAction` when the curated action set already exposes the node you want but semantic planning does not.
 - Use `addNode.byClass` only when deterministic construction is easier or semantic/action discovery is incomplete.
 - Re-query exact pins after introducing unfamiliar PCG nodes before wiring deeper stages.
 - If `graph.ops.resolve` returns `settingsTemplate` or `verificationHints`, carry them forward. They are execution guidance, not decoration.
 - For `connectPins`, use nested `args.from` and `args.to` endpoint objects with `nodeId` or `nodeRef` plus `pin`.
+- If `graph.ops.resolve` or runtime diagnostics indicate a pin-context-sensitive op, retry resolve with the narrowest `fromPin` or `toPin` you have instead of guessing a class path.
 
 ## 4) Run and Verify
 - Always verify with a fresh `graph.query` after every structural batch.
 - Compile after structural edits.
 - Treat `layoutGraph(scope=\"touched\")` as a readability helper, not as proof that the pipeline is correct.
 - Trust readback over mutate optimism if there is any disagreement.
+- When the pipeline drives runtime generation, capture a `graph.runtime` baseline before the edit and compare after regenerate. Prefer `managedResources` and `inspection` over static graph shape when validating spawned output.
 
 ## 5) Layout Rules
 - Keep pipeline flow readable left to right.
@@ -106,6 +110,7 @@ For local refactors, prefer verifying:
 - specific old edges are gone
 - specific replacement edges are present
 - preserved upstream and downstream dataflow still connect as intended
+- `graph.runtime` shows the expected before/after change for generated output, for example `totalInstanceCount`, `generatedComponentCount`, or executed node titles
 
 ## Troubleshooting
 - If a PCG edge does not appear after a reported success, trust fresh readback and repair from the observed state.
@@ -114,6 +119,8 @@ For local refactors, prefer verifying:
 - If a pipeline replacement disconnects the graph, rebuild from the current snapshot instead of replaying the original whole batch blindly.
 - If compile succeeds but the pipeline still looks wrong, re-query exact node IDs and edges rather than relying on layout.
 - For layout or move verification, prefer `position` or `layout.position`; `nodePosX/nodePosY` may be null.
+- If a PCG graph still executes but output counts changed unexpectedly, compare `graph.runtime.managedResources.totalInstanceCount` and `inspection.nodes` before assuming the structure edit was wrong.
+- `setPinDefault` is not universally supported on PCG nodes. If it fails, keep the committed part of the batch, re-query, and continue from the observed state.
 
 For recurring failure patterns and concrete fixes, read [references/troubleshooting.md](references/troubleshooting.md).
 

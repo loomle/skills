@@ -72,10 +72,12 @@ For a concrete Loomle-first edit loop, read [references/loomle-blueprint-workflo
 Prefer the simplest node-creation path that is reliable in the current graph.
 
 - Use `graph.ops.resolve` first for stable semantic ops such as common control-flow nodes. Reuse the returned `preferredPlan` instead of hardcoding class paths when possible.
+- For edge-sensitive semantic ops such as `core.reroute`, include the narrowest available pin context. If resolve succeeds with pin context, treat the returned steps as the opening move and let the skill finish downstream reconnects and verification.
 - Use `addNode.byAction` when you already have a valid action token for the current graph context and semantic planning does not cover the node you need.
 - Use `addNode.byClass` when deterministic construction is easier or action discovery is noisy.
 - Do not reuse Blueprint `actionToken` values across different assets or graph contexts.
 - If `graph.ops.resolve` returns `resolved=false` with reasons like `requires_pin_context`, treat that as a signal to gather more context or fall back to graph-specific creation guidance rather than forcing the semantic op.
+- Do not assume a semantic plan fully inserts a node into an existing edge. Re-query after the planned steps and explicitly restore downstream connections before deleting old local wiring.
 
 Read [references/action-token-notes.md](references/action-token-notes.md) before caching or reusing node-creation context.
 
@@ -113,6 +115,7 @@ For local refactors, prefer verifying:
 - If a local replacement risks disconnecting exec flow, stage the new path first and delete the old nodes only after readback confirms the new edges.
 - If a connection reports success but the graph snapshot disagrees, trust the fresh query and repair from there.
 - If compile succeeds but the graph still looks wrong, re-query exact node IDs and edges rather than relying on layout.
+- If a reroute or similar op resolves only after adding `fromPin` or `toPin`, keep that context in the log so later repair batches can reproduce the same resolve path.
 
 For recurring failure patterns and concrete fixes, read [references/troubleshooting.md](references/troubleshooting.md).
 
