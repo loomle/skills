@@ -12,15 +12,16 @@ Make a local Material change with:
 1. Read current context if the Material is already open.
 2. `graph.query` the root Material graph with `graphType="material"`.
 3. Identify the exact node IDs and external edges around the subgraph you plan to change.
-4. Apply one small `graph.mutate` batch.
-5. Immediately `graph.query` again.
-6. Verify:
+4. If you are adding a stable semantic node like a scalar parameter or multiply, call `graph.ops.resolve` and prefer its `preferredPlan` over a hardcoded `nodeClassPath`.
+5. Apply one small `graph.mutate` batch.
+6. Immediately `graph.query` again.
+7. Verify:
    - new nodes exist
    - intended edges exist
    - removed edges are gone
    - total node/edge counts make sense
-7. `compile`
-8. Repeat only if the previous batch verified cleanly.
+8. `compile`
+9. Repeat only if the previous batch verified cleanly.
 
 ## Good Batch Shapes
 
@@ -32,6 +33,7 @@ Make a local Material change with:
 ### Safe subgraph replacement
 - query old boundary first
 - prefer the address form that already succeeds in the current session
+- for well-known new nodes, prefer `graph.ops.resolve` and carry its `preferredPlan` into mutate
 - add replacement nodes first
 - re-query exact new node IDs and pin behavior before wiring unfamiliar nodes
 - reconnect preserved external inputs
@@ -46,6 +48,7 @@ Make a local Material change with:
 - Prefer fresh `graph.query` over mutate optimism.
 - If a connection reports success but does not appear in the snapshot, treat it as a failed edit.
 - For Material specifically, double-check pin names before assuming the edit logic is wrong.
+- If `graph.ops.resolve` supplied `pinHints`, treat them as first-pass wiring guidance, then verify against actual readback.
 - For layout or move verification, read `position` or `layout.position`; `nodePosX/nodePosY` may be null.
 
 ## Material-Specific Notes

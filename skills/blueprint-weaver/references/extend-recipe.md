@@ -12,14 +12,17 @@ Use `LOOMLE mode`.
 
 ## Steps
 1. Query the graph and identify the insertion point.
-2. Fetch fresh `graph.actions` if node creation by action is needed.
-3. Add nodes in a small local cluster.
-4. Connect the insertion point into the new cluster.
-5. Connect the new cluster back into the existing graph.
-6. Layout touched nodes.
-7. Re-query and verify exact new edges.
-8. Compile.
+2. Prefer `graph.ops.resolve` for known semantic additions and use `preferredPlan` as the default creation path.
+3. Fetch fresh `graph.actions` only when semantic planning does not cover the desired node or richer graph-specific context is required.
+4. Add nodes in a small local cluster.
+5. If same-batch wiring through fresh `clientRef`s fails, re-query and finish with explicit `nodeId`s.
+6. Connect the insertion point into the new cluster.
+7. Connect the new cluster back into the existing graph.
+8. Layout touched nodes.
+9. Re-query and verify exact new edges.
+10. Compile.
 
 ## Avoid
 - extending multiple unrelated regions in one batch
 - mixing too many creation and reconnection steps without an intermediate readback
+- assuming semantic planning removes the need to respect Blueprint type and pin-context constraints

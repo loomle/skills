@@ -12,15 +12,16 @@ Make a local Blueprint change with:
 1. Query the target Blueprint graph.
 2. Identify the exact local rewrite boundary.
 3. Record preserved external inputs and outputs before mutating.
-4. Apply one small `graph.mutate` batch.
-5. Immediately `graph.query` again.
-6. Verify:
+4. For known semantic nodes, call `graph.ops.resolve` on the exact target graph and prefer its `preferredPlan`.
+5. Apply one small `graph.mutate` batch.
+6. Immediately `graph.query` again.
+7. Verify:
    - new nodes exist
    - intended edges exist
    - removed edges are gone
    - preserved interfaces still connect correctly
-7. Compile.
-8. Repeat only if the previous batch verified cleanly.
+8. Compile.
+9. Repeat only if the previous batch verified cleanly.
 
 ## Good Batch Shapes
 
@@ -32,6 +33,7 @@ Make a local Blueprint change with:
 ### Safe subgraph replacement
 - query old boundary first
 - prefer the graph address form that already succeeds in the current session
+- for stable semantic nodes like a branch, prefer `graph.ops.resolve` over hardcoded class paths
 - add replacement nodes
 - if same-batch wiring through fresh `clientRef`s fails, re-query and finish the wiring with explicit `nodeId`s
 - reconnect preserved external inputs
@@ -47,3 +49,4 @@ Make a local Blueprint change with:
 - If a batch fails, verify what was already committed before retrying.
 - For Blueprint specifically, compile after structural edits even when the local snapshot looks correct.
 - If `graph.query` by `graphName` is inconsistent, recover a `graphRef` from `graph.list` and continue with that.
+- If `graph.ops.resolve` reports `requires_pin_context` or another incompatibility reason, gather the narrower context or fall back instead of forcing the op.

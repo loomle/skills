@@ -12,14 +12,17 @@ Use `LOOMLE mode`.
 
 ## Steps
 1. Query the graph and identify the insertion point.
-2. Fetch fresh `graph.actions` if node creation by action is needed.
-3. Add nodes in a small local cluster.
-4. Connect the insertion point into the new cluster.
-5. Connect the new cluster back into the existing graph.
-6. Layout touched nodes.
-7. Re-query and verify exact new edges.
-8. Compile.
+2. Prefer `graph.ops.resolve` for known stages and use `preferredPlan` as the default node-creation path.
+3. Fetch fresh `graph.actions` only if semantic planning does not cover the needed stage.
+4. Add nodes in a small local cluster.
+5. If semantic planning returned `verificationHints`, re-query new stages before wiring downstream outputs.
+6. Connect the insertion point into the new cluster.
+7. Connect the new cluster back into the existing graph.
+8. Layout touched nodes.
+9. Re-query and verify exact new edges.
+10. Compile.
 
 ## Avoid
 - extending multiple unrelated regions in one batch
 - mixing too many creation and reconnection steps without an intermediate readback
+- hardcoding a class path for a common PCG stage when `graph.ops.resolve` already knows it

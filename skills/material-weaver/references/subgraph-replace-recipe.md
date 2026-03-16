@@ -18,14 +18,15 @@ Use `LOOMLE mode` first.
    - nodes to remove
 3. Write down the exact preserved edges before changing anything.
 4. Prefer the graph address form that already succeeds in the current session.
-5. Add the replacement nodes first.
-6. Re-query exact new node IDs and pin behavior if any node is unfamiliar.
-7. Reconnect preserved external inputs into the new subgraph.
-8. Reconnect preserved external outputs from the new subgraph.
-9. Remove the old node or subgraph only after the replacement path is present.
-10. Run `layoutGraph(scope=\"touched\")`.
-11. Re-query and verify the preserved interface plus new internal edges.
-12. Compile.
+5. For common replacement nodes, call `graph.ops.resolve` and convert returned `preferredPlan` entries directly into `graph.mutate` ops.
+6. Add the replacement nodes first.
+7. Re-query exact new node IDs and pin behavior if any node is unfamiliar.
+8. Reconnect preserved external inputs into the new subgraph.
+9. Reconnect preserved external outputs from the new subgraph.
+10. Remove the old node or subgraph only after the replacement path is present.
+11. Run `layoutGraph(scope=\"touched\")`.
+12. Re-query and verify the preserved interface plus new internal edges.
+13. Compile.
 
 ## Verification Checklist
 - old internal nodes are gone

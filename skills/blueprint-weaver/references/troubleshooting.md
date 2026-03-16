@@ -12,6 +12,14 @@
 - Cause: a fresh `clientRef` may not always resolve cleanly for later Blueprint wiring ops in the same batch.
 - Fix: re-query the graph, collect the concrete `nodeId`s for the newly created nodes, then reconnect in a follow-up batch.
 
+## Symptom: `graph.ops.resolve` reports `requires_pin_context`
+- Cause: some semantic ops, such as reroutes, depend on a narrower source-pin context than a whole-graph resolve can express.
+- Fix: gather the tighter local context first, or fall back to graph-specific creation guidance instead of forcing the semantic op.
+
+## Symptom: semantic node creation succeeded but later wiring still failed
+- Cause: semantic planning helped choose the right node, but Blueprint type compatibility or pin context still rejected the connection.
+- Fix: trust the failure, re-query exact pin names and types, then reconnect in a narrower follow-up batch.
+
 ## Symptom: Graph looks mostly right but behavior may still be broken
 - Cause: structural readback alone is insufficient for Blueprint edits.
 - Fix: compile after structural edits and treat compile as required validation.

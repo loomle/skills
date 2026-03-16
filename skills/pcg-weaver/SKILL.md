@@ -55,15 +55,16 @@ Use this path first for PCG work.
 Recommended rhythm:
 1. `graph.query` the target PCG graph.
 2. Identify the exact pipeline boundary before mutating.
-3. If adding nodes by action, fetch fresh `graph.actions` from the same asset and graph.
-4. Apply a small `graph.mutate` batch.
-5. `graph.query` again and verify:
+3. For known semantic stages, call `graph.ops.resolve` on the target graph and prefer the returned `preferredPlan`.
+4. If adding nodes by action, fetch fresh `graph.actions` from the same asset and graph only when semantic planning does not cover the stage you need.
+5. Apply a small `graph.mutate` batch.
+6. `graph.query` again and verify:
    - new nodes exist
    - expected edges exist
    - removed edges are actually gone
    - preserved upstream and downstream interfaces still connect correctly
-6. `compile`
-7. Repeat only if the previous batch verified cleanly.
+7. `compile`
+8. Repeat only if the previous batch verified cleanly.
 
 For a concrete Loomle-first edit loop, read [references/loomle-pcg-workflow.md](references/loomle-pcg-workflow.md).
 Always pass `graphType="pcg"` on PCG `graph.query`, `graph.actions`, and `graph.mutate` calls.
@@ -71,9 +72,11 @@ Always pass `graphType="pcg"` on PCG `graph.query`, `graph.actions`, and `graph.
 ## 3) Node Creation Guidance
 Prefer the simplest node-creation path that is reliable in the current graph.
 
-- Use `addNode.byAction` when the curated action set already exposes the node you want.
-- Use `addNode.byClass` when deterministic construction is easier or action discovery is incomplete.
+- Use `graph.ops.resolve` first when the stage is a stable semantic operation. Copy the returned `preferredPlan` into `graph.mutate` instead of hardcoding class paths.
+- Use `addNode.byAction` when the curated action set already exposes the node you want but semantic planning does not.
+- Use `addNode.byClass` only when deterministic construction is easier or semantic/action discovery is incomplete.
 - Re-query exact pins after introducing unfamiliar PCG nodes before wiring deeper stages.
+- If `graph.ops.resolve` returns `settingsTemplate` or `verificationHints`, carry them forward. They are execution guidance, not decoration.
 - For `connectPins`, use nested `args.from` and `args.to` endpoint objects with `nodeId` or `nodeRef` plus `pin`.
 
 ## 4) Run and Verify

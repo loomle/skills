@@ -17,14 +17,15 @@ Use `LOOMLE mode`.
    - downstream consumers to preserve
    - nodes to remove
 3. Write down the preserved edges before changing anything.
-4. Add the replacement nodes first.
-5. Re-query exact new node IDs and pin names if any stage is unfamiliar.
-6. Reconnect preserved upstream inputs into the new subgraph.
-7. Reconnect preserved downstream consumers from the new subgraph.
-8. Remove the old node or short chain only after the replacement path is present.
-9. Run `layoutGraph(scope=\"touched\")`.
-10. Re-query and verify the preserved interface plus new internal edges.
-11. Compile.
+4. Prefer `graph.ops.resolve` for known stages and carry forward any returned `settingsTemplate` or `verificationHints`.
+5. Add the replacement nodes first.
+6. Re-query exact new node IDs and pin names if any stage is unfamiliar.
+7. Reconnect preserved upstream inputs into the new subgraph.
+8. Reconnect preserved downstream consumers from the new subgraph.
+9. Remove the old node or short chain only after the replacement path is present.
+10. Run `layoutGraph(scope=\"touched\")`.
+11. Re-query and verify the preserved interface plus new internal edges.
+12. Compile.
 
 ## Verification Checklist
 - old internal nodes are gone

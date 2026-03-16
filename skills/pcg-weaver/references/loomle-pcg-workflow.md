@@ -12,15 +12,16 @@ Make a local PCG pipeline change with:
 1. Query the target PCG graph with `graphType="pcg"`.
 2. Identify the exact local pipeline boundary.
 3. Record preserved upstream inputs and downstream consumers before mutating.
-4. Apply one small `graph.mutate` batch.
-5. Immediately `graph.query` again.
-6. Verify:
+4. For known stages, call `graph.ops.resolve` and prefer its `preferredPlan`, `settingsTemplate`, and `verificationHints`.
+5. Apply one small `graph.mutate` batch.
+6. Immediately `graph.query` again.
+7. Verify:
    - new nodes exist
    - intended edges exist
    - removed edges are gone
    - preserved interfaces still connect correctly
-7. Compile.
-8. Repeat only if the previous batch verified cleanly.
+8. Compile.
+9. Repeat only if the previous batch verified cleanly.
 
 ## Good Batch Shapes
 
@@ -31,6 +32,7 @@ Make a local PCG pipeline change with:
 
 ### Safe pipeline replacement
 - query old boundary first
+- prefer `graph.ops.resolve` for known stages such as `Add Tag` or `Filter By Tag`
 - add replacement nodes first
 - re-query exact new node IDs and pin names if any stage is unfamiliar
 - remove the old middle stage or short chain only after the replacement nodes exist
@@ -68,4 +70,5 @@ You can also use `nodeRef` for nodes created earlier in the same batch.
 - Prefer fresh `graph.query` over mutate optimism.
 - If a batch fails, verify what was already committed before retrying.
 - For PCG specifically, confirm output pin names from the returned snapshot when introducing unfamiliar nodes.
+- If `graph.ops.resolve` supplied `verificationHints`, treat them as required follow-up work, not optional advice.
 - For layout or move verification, read `position` or `layout.position`; `nodePosX/nodePosY` may be null.

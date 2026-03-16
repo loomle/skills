@@ -55,24 +55,27 @@ Use this path first for Blueprint work.
 Recommended rhythm:
 1. `graph.query` the target Blueprint graph.
 2. Identify the exact rewrite boundary before mutating.
-3. If adding nodes by action, fetch fresh `graph.actions` from the same asset and graph.
-4. Apply a small `graph.mutate` batch.
-5. `graph.query` again and verify:
+3. For known semantic nodes, call `graph.ops.resolve` on the exact target graph and prefer the returned `preferredPlan`.
+4. If adding nodes by action, fetch fresh `graph.actions` from the same asset and graph only when semantic planning does not cover the desired node.
+5. Apply a small `graph.mutate` batch.
+6. `graph.query` again and verify:
    - new nodes exist
    - expected edges exist
    - removed edges are actually gone
    - preserved external interfaces still land where intended
-6. `compile`
-7. Repeat only if the previous batch verified cleanly.
+7. `compile`
+8. Repeat only if the previous batch verified cleanly.
 
 For a concrete Loomle-first edit loop, read [references/loomle-blueprint-workflow.md](references/loomle-blueprint-workflow.md).
 
 ## 3) Node Creation Guidance
 Prefer the simplest node-creation path that is reliable in the current graph.
 
-- Use `addNode.byAction` when you already have a valid action token for the current graph context.
+- Use `graph.ops.resolve` first for stable semantic ops such as common control-flow nodes. Reuse the returned `preferredPlan` instead of hardcoding class paths when possible.
+- Use `addNode.byAction` when you already have a valid action token for the current graph context and semantic planning does not cover the node you need.
 - Use `addNode.byClass` when deterministic construction is easier or action discovery is noisy.
 - Do not reuse Blueprint `actionToken` values across different assets or graph contexts.
+- If `graph.ops.resolve` returns `resolved=false` with reasons like `requires_pin_context`, treat that as a signal to gather more context or fall back to graph-specific creation guidance rather than forcing the semantic op.
 
 Read [references/action-token-notes.md](references/action-token-notes.md) before caching or reusing node-creation context.
 

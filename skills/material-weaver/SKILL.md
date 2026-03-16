@@ -55,16 +55,21 @@ Use this path first when the task is an interactive Material edit rather than a 
 Recommended rhythm:
 1. `graph.query` the Material root graph.
 2. Identify the exact subgraph boundary before mutating.
-3. Apply a small `graph.mutate` batch.
-4. `graph.query` again and verify:
+3. When adding a well-known node, call `graph.ops.resolve` first and prefer the returned `preferredPlan` over hardcoded class guesses.
+4. Apply a small `graph.mutate` batch.
+5. `graph.query` again and verify:
    - new nodes exist
    - expected edges exist
    - removed edges are actually gone
-5. `compile`
-6. Repeat only if the previous step verified cleanly
+6. `compile`
+7. Repeat only if the previous step verified cleanly
 
 Use `graph.query` and `context` to discover graph refs instead of guessing addresses. For Material assets, prefer the address forms that already work in the current session.
 Always pass `graphType="material"` on Material `graph.query`, `graph.actions`, and `graph.mutate` calls.
+When `graph.ops.resolve` returns a stable `preferredPlan`, treat that as the default source of node-creation truth. Fall back to direct `addNode.byClass` only when:
+- the op is not in the curated catalog
+- resolve returns `resolved=false`
+- the task needs a node shape that the semantic catalog does not express yet
 
 Read [references/pin-behavior-ue57.md](references/pin-behavior-ue57.md) before wiring nodes in UE 5.7.
 For a concrete Loomle-first edit recipe, read [references/loomle-material-workflow.md](references/loomle-material-workflow.md).

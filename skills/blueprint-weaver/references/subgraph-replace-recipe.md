@@ -19,13 +19,15 @@ Use `LOOMLE mode`.
    - nodes to remove
 3. Write down the preserved edges before changing anything.
 4. Prefer the graph address form that already succeeds in the current session.
-5. Add the replacement nodes first.
-6. Reconnect preserved exec and data inputs into the new subgraph.
-7. Reconnect preserved downstream outputs from the new subgraph.
-8. Remove the old node or small chain only after the replacement path is present.
-9. Run `layoutGraph(scope=\"touched\")`.
-10. Re-query and verify the preserved interface plus new internal edges.
-11. Compile.
+5. For stable semantic nodes like a branch, call `graph.ops.resolve` and prefer returned `preferredPlan` entries over hardcoded class paths.
+6. If semantic planning reports `requires_pin_context`, gather narrower context or fall back instead of forcing the op.
+7. Add the replacement nodes first.
+8. Reconnect preserved exec and data inputs into the new subgraph.
+9. Reconnect preserved downstream outputs from the new subgraph.
+10. Remove the old node or small chain only after the replacement path is present.
+11. Run `layoutGraph(scope=\"touched\")`.
+12. Re-query and verify the preserved interface plus new internal edges.
+13. Compile.
 
 ## Verification Checklist
 - old internal nodes are gone
