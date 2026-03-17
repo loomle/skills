@@ -1,0 +1,4473 @@
+{
+  "nodes": [
+    {
+      "className": "UPCGAddComponentSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AddComponent",
+      "defaultNodeTitle": "Add Component",
+      "nodeTooltip": "Adds component(s) to specified target actor(s).",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAddComponent.h",
+      "hasDynamicPins": false,
+      "propertyCount": 7,
+      "propertyNames": [
+        "bUseClassAttribute",
+        "ClassAttribute",
+        "TemplateComponentClass",
+        "bAllowTemplateComponentEditing",
+        "TemplateComponent",
+        "ActorReferenceAttribute",
+        "ComponentReferenceAttribute"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAddTagSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AddTags",
+      "defaultNodeTitle": "Add Tags",
+      "nodeTooltip": "Applies the specified tags on the output data.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAddTag.h",
+      "hasDynamicPins": true,
+      "propertyCount": 5,
+      "propertyNames": [
+        "TagsToAdd",
+        "Prefix",
+        "Suffix",
+        "bIgnoreTagValueParsing",
+        "bTokenizeOnWhiteSpace"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGApplyHierarchySettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ApplyHierarchy",
+      "defaultNodeTitle": "Apply Hierarchy",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGApplyHierarchy.h",
+      "hasDynamicPins": false,
+      "propertyCount": 11,
+      "propertyNames": [
+        "PointKeyAttributes",
+        "ParentKeyAttributes",
+        "HierarchyDepthAttribute",
+        "RelativeTransformAttribute",
+        "ApplyParentRotation",
+        "ApplyParentRotationAttribute",
+        "ApplyParentScale",
+        "ApplyParentScaleAttribute",
+        "ApplyHierarchy",
+        "ApplyHierarchyAttribute",
+        "bWarnOnPointsWithInvalidParent"
+      ],
+      "propertyCategories": [
+        "Advanced",
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGApplyOnActorSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ApplyOnActor",
+      "defaultNodeTitle": "Apply On Object",
+      "nodeTooltip": "Applies property overrides and executes functions on a target object.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGApplyOnActor.h",
+      "hasDynamicPins": true,
+      "propertyCount": 7,
+      "propertyNames": [
+        "ObjectReferenceAttribute",
+        "TargetActor",
+        "PropertyOverrideDescriptions",
+        "PostProcessFunctionNames",
+        "bSilenceErrorOnEmptyObjectPath",
+        "bPropagateObjectChangeEvent",
+        "bSynchronousLoad"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGApplyScaleToBoundsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ApplyScaleToBounds",
+      "defaultNodeTitle": "Apply Scale To Bounds",
+      "nodeTooltip": "Applies the scale of each point to its bounds and resets the scale.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGApplyScaleToBounds.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGAttractSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AttractElement",
+      "defaultNodeTitle": "Attract",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttractElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 13,
+      "propertyNames": [
+        "Mode",
+        "AttractorIndexAttribute",
+        "Distance",
+        "bRemoveUnattractedPoints",
+        "TargetAttribute",
+        "bUseSourceWeight",
+        "SourceWeightAttribute",
+        "bUseTargetWeight",
+        "TargetWeightAttribute",
+        "Weight",
+        "SourceAndTargetAttributeMapping",
+        "bOutputAttractIndex",
+        "OutputAttractIndexAttribute"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeCastSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AttributeCast",
+      "defaultNodeTitle": "Attribute Cast",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Metadata/PCGAttributeCast.h",
+      "hasDynamicPins": true,
+      "propertyCount": 3,
+      "propertyNames": [
+        "InputSource",
+        "OutputType",
+        "OutputTarget"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeNoiseSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AttributeNoise",
+      "defaultNodeTitle": "Attribute Noise",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttributeNoise.h",
+      "hasDynamicPins": true,
+      "propertyCount": 15,
+      "propertyNames": [
+        "InputSource",
+        "OutputTarget",
+        "Mode",
+        "NoiseMin",
+        "NoiseMax",
+        "bInvertSource",
+        "bClampResult",
+        "bHasCustomSeedSource",
+        "CustomSeedSource",
+        "DensityMode_DEPRECATED",
+        "DensityNoiseMin_DEPRECATED",
+        "DensityNoiseMax_DEPRECATED",
+        "bInvertSourceDensity_DEPRECATED",
+        "bOutputTargetDifferentFromInputSource_DEPRECATED",
+        "bHasSpatialToPointDeprecation"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGMetadataPartitionSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AttributePartition",
+      "defaultNodeTitle": "Attribute Partition",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Metadata/PCGMetadataPartition.h",
+      "hasDynamicPins": true,
+      "propertyCount": 8,
+      "propertyNames": [
+        "PartitionAttributeSelectors",
+        "PartitionAttributeNames",
+        "bTokenizeOnWhiteSpace",
+        "bAssignIndexPartition",
+        "bDoNotPartition",
+        "PartitionIndexAttributeName",
+        "PartitionAttribute_DEPRECATED",
+        "PartitionAttributeSource_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeRemoveDuplicatesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": "Attribute Remove Duplicates",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttributeRemoveDuplicates.h",
+      "hasDynamicPins": true,
+      "propertyCount": 2,
+      "propertyNames": [
+        "AttributeSelectors",
+        "AttributeNamesToRemoveDuplicates"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGMetadataRenameSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AttributeRename",
+      "defaultNodeTitle": "Attribute Rename",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Metadata/PCGMetadataRenameElement.h",
+      "hasDynamicPins": true,
+      "propertyCount": 2,
+      "propertyNames": [
+        "AttributeToRename",
+        "NewAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGConvertToPointDataSettings",
+      "baseClassName": "UPCGCollapseSettings",
+      "defaultNodeName": "AttributeSetToPoint",
+      "defaultNodeTitle": "Attribute Set To Point",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCollapseElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "bMatchAttributeNamesWithPropertyNames",
+        "AttributeToConvert",
+        "bDeleteOriginalRemappedAttribute"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGBoundsModifierSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "BoundsModifier",
+      "defaultNodeTitle": "Bounds Modifier",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGBoundsModifier.h",
+      "hasDynamicPins": false,
+      "propertyCount": 5,
+      "propertyNames": [
+        "Mode",
+        "BoundsMin",
+        "BoundsMax",
+        "bAffectSteepness",
+        "Steepness"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCleanSplineSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CleanSpline",
+      "defaultNodeTitle": "Clean Spline",
+      "nodeTooltip": "Remove superfluous control points along the spline, such as those that are co-located or collinear.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCleanSpline.h",
+      "hasDynamicPins": false,
+      "propertyCount": 7,
+      "propertyNames": [
+        "bFuseColocatedControlPoints",
+        "ColocationDistanceThreshold",
+        "bUseSplineLocalSpace",
+        "FuseMode",
+        "bRemoveCollinearControlPoints",
+        "CollinearAngleThreshold",
+        "bUseRadians"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGClusterSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ClusterElement",
+      "defaultNodeTitle": "Cluster",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGClusterElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 8,
+      "propertyNames": [
+        "Algorithm",
+        "NumClusters",
+        "ClusterAttribute",
+        "MaxIterations",
+        "Tolerance",
+        "bOutputFinalCentroids",
+        "bOutputFinalCentroidElementCount",
+        "FinalCentroidElementCountAttribute"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCollapsePointsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CollapsePoints",
+      "defaultNodeTitle": "Collapse Points",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCollapsePoints.h",
+      "hasDynamicPins": false,
+      "propertyCount": 8,
+      "propertyNames": [
+        "DistanceThreshold",
+        "Mode",
+        "ComparisonMode",
+        "VisitOrder",
+        "VisitOrderAttribute",
+        "bUseMergeWeightAttribute",
+        "MergeWeightAttribute",
+        "AttributesToMerge"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCombinePointsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CombinePoints",
+      "defaultNodeTitle": "Combine Points",
+      "nodeTooltip": "Combines each point to share a singular bound extent.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCombinePoints.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "bCenterPivot",
+        "bUseFirstPointTransform",
+        "PointTransform"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCopyAttributesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CopyAttributes",
+      "defaultNodeTitle": "Copy Attributes",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCopyAttributes.h",
+      "hasDynamicPins": true,
+      "propertyCount": 6,
+      "propertyNames": [
+        "Operation",
+        "bCopyAllAttributes",
+        "bCopyAllDomains",
+        "MetadataDomainsMapping",
+        "InputSource",
+        "OutputTarget"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCopyPointsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CopyPoints",
+      "defaultNodeTitle": "Copy Points",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCopyPoints.h",
+      "hasDynamicPins": false,
+      "propertyCount": 11,
+      "propertyNames": [
+        "RotationInheritance",
+        "bApplyTargetRotationToPositions",
+        "ScaleInheritance",
+        "bApplyTargetScaleToPositions",
+        "ColorInheritance",
+        "SeedInheritance",
+        "AttributeInheritance",
+        "TagInheritance",
+        "bCopyEachSourceOnEveryTarget",
+        "bMatchBasedOnAttribute",
+        "MatchAttribute"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCreateCollisionDataSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreateCollisionData",
+      "defaultNodeTitle": "Create Collision Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreateCollisionData.h",
+      "hasDynamicPins": false,
+      "propertyCount": 5,
+      "propertyNames": [
+        "CollisionAttribute",
+        "CollisionQueryFlag",
+        "bWarnIfAttributeCouldNotBeUsed",
+        "bSynchronousLoad",
+        "bUseComplexCollision_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCreatePointsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreatePoints",
+      "defaultNodeTitle": "Create Points",
+      "nodeTooltip": "Creates point data from a provided list of points.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreatePoints.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "PointsToCreate",
+        "GridPivot_DEPRECATED",
+        "CoordinateSpace",
+        "bCullPointsOutsideVolume"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCreatePointsGridSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreatePointsGrid",
+      "defaultNodeTitle": "Create Points Grid",
+      "nodeTooltip": "Creates a 2D or 3D grid of points.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreatePointsGrid.h",
+      "hasDynamicPins": false,
+      "propertyCount": 8,
+      "propertyNames": [
+        "GridExtents",
+        "CellSize",
+        "PointSteepness",
+        "GridPivot_DEPRECATED",
+        "CoordinateSpace",
+        "bSetPointsBounds",
+        "bCullPointsOutsideVolume",
+        "PointPosition"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCreatePointsSphereSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreatePointsSphere",
+      "defaultNodeTitle": "Create Points Sphere",
+      "nodeTooltip": "Generate points on the surface of a sphere.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreatePointsSphere.h",
+      "hasDynamicPins": false,
+      "propertyCount": 21,
+      "propertyNames": [
+        "SphereGeneration",
+        "CoordinateSpace",
+        "PointOrientation",
+        "Origin",
+        "Radius",
+        "GeodesicSubdivisions",
+        "Theta",
+        "Phi",
+        "LatitudinalSegments",
+        "LongitudinalSegments",
+        "SampleCount",
+        "PoissonDistance",
+        "PoissonMaxAttempts",
+        "LatitudinalStartAngle",
+        "LatitudinalEndAngle",
+        "LongitudinalStartAngle",
+        "LongitudinalEndAngle",
+        "Jitter",
+        "PointSteepness",
+        "bCullPointsOutsideVolume",
+        "PointLimit"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCreatePolygon2DSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreatePolygon2D",
+      "defaultNodeTitle": "Create Polygon 2D",
+      "nodeTooltip": "Creates a (closed) 2d polygon per input.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Polygon/PCGCreatePolygon2D.h",
+      "hasDynamicPins": false,
+      "propertyCount": 7,
+      "propertyNames": [
+        "InputType",
+        "bUseHoleAttribute",
+        "HoleIndexAttribute",
+        "bUsePolygonWidthAttribute",
+        "PolygonWidthAttribute",
+        "OpenPolygonWidth",
+        "SplineMaxDiscretizationError"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCreateSplineSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreateSpline",
+      "defaultNodeTitle": "Create Spline",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreateSpline.h",
+      "hasDynamicPins": false,
+      "propertyCount": 8,
+      "propertyNames": [
+        "Mode",
+        "bClosedLoop",
+        "bLinear",
+        "bApplyCustomTangents",
+        "ArriveTangentAttribute",
+        "LeaveTangentAttribute",
+        "TargetActor",
+        "PostProcessFunctionNames"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCreateSurfaceFromPolygon2DSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreateSurfaceFromPolygon2D",
+      "defaultNodeTitle": "Create Surface From Polygon2D",
+      "nodeTooltip": "Creates a surface data from a Polygon 2D data.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Polygon/PCGSurfaceFromPolygon2D.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGCreateSurfaceFromSplineSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreateSurfaceFromSpline",
+      "defaultNodeTitle": "Create Surface From Spline",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreateSurfaceFromSpline.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "bShouldDrawNodeCompact"
+      ],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGDataTableRowToParamDataSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "DataTableRowToAttributeSet",
+      "defaultNodeTitle": "Data Table Row To Attribute Set",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDataTableRowToParamData.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "RowName",
+        "DataTable",
+        "bSynchronousLoad",
+        "PathOverride_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGTagsToAttributeSetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "TagsToAttributeSet",
+      "defaultNodeTitle": "Data Tags To Attribute Set",
+      "nodeTooltip": "Extracts the tags on the data to an attribute set.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGConvertToAttributeSet.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGDebugSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Debug",
+      "defaultNodeTitle": "Debug",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDebugElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "TargetActor"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDensityFilterSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "DensityFilter",
+      "defaultNodeTitle": "Density Filter",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDensityFilter.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "LowerBound",
+        "UpperBound",
+        "bInvertFilter",
+        "bKeepZeroDensityPoints"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "Transient"
+      ]
+    },
+    {
+      "className": "UPCGDifferenceSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Difference",
+      "defaultNodeTitle": "Difference",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDifferenceElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "DensityFunction",
+        "Mode",
+        "bDiffMetadata",
+        "bKeepZeroDensityPoints"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDistanceSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Distance",
+      "defaultNodeTitle": "Distance",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDistance.h",
+      "hasDynamicPins": false,
+      "propertyCount": 9,
+      "propertyNames": [
+        "bOutputToAttribute",
+        "OutputAttribute",
+        "bOutputDistanceVector",
+        "bSetDensity",
+        "MaximumDistance",
+        "SourceShape",
+        "TargetShape",
+        "bCheckSourceAgainstRespectiveTarget",
+        "AttributeName_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDuplicatePointSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "DuplicatePoint",
+      "defaultNodeTitle": "Duplicate Point",
+      "nodeTooltip": "Creates duplicates of each point with optional transform offsets.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDuplicatePoint.h",
+      "hasDynamicPins": false,
+      "propertyCount": 5,
+      "propertyNames": [
+        "Iterations",
+        "Direction",
+        "bDirectionAppliedInRelativeSpace",
+        "bOutputSourcePoint",
+        "PointTransform"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGBlueprintSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ExecuteBlueprint",
+      "defaultNodeTitle": "Execute Blueprint",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGExecuteBlueprint.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "BlueprintElementType",
+        "BlueprintElementInstance",
+        "TrackedActorTags",
+        "bTrackActorsOnlyWithinBounds"
+      ],
+      "propertyCategories": [
+        "Instance",
+        "Settings",
+        "Template"
+      ],
+      "flags": [
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "VisibleAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGExportSelectedAttributesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PCGExportSelectedAttributes",
+      "defaultNodeTitle": "Export Selected Attributes",
+      "nodeTooltip": "Exports selected attributes directly to a file in a specified format.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/IO/PCGExportSelectedAttributes.h",
+      "hasDynamicPins": false,
+      "propertyCount": 8,
+      "propertyNames": [
+        "Format",
+        "Layout",
+        "Path",
+        "FileName",
+        "bExportAllAttributes",
+        "AttributeSelectors",
+        "bAddCustomDataVersion",
+        "CustomVersion"
+      ],
+      "propertyCategories": [
+        "Advanced",
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGPointExtentsModifierSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ExtentsModifier",
+      "defaultNodeTitle": "Extents Modifier",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGPointExtentsModifier.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "Extents",
+        "Mode"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeFilteringSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AttributeFilter",
+      "defaultNodeTitle": "Filter Attribute Elements",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttributeFilter.h",
+      "hasDynamicPins": true,
+      "propertyCount": 9,
+      "propertyNames": [
+        "Operator",
+        "TargetAttribute",
+        "bUseConstantThreshold",
+        "ThresholdAttribute",
+        "bUseSpatialQuery",
+        "AttributeTypes",
+        "bWarnOnDataMissingAttribute",
+        "bGenerateOutputDataEvenIfEmpty",
+        "bHasSpatialToPointDeprecation"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeFilteringRangeSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "AttributeFilterRange",
+      "defaultNodeTitle": "Filter Attribute Elements by Range",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttributeFilter.h",
+      "hasDynamicPins": true,
+      "propertyCount": 6,
+      "propertyNames": [
+        "TargetAttribute",
+        "MinThreshold",
+        "MaxThreshold",
+        "bWarnOnDataMissingAttribute",
+        "bGenerateOutputDataEvenIfEmpty",
+        "bHasSpatialToPointDeprecation"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGFilterElementsByIndexSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "FilterElementsByIndex",
+      "defaultNodeTitle": "Filter Elements By Index",
+      "nodeTooltip": "Filters points or the elements of an attribute set based on a second input of points, attribute sets, or a user-defined index range expression.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGFilterElementsByIndex.h",
+      "hasDynamicPins": true,
+      "propertyCount": 5,
+      "propertyNames": [
+        "bSelectIndicesByInput",
+        "IndexSelectionAttribute",
+        "SelectedIndices",
+        "bOutputDiscardedElements",
+        "bInvertFilter"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGConvexHull2DSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "FindConvexHull2D",
+      "defaultNodeTitle": "Find Convex Hull 2D",
+      "nodeTooltip": "Return the 2D convex hull of a set of points on the XY plane.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGConvexHull2D.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGatherSettings",
+      "baseClassName": "UPCGSettingsWithDynamicInputs",
+      "defaultNodeName": "Gather",
+      "defaultNodeTitle": "Gather",
+      "nodeTooltip": "Gathers multiple data in a single collection. Can also be used to order execution through the dependency-only pin.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGather.h",
+      "hasDynamicPins": true,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGenerateLandscapeTexturesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GenerateLandscapeTextures",
+      "defaultNodeTitle": "Generate Landscape Textures",
+      "nodeTooltip": "Generates landscape height texture and grass maps on the GPU.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGenerateLandscapeTextures.h",
+      "hasDynamicPins": false,
+      "propertyCount": 6,
+      "propertyNames": [
+        "SelectedGrassTypes",
+        "bOverrideFromInput",
+        "GrassTypesAttribute",
+        "bExcludeSelectedGrassTypes",
+        "bSkipReadbackToCPU",
+        "bGenerateHeightMap"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGenerateSeedSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GenerateSeed",
+      "defaultNodeTitle": "Generate Seed",
+      "nodeTooltip": "Generate a seed attribute ",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGenerateSeedElement.h",
+      "hasDynamicPins": true,
+      "propertyCount": 5,
+      "propertyNames": [
+        "GenerationSource",
+        "SourceString",
+        "SeedSource",
+        "bResetSeedPerInput",
+        "OutputTarget"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDataFromActorSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetActorData",
+      "defaultNodeTitle": "Get Actor Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDataFromActor.h",
+      "hasDynamicPins": true,
+      "propertyCount": 16,
+      "propertyNames": [
+        "ActorSelector",
+        "ComponentSelector",
+        "Mode",
+        "bIgnorePCGGeneratedComponents",
+        "bAlsoOutputSinglePointData",
+        "bComponentsMustOverlapSelf",
+        "bGetDataOnAllGrids",
+        "AllowedGrids",
+        "bMergeSinglePointData",
+        "ExpectedPins",
+        "PropertyName",
+        "bAlwaysRequeryActors",
+        "bSilenceSanitizedAttributeNameWarnings",
+        "bSilenceReservedAttributeNameWarnings",
+        "bTrackActorsOnlyWithinBounds",
+        "bDisplayModeSettings"
+      ],
+      "propertyCategories": [
+        "Data Retrieval Settings",
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "Transient"
+      ]
+    },
+    {
+      "className": "UPCGGetActorDataLayersSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PCGGetActorDataLayers",
+      "defaultNodeTitle": "Get Actor Data Layers",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetActorDataLayers.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "ActorReferenceAttribute",
+        "DataLayerReferenceAttribute"
+      ],
+      "propertyCategories": [
+        "Default"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetActorPropertySettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetActorProperty",
+      "defaultNodeTitle": "Get Actor Property",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetActorProperty.h",
+      "hasDynamicPins": true,
+      "propertyCount": 18,
+      "propertyNames": [
+        "ActorSelector",
+        "bSelectComponent",
+        "ComponentClass",
+        "bProcessAllComponents",
+        "bOutputComponentReference",
+        "PropertyName",
+        "bForceObjectAndStructExtraction",
+        "OutputAttributeName",
+        "bSanitizeOutputAttributeName",
+        "bOutputActorReference",
+        "bAlwaysRequeryActors",
+        "bTrackActorsOnlyWithinBounds",
+        "ActorSelection_DEPRECATED",
+        "ActorSelectionTag_DEPRECATED",
+        "ActorSelectionName_DEPRECATED",
+        "ActorSelectionClass_DEPRECATED",
+        "ActorFilter_DEPRECATED",
+        "bIncludeChildren_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetAssetListSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetAssetList",
+      "defaultNodeTitle": "Get Asset List",
+      "nodeTooltip": "Returns the list of asset, with options (class, bp generated class, etc.) from a source - collection or folder.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/IO/PCGGetAssetList.h",
+      "hasDynamicPins": false,
+      "propertyCount": 5,
+      "propertyNames": [
+        "AssetListSource",
+        "Directory",
+        "Collection",
+        "bGetClassPath",
+        "bQuiet"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetAttributesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetAttributeList",
+      "defaultNodeTitle": "Get Attribute List",
+      "nodeTooltip": "Creates an attribute set with one entry per attribute on the input data.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetDataInfo.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "bGetType",
+        "bGetDefaultValue"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGGetConsoleVariableSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetConsoleVariable",
+      "defaultNodeTitle": "Get Console Variable",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetConsoleVariable.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "ConsoleVariableName",
+        "OutputAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGNumberOfElementsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetElementsCount",
+      "defaultNodeTitle": "Get Element Count",
+      "nodeTooltip": "Return the number of elements in the input data.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGNumberOfElements.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "OutputAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetExecutionContextSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetExecutionContext",
+      "defaultNodeTitle": "Get Execution Context Info",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetExecutionContext.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "Mode"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGGenericUserParameterGetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetGenericGraphParameter",
+      "defaultNodeTitle": "Get Graph Parameter",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGUserParameterGet.h",
+      "hasDynamicPins": false,
+      "propertyCount": 6,
+      "propertyNames": [
+        "PropertyPath",
+        "bForceObjectAndStructExtraction",
+        "bSanitizeOutputAttributeName",
+        "OutputAttributeName",
+        "Source",
+        "bQuiet"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGUserParameterGetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetGraphParameter",
+      "defaultNodeTitle": "Get Graph Parameter",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGUserParameterGet.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "PropertyGuid",
+        "PropertyName",
+        "bForceObjectAndStructExtraction",
+        "bSanitizeOutputAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGGetLandscapeSettings",
+      "baseClassName": "UPCGDataFromActorSettings",
+      "defaultNodeName": "GetLandscapeData",
+      "defaultNodeTitle": "Get Landscape Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGTypedGetter.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "SamplingProperties",
+        "bUnbounded",
+        "bGetHeightOnly_DEPRECATED",
+        "bGetLayerWeights_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetLoopIndexSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetLoopIndex",
+      "defaultNodeTitle": "Get Loop Index",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetLoopIndex.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "bWarnIfCalledOutsideOfLoop"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGGetPCGComponentSettings",
+      "baseClassName": "UPCGDataFromActorSettings",
+      "defaultNodeName": "GetPCGComponentData",
+      "defaultNodeTitle": "Get PCG Component Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGTypedGetter.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGetPrimitiveSettings",
+      "baseClassName": "UPCGDataFromActorSettings",
+      "defaultNodeName": "GetPrimitiveData",
+      "defaultNodeTitle": "Get Primitive Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGTypedGetter.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGetResourcePath",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetResourcePath",
+      "defaultNodeTitle": "Get Resource Path",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetResourcePath.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGetSegmentSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetSegment",
+      "defaultNodeTitle": "Get Segment",
+      "nodeTooltip": "Gets a specific segment from the input.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Polygon/PCGGetSegment.h",
+      "hasDynamicPins": false,
+      "propertyCount": 7,
+      "propertyNames": [
+        "bUseInputSegmentData",
+        "bUseInputHoleData",
+        "bOutputSplineData",
+        "SegmentIndexAttribute",
+        "SegmentIndex",
+        "HoleIndexAttribute",
+        "HoleIndex"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetSplineSettings",
+      "baseClassName": "UPCGDataFromActorSettings",
+      "defaultNodeName": "GetSplineData",
+      "defaultNodeTitle": "Get Spline Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGTypedGetter.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGetStaticMeshResourceDataSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetStaticMeshResourceData",
+      "defaultNodeTitle": "Get Static Mesh Resource Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetStaticMeshResourceData.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "StaticMeshes",
+        "bOverrideFromInput",
+        "MeshAttribute"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGGetSubgraphDepthSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetSubgraphDepth",
+      "defaultNodeTitle": "Get Subgraph Depth",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetSubgraphDepth.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "Mode",
+        "DistanceRelativeToUpstreamGraph",
+        "bQuietInvalidDepthQueries"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetTagsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetTags",
+      "defaultNodeTitle": "Get Tags",
+      "nodeTooltip": "Creates an attribute set with one entry per tag",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetDataInfo.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "bExtractTagValues"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGTextureSamplerSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetTextureData",
+      "defaultNodeTitle": "Get Texture Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGTextureSampler.h",
+      "hasDynamicPins": false,
+      "propertyCount": 20,
+      "propertyNames": [
+        "Transform",
+        "bUseAbsoluteTransform",
+        "TextureArrayIndex",
+        "DensityFunction",
+        "bUseDensitySourceChannel",
+        "ColorChannel",
+        "Filter",
+        "TexelSize",
+        "bUseAdvancedTiling",
+        "Tiling",
+        "CenterOffset",
+        "Rotation",
+        "bUseTileBounds",
+        "TileBoundsMin",
+        "TileBoundsMax",
+        "bForceEditorOnlyCPUSampling",
+        "bSynchronousLoad",
+        "bSkipReadbackToCPU",
+        "Texture",
+        "bDisplayTextureArrayIndex"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug",
+        "Settings|Tiling",
+        "SpatialData"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "Transient"
+      ]
+    },
+    {
+      "className": "UPCGDataFromTool",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "GetToolData",
+      "defaultNodeTitle": "Get Tool Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDataFromTool.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "ToolTag",
+        "DataInstance"
+      ],
+      "propertyCategories": [
+        "Data Retrieval Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetVirtualTextureSettings",
+      "baseClassName": "UPCGDataFromActorSettings",
+      "defaultNodeName": "GetVirtualTextureData",
+      "defaultNodeTitle": "Get Virtual Texture Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGTypedGetter.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGetVolumeSettings",
+      "baseClassName": "UPCGDataFromActorSettings",
+      "defaultNodeName": "GetVolumeData",
+      "defaultNodeTitle": "Get Volume Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGTypedGetter.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGInnerIntersectionSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Inner Intersection",
+      "defaultNodeTitle": "Inner Intersection",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGInnerIntersectionElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "DensityFunction",
+        "bKeepZeroDensityPoints"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGOuterIntersectionSettings",
+      "baseClassName": "UPCGSettingsWithDynamicInputs",
+      "defaultNodeName": "Intersection",
+      "defaultNodeTitle": "Intersection",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGOuterIntersectionElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "DensityFunction",
+        "bIgnorePinsWithNoInput",
+        "bKeepZeroDensityPoints"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGLoadDataAssetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PCGLoadDataAsset",
+      "defaultNodeTitle": "Load PCG Data Asset",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/IO/PCGLoadAssetElement.h",
+      "hasDynamicPins": true,
+      "propertyCount": 15,
+      "propertyNames": [
+        "Asset",
+        "Pins",
+        "AssetName",
+        "AssetDescription",
+        "AssetColor",
+        "bLoadFromInput",
+        "AssetReferenceSelector",
+        "InputIndexTag",
+        "DataIndexTag",
+        "bSetDefaultAttributeOverridesFromInput",
+        "DefaultAttributeOverrides",
+        "CommaSeparatedDefaultAttributeOverrides",
+        "bWarnIfNoAsset",
+        "bTagOutputsBasedOnOutputPins",
+        "bSynchronousLoad"
+      ],
+      "propertyCategories": [
+        "Data",
+        "Data|Asset Info",
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "VisibleAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGMergeSettings",
+      "baseClassName": "UPCGSettingsWithDynamicInputs",
+      "defaultNodeName": "MergePoints",
+      "defaultNodeTitle": "Merge Points",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGMergeElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "bMergeMetadata"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGMutateSeedSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "MutateSeed",
+      "defaultNodeTitle": "Mutate Seed",
+      "nodeTooltip": "Applies a new random seed from point input.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGMutateSeed.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGNormalToDensitySettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "NormalToDensity",
+      "defaultNodeTitle": "Normal To Density",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGNormalToDensity.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "Normal",
+        "Offset",
+        "Strength",
+        "DensityMode"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGOffsetPolygon2DSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "OffsetPolygon2D",
+      "defaultNodeTitle": "Offset Polygon",
+      "nodeTooltip": "Offsets polygon to either make it larger or smaller, or open/close holes based on the offset quantity.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Polygon/PCGOffsetPolygon2D.h",
+      "hasDynamicPins": false,
+      "propertyCount": 5,
+      "propertyNames": [
+        "Operation",
+        "bInheritMetadata",
+        "bUseOffsetFromInput",
+        "OffsetAttribute",
+        "Offset"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGPartitionByActorDataLayersSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PartitionByActorDataLayers",
+      "defaultNodeTitle": "Partition by Actor Data Layers",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGPartitionByActorDataLayers.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "ActorReferenceAttribute",
+        "DataLayerReferenceAttribute",
+        "IncludedDataLayers",
+        "ExcludedDataLayers"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGPathfindingSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PathfindingElement",
+      "defaultNodeTitle": "Pathfinding",
+      "nodeTooltip": "Finds the optimal path across the points of a given point cloud--should one exist--when provided a start and goal location, and a maximum jump distance between points. Can return a partial path.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGPathfindingElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 18,
+      "propertyNames": [
+        "SearchDistance",
+        "bStartLocationsAsInput",
+        "StartLocationAttribute",
+        "Start",
+        "bGoalLocationsAsInput",
+        "GoalLocationAttribute",
+        "Goal",
+        "GoalMappingMode",
+        "HeuristicWeight",
+        "CostFunctionMode",
+        "CostAttribute",
+        "MaximumFitnessPenaltyFactor",
+        "bUsePathTraces",
+        "PathTraceParams",
+        "bAcceptPartialPath",
+        "bOutputAsSpline",
+        "SplineMode",
+        "bCopyOriginatingPoints"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGPointMatchAndSetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PointMatchAndSet",
+      "defaultNodeTitle": "Point Match And Set",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGPointMatchAndSet.h",
+      "hasDynamicPins": false,
+      "propertyCount": 6,
+      "propertyNames": [
+        "MatchAndSetType",
+        "MatchAndSetInstance",
+        "SetTarget",
+        "SetTargetType",
+        "bSetTargetIsAttribute",
+        "SetTargetStringMode_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "MatchAndSet",
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "VisibleAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGPointNeighborhoodSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PointNeighborhood",
+      "defaultNodeTitle": "Point Neighborhood",
+      "nodeTooltip": "Computes quantities from nearby neighbor points, such as average density, color, and position.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGPointNeighborhood.h",
+      "hasDynamicPins": false,
+      "propertyCount": 9,
+      "propertyNames": [
+        "SearchDistance",
+        "bSetDistanceToAttribute",
+        "DistanceAttribute",
+        "bSetAveragePositionToAttribute",
+        "AveragePositionAttribute",
+        "SetDensity",
+        "bSetAveragePosition",
+        "bSetAverageColor",
+        "bWeightedAverage"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGConvertToAttributeSetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PointToAttributeSet",
+      "defaultNodeTitle": "Point To Attribute Set",
+      "nodeTooltip": "Converts point data to an attribute set with one entry per point and the same attributes.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGConvertToAttributeSet.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "PropertiesToConvert",
+        "bOverrideExistingAttributes"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGPrintGrammarSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PrintGrammar",
+      "defaultNodeTitle": "Print Grammar",
+      "nodeTooltip": "Prints the result of an interpreted grammar.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Grammar/PCGPrintGrammar.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "Grammar"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGPrintElementSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Print String",
+      "defaultNodeTitle": "Print String",
+      "nodeTooltip": "Issues a specified message to the log, and optionally to the graph and/or screen.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGPrintElement.h",
+      "hasDynamicPins": true,
+      "propertyCount": 13,
+      "propertyNames": [
+        "PrintString",
+        "Verbosity",
+        "CustomPrefix",
+        "bDisplayOnNode",
+        "bPrintPerComponent",
+        "bPrintToScreen",
+        "PrintToScreenDuration",
+        "PrintToScreenColor",
+        "bPrefixWithOwner",
+        "bPrefixWithComponent",
+        "bPrefixWithGraph",
+        "bPrefixWithNode",
+        "bEnablePrint"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGProjectionSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Projection",
+      "defaultNodeTitle": "Projection",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGProjectionElement.h",
+      "hasDynamicPins": true,
+      "propertyCount": 3,
+      "propertyNames": [
+        "ProjectionParams",
+        "bForceCollapseToPoint",
+        "bKeepZeroDensityPoints"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGRerouteSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Reroute",
+      "defaultNodeTitle": "Reroute",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGReroute.h",
+      "hasDynamicPins": true,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGResetPointCenterSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ResetPointCenter",
+      "defaultNodeTitle": "Reset Point Center",
+      "nodeTooltip": "Modify the position of a point within its bounds, while keeping its bounds the same.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGResetPointCenter.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "PointCenterLocation"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGQualityBranchSettings",
+      "baseClassName": "UPCGControlFlowSettings",
+      "defaultNodeName": "RuntimeQualityBranch",
+      "defaultNodeTitle": "Runtime Quality Branch",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/ControlFlow/PCGQualityBranch.h",
+      "hasDynamicPins": true,
+      "propertyCount": 5,
+      "propertyNames": [
+        "bUseLowPin",
+        "bUseMediumPin",
+        "bUseHighPin",
+        "bUseEpicPin",
+        "bUseCinematicPin"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGQualitySelectSettings",
+      "baseClassName": "UPCGControlFlowSettings",
+      "defaultNodeName": "RuntimeQualitySelect",
+      "defaultNodeTitle": "Runtime Quality Select",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/ControlFlow/PCGQualitySelect.h",
+      "hasDynamicPins": true,
+      "propertyCount": 5,
+      "propertyNames": [
+        "bUseLowPin",
+        "bUseMediumPin",
+        "bUseHighPin",
+        "bUseEpicPin",
+        "bUseCinematicPin"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSampleTextureSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SampleTexture",
+      "defaultNodeTitle": "Sample Texture",
+      "nodeTooltip": "Samples color of texture at each point.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSampleTexture.h",
+      "hasDynamicPins": false,
+      "propertyCount": 5,
+      "propertyNames": [
+        "TextureMappingMethod",
+        "UVCoordinatesAttribute",
+        "TilingMode",
+        "DensityMergeFunction",
+        "bClampOutputDensity"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSanityCheckPointDataSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SanityCheckPointData",
+      "defaultNodeTitle": "Sanity Check Point Data",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSanityCheckPointData.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "MinPointCount",
+        "MaxPointCount"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSaveDataAssetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PCGSaveDataAsset",
+      "defaultNodeTitle": "Save PCG Data Asset",
+      "nodeTooltip": "Exports the input data to a PCG Data Asset.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/IO/PCGSaveAssetElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 5,
+      "propertyNames": [
+        "Pins",
+        "CustomDataCollectionExporterClass",
+        "Params",
+        "AssetDescription",
+        "AssetColor"
+      ],
+      "propertyCategories": [
+        "Data"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSaveTextureToAssetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SaveTextureToAsset",
+      "defaultNodeTitle": "Save Texture to Asset",
+      "nodeTooltip": "Save the input texture to a UTexture2D asset (format is always BGRA8). Outputs a soft object path attribute for the saved texture. Note: This node is editor only.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSaveTextureToAsset.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "ExporterParams"
+      ],
+      "propertyCategories": [
+        "Data"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSceneCaptureSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SceneCapture",
+      "defaultNodeTitle": "Scene Capture",
+      "nodeTooltip": "Perform a 2D orthographic scene capture and write the result to a render target data. Can be costly, use with caution with runtime generation.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSceneCapture.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "PixelFormat",
+        "CaptureSource",
+        "TexelSize",
+        "bSkipReadbackToCPU"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSelectPointsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SelectPoints",
+      "defaultNodeTitle": "Select Points",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSelectPoints.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "Ratio",
+        "bKeepZeroDensityPoints"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "Transient"
+      ]
+    },
+    {
+      "className": "UPCGSelfPruningSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SelfPruning",
+      "defaultNodeTitle": "Self Pruning",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSelfPruning.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "Parameters",
+        "PruningType_DEPRECATED",
+        "RadiusSimilarityFactor_DEPRECATED",
+        "bRandomizedPruning_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSpatialNoiseSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Spatial Noise",
+      "defaultNodeTitle": "Spatial Noise",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSpatialNoise.h",
+      "hasDynamicPins": false,
+      "propertyCount": 18,
+      "propertyNames": [
+        "Mode",
+        "EdgeMask2DMode",
+        "Iterations",
+        "bTiling",
+        "Brightness",
+        "Contrast",
+        "ValueTarget",
+        "RandomOffset",
+        "Transform",
+        "VoronoiCellRandomness",
+        "VoronoiCellIDTarget",
+        "bVoronoiOrientSamplesToCellEdge",
+        "TiledVoronoiResolution",
+        "TiledVoronoiEdgeBlendCellCount",
+        "EdgeBlendDistance",
+        "EdgeBlendCurveOffset",
+        "EdgeBlendCurveIntensity",
+        "bForceNoUseSeed"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSpawnActorSettings",
+      "baseClassName": "UPCGBaseSubgraphSettings",
+      "defaultNodeName": "SpawnActor",
+      "defaultNodeTitle": "Spawn Actor",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSpawnActor.h",
+      "hasDynamicPins": false,
+      "propertyCount": 20,
+      "propertyNames": [
+        "PostSpawnFunctionNames",
+        "Option",
+        "bForceDisableActorParsing",
+        "GenerationTrigger",
+        "bInheritActorTags",
+        "TagsToAddOnActors",
+        "TemplateActor",
+        "SpawnedActorPropertyOverrideDescriptions",
+        "RootActor",
+        "AttachOptions",
+        "bSpawnByAttribute",
+        "SpawnAttribute",
+        "bWarnOnIdenticalSpawn",
+        "bDeleteActorsBeforeGeneration",
+        "DataLayerSettings",
+        "HLODSettings",
+        "TemplateActorClass",
+        "bAllowTemplateActorEditing",
+        "bGenerationTrigger_DEPRECATED",
+        "ActorOverrides_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Streaming"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSpawnSplineMeshSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SpawnSplineMesh",
+      "defaultNodeTitle": "Spawn Spline Mesh",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSpawnSplineMesh.h",
+      "hasDynamicPins": false,
+      "propertyCount": 8,
+      "propertyNames": [
+        "SplineMeshDescriptor",
+        "SplineMeshParams",
+        "TargetActor",
+        "PostProcessFunctionNames",
+        "bSynchronousLoad",
+        "SplineMeshOverrideDescriptions",
+        "SplineMeshParamsOverride",
+        "SplineMeshComponentOverride"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSplineSamplerSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SplineSampler",
+      "defaultNodeTitle": "Spline Sampler",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSplineSampler.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "SamplerParams"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSplitPointsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SplitPoints",
+      "defaultNodeTitle": "Split Points",
+      "nodeTooltip": "Splits each input point into two separate points and sets bounds based on the position and axis of the cut.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSplitPoints.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "SplitPosition",
+        "SplitAxis"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSubdivideSplineSettings",
+      "baseClassName": "UPCGSubdivisionBaseSettings",
+      "defaultNodeName": "SubdivideSpline",
+      "defaultNodeTitle": "Subdivide Spline",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Grammar/PCGSubdivideSpline.h",
+      "hasDynamicPins": false,
+      "propertyCount": 10,
+      "propertyNames": [
+        "bAcceptIncompleteSubdivision",
+        "bModuleHeightAsAttribute",
+        "ModuleHeight",
+        "ModuleHeightAttribute",
+        "bOutputModuleIndexAttribute",
+        "ModuleIndexAttributeName",
+        "bOutputExtremityAttributes",
+        "IsFirstAttributeName",
+        "IsFinalAttributeName",
+        "ModulePlacementTolerance"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Extra Output Attributes"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSurfaceSamplerSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SurfaceSampler",
+      "defaultNodeTitle": "Surface Sampler",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSurfaceSampler.h",
+      "hasDynamicPins": false,
+      "propertyCount": 9,
+      "propertyNames": [
+        "PointsPerSquaredMeter",
+        "PointExtents",
+        "Looseness",
+        "bUnbounded",
+        "bApplyDensityToPoints",
+        "PointSteepness",
+        "bKeepZeroDensityPoints",
+        "PointRadius_DEPRECATED",
+        "bUseLegacyGridCreationMethod"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug",
+        "Settings|Points"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "Transient"
+      ]
+    },
+    {
+      "className": "UPCGCollapseSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ToPoint",
+      "defaultNodeTitle": "To Point",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCollapseElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "bPassThroughEmptyAttributeSets"
+      ],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGTransformPointsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "TransformPoints",
+      "defaultNodeTitle": "Transform Points",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGTransformPoints.h",
+      "hasDynamicPins": false,
+      "propertyCount": 13,
+      "propertyNames": [
+        "bApplyToAttribute",
+        "AttributeName",
+        "OffsetMin",
+        "OffsetMax",
+        "bAbsoluteOffset",
+        "RotationMin",
+        "RotationMax",
+        "bAbsoluteRotation",
+        "ScaleMin",
+        "ScaleMax",
+        "bAbsoluteScale",
+        "bUniformScale",
+        "bRecomputeSeed"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UDEPRECATED_PCGGenerateGrassMapsSettings",
+      "baseClassName": "UPCGGenerateLandscapeTexturesSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGenerateGrassMaps.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGAddAttributeSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreateAttribute.h",
+      "hasDynamicPins": true,
+      "propertyCount": 8,
+      "propertyNames": [
+        "InputSource",
+        "OutputTarget",
+        "AttributeTypes",
+        "bCopyAllAttributes",
+        "bCopyAllDomains",
+        "MetadataDomainsMapping",
+        "SourceParamAttributeName_DEPRECATED",
+        "OutputAttributeName_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeGetFromIndexSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttributeGetFromIndexElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "Index"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeGetFromPointIndexSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttributeGetFromPointIndexElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "InputSource",
+        "Index",
+        "OutputAttributeName",
+        "InputAttributeName_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeReduceSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttributeReduceElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 7,
+      "propertyNames": [
+        "InputSource",
+        "bWriteToDataDomain",
+        "OutputAttributeName",
+        "Operation",
+        "JoinDelimiter",
+        "bMergeOutputAttributes",
+        "InputAttributeName_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGAttributeSelectSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGAttributeSelectElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 6,
+      "propertyNames": [
+        "InputSource",
+        "OutputAttributeName",
+        "Operation",
+        "Axis",
+        "CustomAxis",
+        "InputAttributeName_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGBlurSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGBlurElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 7,
+      "propertyNames": [
+        "InputSource",
+        "OutputTarget",
+        "NumIterations",
+        "SearchDistance",
+        "BlurMode",
+        "bUseCustomStandardDeviation",
+        "CustomStandardDeviation"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Gaussian"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGBooleanSelectSettings",
+      "baseClassName": "UPCGControlFlowSettings",
+      "defaultNodeName": "Select",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/ControlFlow/PCGBooleanSelect.h",
+      "hasDynamicPins": true,
+      "propertyCount": 1,
+      "propertyNames": [
+        "bUseInputB"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGBoundsFromMeshSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGBoundsFromMesh.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "MeshAttribute",
+        "bSilenceAttributeNotFoundErrors",
+        "bSynchronousLoad"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGBranchSettings",
+      "baseClassName": "UPCGControlFlowSettings",
+      "defaultNodeName": "Branch",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/ControlFlow/PCGBranch.h",
+      "hasDynamicPins": true,
+      "propertyCount": 1,
+      "propertyNames": [
+        "bOutputToB"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGClipPathsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "ClipPaths",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Polygon/PCGClipPaths.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "Operation",
+        "SplineMaxDiscretizationError"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGControlFlowSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/ControlFlow/PCGControlFlow.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGCreateAttributeSetSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreateAttribute.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "AttributeTypes",
+        "OutputTarget",
+        "OutputAttributeName_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCreateTargetActor",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "CreateTargetActor",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCreateTargetActor.h",
+      "hasDynamicPins": false,
+      "propertyCount": 13,
+      "propertyNames": [
+        "TemplateActor",
+        "AttachOptions",
+        "RootActor",
+        "ActorLabel",
+        "ActorPivot",
+        "CommaSeparatedActorTags",
+        "PropertyOverrideDescriptions",
+        "PostProcessFunctionNames",
+        "DataLayerSettings",
+        "HLODSettings",
+        "bDeleteActorsBeforeGeneration",
+        "TemplateActorClass",
+        "bAllowTemplateActorEditing"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Streaming"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGCullPointsOutsideActorBoundsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGCullPointsOutsideActorBounds.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "BoundsExpansion",
+        "Mode"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDataAttributesAndTagsSettingsBase",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Metadata/PCGDataAttributesAndTags.h",
+      "hasDynamicPins": true,
+      "propertyCount": 2,
+      "propertyNames": [
+        "AttributesTagsMapping",
+        "bDeleteInputsAfterOperation"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDataAttributesToTagsSettings",
+      "baseClassName": "UPCGDataAttributesAndTagsSettingsBase",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Metadata/PCGDataAttributesAndTags.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "bDiscardNonParseableAttributeTypes",
+        "bDiscardAttributeValue"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDataNumSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDataNum.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "OutputAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDeleteAttributesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDeleteAttributesElement.h",
+      "hasDynamicPins": true,
+      "propertyCount": 6,
+      "propertyNames": [
+        "Operation",
+        "Operator",
+        "SelectedAttributes",
+        "bTokenizeOnWhiteSpace",
+        "MetadataDomain",
+        "AttributesToKeep_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDeleteTagsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGDeleteTags.h",
+      "hasDynamicPins": true,
+      "propertyCount": 4,
+      "propertyNames": [
+        "Operation",
+        "Operator",
+        "SelectedTags",
+        "bTokenizeOnWhiteSpace"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGDuplicateCrossSectionsSettings",
+      "baseClassName": "UPCGSubdivisionBaseSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Grammar/PCGDuplicateCrossSections.h",
+      "hasDynamicPins": false,
+      "propertyCount": 6,
+      "propertyNames": [
+        "bExtrudeVectorAsAttribute",
+        "ExtrudeVector",
+        "ExtrudeVectorAttribute",
+        "bExtraOutputAttributesOnDataDomain",
+        "bOutputSplineIndexAttribute",
+        "SplineIndexAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Extra Output Attributes"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGElevationIsolinesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGElevationIsolines.h",
+      "hasDynamicPins": false,
+      "propertyCount": 8,
+      "propertyNames": [
+        "ElevationStart",
+        "ElevationEnd",
+        "ElevationIncrement",
+        "Resolution",
+        "bAddTagOnOutputForSameElevation",
+        "bProjectSurfaceNormal",
+        "bOutputAsSpline",
+        "bLinearSpline"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGExternalDataSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/IO/PCGExternalData.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "AttributeMapping"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGExtractAttributeSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Metadata/PCGExtractAttribute.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "InputSource",
+        "Index",
+        "OutputAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGFilterByAttributeSettings",
+      "baseClassName": "UPCGFilterDataBaseSettings",
+      "defaultNodeName": "FilterDataByAttribute",
+      "defaultNodeTitle": null,
+      "nodeTooltip": "Separates input data by whether they have the specified attribute or not, or on the data attribute value.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGFilterByAttribute.h",
+      "hasDynamicPins": false,
+      "propertyCount": 11,
+      "propertyNames": [
+        "FilterMode",
+        "Attribute",
+        "MetadataDomain",
+        "Operator",
+        "bIgnoreProperties",
+        "FilterByValueMode",
+        "TargetAttribute",
+        "FilterOperator",
+        "Threshold",
+        "MinThreshold",
+        "MaxThreshold"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGFilterByIndexSettings",
+      "baseClassName": "UPCGFilterDataBaseSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGFilterByIndex.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "bInvertFilter",
+        "SelectedIndices"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGFilterByTagSettings",
+      "baseClassName": "UPCGFilterDataBaseSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGFilterByTag.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "Operation",
+        "Operator",
+        "SelectedTags",
+        "bTokenizeOnWhiteSpace"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGFilterByTypeSettings",
+      "baseClassName": "UPCGFilterDataBaseSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGFilterByType.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "TargetType",
+        "bShowOutsideFilter"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGFilterDataBaseSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGFilterDataBase.h",
+      "hasDynamicPins": true,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGetBoundsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetBounds.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGGetPropertyFromObjectPathSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetPropertyFromObjectPath.h",
+      "hasDynamicPins": false,
+      "propertyCount": 9,
+      "propertyNames": [
+        "ObjectPathsToExtract",
+        "InputSource",
+        "PropertyName",
+        "bForceObjectAndStructExtraction",
+        "OutputAttributeName",
+        "bSanitizeOutputAttributeName",
+        "bSynchronousLoad",
+        "bPersistAllData",
+        "bSilenceErrorOnEmptyObjectPath"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGetSplineControlPointsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGGetSplineControlPoints.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "ArriveTangentAttributeName",
+        "LeaveTangentAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGHiGenGridSizeSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGHiGenGridSize.h",
+      "hasDynamicPins": true,
+      "propertyCount": 2,
+      "propertyNames": [
+        "HiGenGridSize",
+        "bShowInputPin"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGIndirectionSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGIndirectionElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 5,
+      "propertyNames": [
+        "ProxyInterfaceMode",
+        "SettingsClass",
+        "BlueprintElementClass",
+        "Settings",
+        "bTagOutputsBasedOnOutputPins"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGLoadDataTableSettings",
+      "baseClassName": "UPCGExternalDataSettings",
+      "defaultNodeName": "LoadDataTable",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/IO/PCGDataTableElement.h",
+      "hasDynamicPins": true,
+      "propertyCount": 3,
+      "propertyNames": [
+        "DataTable",
+        "OutputType",
+        "bSynchronousLoad"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGLoopSettings",
+      "baseClassName": "UPCGSubgraphSettings",
+      "defaultNodeName": "Loop",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGLoopElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "bUseGraphDefaultPinUsage",
+        "LoopPins",
+        "FeedbackPins",
+        "bTokenizeOnWhiteSpace"
+      ],
+      "propertyCategories": [
+        "Data",
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGMakeConcreteSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "MakeConcrete",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGMakeConcreteElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGMatchAndSetAttributesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGMatchAndSetAttributes.h",
+      "hasDynamicPins": false,
+      "propertyCount": 14,
+      "propertyNames": [
+        "bMatchAttributes",
+        "InputAttribute",
+        "MatchAttribute",
+        "bKeepUnmatched",
+        "bFindNearest",
+        "MaxDistanceMode",
+        "MaxDistanceForNearestMatch",
+        "MaxDistanceInputAttribute",
+        "bUseInputWeightAttribute",
+        "InputWeightAttribute",
+        "bUseWeightAttribute",
+        "WeightAttribute",
+        "bWarnIfNoMatchData",
+        "bWarnOnAttributeCast"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGMergeAttributesSettings",
+      "baseClassName": "UPCGSettingsWithDynamicInputs",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGMergeAttributes.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGMultiSelectSettings",
+      "baseClassName": "UPCGControlFlowSettings",
+      "defaultNodeName": "Select (Multi)",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/ControlFlow/PCGMultiSelect.h",
+      "hasDynamicPins": true,
+      "propertyCount": 8,
+      "propertyNames": [
+        "SelectionMode",
+        "IntegerSelection",
+        "IntOptions",
+        "StringSelection",
+        "StringOptions",
+        "EnumSelection",
+        "EnumValueToPinLabelMapping",
+        "CachedPinLabels"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "Transient"
+      ]
+    },
+    {
+      "className": "UPCGNamedRerouteBaseSettings",
+      "baseClassName": "UPCGRerouteSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGReroute.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGNamedRerouteDeclarationSettings",
+      "baseClassName": "UPCGNamedRerouteBaseSettings",
+      "defaultNodeName": "NamedRerouteDeclaration",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGReroute.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGNamedRerouteUsageSettings",
+      "baseClassName": "UPCGNamedRerouteBaseSettings",
+      "defaultNodeName": "NamedRerouteUsage",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGReroute.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "Declaration"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite"
+      ]
+    },
+    {
+      "className": "UPCGPointFromMeshSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "PointFromMesh",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGPointFromMeshElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "Mesh",
+        "StaticMesh",
+        "MeshPathAttributeName",
+        "bSynchronousLoad"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGPolygon2DOperationSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Polygon2DOperation",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Polygon/PCGPolygon2DOperation.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "Operation",
+        "MetadataMode",
+        "SplineMaxDiscretizationError",
+        "bQuiet"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGRandomChoiceSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGRandomChoice.h",
+      "hasDynamicPins": true,
+      "propertyCount": 7,
+      "propertyNames": [
+        "bFixedMode",
+        "FixedNumber",
+        "Ratio",
+        "bOutputDiscardedEntries",
+        "bHasCustomSeedSource",
+        "CustomSeedSource",
+        "bUseFirstAttributeOnly"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGRemoveEmptyDataSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGRemoveEmptyData.h",
+      "hasDynamicPins": true,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGReplaceTagsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGReplaceTags.h",
+      "hasDynamicPins": true,
+      "propertyCount": 3,
+      "propertyNames": [
+        "SelectedTags",
+        "ReplacedTags",
+        "bTokenizeOnWhiteSpace"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGReverseSplineSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSplineDirection.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "Operation",
+        "bFlipClockwiseComputationResult"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGSelectGrammarSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Grammar/PCGSelectGrammar.h",
+      "hasDynamicPins": false,
+      "propertyCount": 10,
+      "propertyNames": [
+        "bKeyAsAttribute",
+        "Key",
+        "KeyAttribute",
+        "ComparedValueAttribute",
+        "bCriteriaAsInput",
+        "Criteria",
+        "bCopyKeyForUnselectedGrammar",
+        "bRemapCriteriaAttributeNames",
+        "CriteriaAttributeNames",
+        "OutputGrammarAttribute"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSkinnedMeshSpawnerSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "SkinnedMeshSpawner",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSkinnedMeshSpawner.h",
+      "hasDynamicPins": false,
+      "propertyCount": 10,
+      "propertyNames": [
+        "MeshSelectorParameters",
+        "InstanceDataPackerType",
+        "InstanceDataPackerParameters",
+        "SkinnedMeshComponentPropertyOverrides",
+        "bApplyMeshBoundsToPoints",
+        "TargetActor",
+        "PostProcessFunctionNames",
+        "bSynchronousLoad",
+        "bSilenceOverrideAttributeNotFoundErrors",
+        "bWarnOnIdenticalSpawn"
+      ],
+      "propertyCategories": [
+        "InstanceDataPacker",
+        "MeshSelector",
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "VisibleAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGSortAttributesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSortAttributes.h",
+      "hasDynamicPins": true,
+      "propertyCount": 2,
+      "propertyNames": [
+        "InputSource",
+        "SortMethod"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSortTagsSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSortTags.h",
+      "hasDynamicPins": true,
+      "propertyCount": 2,
+      "propertyNames": [
+        "Tag",
+        "SortMethod"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSpawnSplineSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSpawnSpline.h",
+      "hasDynamicPins": false,
+      "propertyCount": 8,
+      "propertyNames": [
+        "SplineComponent",
+        "bSpawnComponentFromAttribute",
+        "SpawnComponentFromAttributeName",
+        "TargetActor",
+        "PostProcessFunctionNames",
+        "PropertyOverrideDescriptions",
+        "bOutputSplineComponentReference",
+        "ComponentReferenceAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSplineIntersectionSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSplineIntersection.h",
+      "hasDynamicPins": false,
+      "propertyCount": 6,
+      "propertyNames": [
+        "Type",
+        "Output",
+        "bOutputSplineIndices",
+        "OriginatingSplineIndexAttribute",
+        "IntersectingSplineIndexAttribute",
+        "DistanceThreshold"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSplineToSegmentSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Grammar/PCGSplineToSegment.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "bExtractTangents",
+        "bExtractAngles",
+        "bExtractConnectivityInfo",
+        "bExtractClockwiseInfo"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGSplitSplinesSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGSplitSplines.h",
+      "hasDynamicPins": false,
+      "propertyCount": 6,
+      "propertyNames": [
+        "Mode",
+        "bUseConstant",
+        "Constant",
+        "Attribute",
+        "bShouldOutputOriginatingSplineIndex",
+        "OutputOriginatingSplineIndex"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGStaticMeshSpawnerSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "StaticMeshSpawner",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGStaticMeshSpawner.h",
+      "hasDynamicPins": false,
+      "propertyCount": 14,
+      "propertyNames": [
+        "MeshSelectorType",
+        "MeshSelectorParameters",
+        "bAllowDescriptorChanges",
+        "InstanceDataPackerType",
+        "InstanceDataPackerParameters",
+        "StaticMeshComponentPropertyOverrides",
+        "OutAttributeName",
+        "bApplyMeshBoundsToPoints",
+        "TargetActor",
+        "PostProcessFunctionNames",
+        "bSynchronousLoad",
+        "bAllowMergeDifferentDataInSameInstancedComponents",
+        "bSilenceOverrideAttributeNotFoundErrors",
+        "bWarnOnIdenticalSpawn"
+      ],
+      "propertyCategories": [
+        "InstanceDataPacker",
+        "MeshSelector",
+        "Settings",
+        "Settings|Debug"
+      ],
+      "flags": [
+        "AdvancedDisplay",
+        "BlueprintReadOnly",
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "VisibleAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGSubdivideSegmentSettings",
+      "baseClassName": "UPCGSubdivisionBaseSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Grammar/PCGSubdivideSegment.h",
+      "hasDynamicPins": false,
+      "propertyCount": 12,
+      "propertyNames": [
+        "SubdivisionAxis",
+        "bFlipAxisAsAttribute",
+        "bShouldFlipAxis",
+        "FlipAxisAttribute",
+        "bAcceptIncompleteSubdivision",
+        "bOutputModuleIndexAttribute",
+        "ModuleIndexAttributeName",
+        "bOutputExtremityAttributes",
+        "IsFirstAttributeName",
+        "IsFinalAttributeName",
+        "bOutputExtremityNeighborIndexAttribute",
+        "ExtremityNeighborIndexAttributeName"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Extra Output Attributes"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSubdivisionBaseSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Grammar/PCGSubdivisionBase.h",
+      "hasDynamicPins": false,
+      "propertyCount": 16,
+      "propertyNames": [
+        "bModuleInfoAsInput",
+        "ModulesInfo",
+        "ModulesInfoAttributeNames",
+        "GrammarSelection",
+        "bUseSeedAttribute",
+        "SeedAttribute",
+        "bForwardAttributesFromModulesInfo",
+        "SymbolAttributeName",
+        "bOutputSizeAttribute",
+        "SizeAttributeName",
+        "bOutputScalableAttribute",
+        "ScalableAttributeName",
+        "bOutputDebugColorAttribute",
+        "DebugColorAttributeName",
+        "bGrammarAsAttribute_DEPRECATED",
+        "Grammar_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Settings",
+        "Settings|Extra Output Attributes"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGSwitchSettings",
+      "baseClassName": "UPCGControlFlowSettings",
+      "defaultNodeName": "Switch",
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/ControlFlow/PCGSwitch.h",
+      "hasDynamicPins": true,
+      "propertyCount": 8,
+      "propertyNames": [
+        "SelectionMode",
+        "IntegerSelection",
+        "IntOptions",
+        "StringSelection",
+        "StringOptions",
+        "EnumSelection",
+        "EnumValueToPinLabelMapping",
+        "CachedPinLabels"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable",
+        "Transient"
+      ]
+    },
+    {
+      "className": "UPCGTagsToDataAttributesSettings",
+      "baseClassName": "UPCGDataAttributesAndTagsSettingsBase",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Metadata/PCGDataAttributesAndTags.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGWorldRaycastElementSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "WorldRaycast",
+      "defaultNodeTitle": null,
+      "nodeTooltip": "Casts a line trace or collision shape sweep from provided points along a given direction returning the location of the impact.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGWorldRaycast.h",
+      "hasDynamicPins": false,
+      "propertyCount": 13,
+      "propertyNames": [
+        "CollisionShape",
+        "RaycastMode",
+        "OriginInputAttribute",
+        "bOverrideRayDirections",
+        "RayDirection",
+        "RayDirectionAttribute",
+        "EndPointAttribute",
+        "bOverrideRayLengths",
+        "RayLength",
+        "RayLengthAttribute",
+        "WorldQueryParams",
+        "bKeepOriginalPointOnMiss",
+        "bUnbounded"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGUnionSettings",
+      "baseClassName": "UPCGSettingsWithDynamicInputs",
+      "defaultNodeName": "Union",
+      "defaultNodeTitle": "Union",
+      "nodeTooltip": "Combine spatial data into a union of all inputs. Order of inputs is respected, beginning with the dynamic pin inputs.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGUnionElement.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "Type",
+        "DensityFunction"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGVisualizeAttributeSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "VisualizeAttribute",
+      "defaultNodeTitle": "Visualize Attribute",
+      "nodeTooltip": "Visualizes a selected attribute on screen at each point's transform.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGVisualizeAttribute.h",
+      "hasDynamicPins": false,
+      "propertyCount": 9,
+      "propertyNames": [
+        "AttributeSource",
+        "CustomPrefixString",
+        "bPrefixWithIndex",
+        "bPrefixWithAttributeName",
+        "LocalOffset",
+        "Color",
+        "Duration",
+        "PointLimit",
+        "bVisualizeEnabled"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGVolumeSamplerSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "VolumeSampler",
+      "defaultNodeTitle": "Volume Sampler",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGVolumeSampler.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "VoxelSize",
+        "bUnbounded",
+        "PointSteepness"
+      ],
+      "propertyCategories": [
+        "Data",
+        "Settings",
+        "Settings|Points"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGWaitSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "Wait",
+      "defaultNodeTitle": "Wait",
+      "nodeTooltip": "Waits some time and/or frames. Not a node that should be used in production except in very special cases.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/ControlFlow/PCGWait.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "WaitTimeInSeconds",
+        "WaitTimeInEngineFrames",
+        "WaitTimeInRenderFrames",
+        "bEndWaitWhenAllConditionsAreMet"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGWaitLandscapeReadySettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "WaitUntilLandscapeReady",
+      "defaultNodeTitle": "Wait Until Landscape Is Ready",
+      "nodeTooltip": "Waits until landscape is ready, then passes data downstream.",
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/Landscape/PCGWaitLandscapeReady.h",
+      "hasDynamicPins": true,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGWorldRayHitSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "WorldRayHitQuery",
+      "defaultNodeTitle": "World Ray Hit Query",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGWorldQuery.h",
+      "hasDynamicPins": false,
+      "propertyCount": 2,
+      "propertyNames": [
+        "CollisionShape",
+        "QueryParams"
+      ],
+      "propertyCategories": [
+        "Data",
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGWorldQuerySettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "WorldVolumetricQuery",
+      "defaultNodeTitle": "World Volumetric Query",
+      "nodeTooltip": null,
+      "sourceGroup": "Elements",
+      "relativeHeaderPath": "Elements/PCGWorldQuery.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "QueryParams"
+      ],
+      "propertyCategories": [
+        "Data"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere",
+        "PCG_Overridable"
+      ]
+    },
+    {
+      "className": "UPCGGraphInputOutputSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": "InputNode",
+      "defaultNodeTitle": "Input Node",
+      "nodeTooltip": null,
+      "sourceGroup": "PCGInputOutputSettings.h",
+      "relativeHeaderPath": "PCGInputOutputSettings.h",
+      "hasDynamicPins": false,
+      "propertyCount": 4,
+      "propertyNames": [
+        "Pins",
+        "PinLabels_DEPRECATED",
+        "CustomPins_DEPRECATED",
+        "bHasAddedDefaultPin"
+      ],
+      "propertyCategories": [
+        "Settings"
+      ],
+      "flags": [
+        "BlueprintReadWrite",
+        "EditAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGTrivialSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "PCGSettings.h",
+      "relativeHeaderPath": "PCGSettings.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGSettingsWithDynamicInputs",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "PCGSettingsWithDynamicInputs.h",
+      "relativeHeaderPath": "PCGSettingsWithDynamicInputs.h",
+      "hasDynamicPins": false,
+      "propertyCount": 1,
+      "propertyNames": [
+        "DynamicInputPinProperties"
+      ],
+      "propertyCategories": [],
+      "flags": []
+    },
+    {
+      "className": "UPCGSubgraphSettings",
+      "baseClassName": "UPCGBaseSubgraphSettings",
+      "defaultNodeName": "Subgraph",
+      "defaultNodeTitle": "Subgraph",
+      "nodeTooltip": null,
+      "sourceGroup": "PCGSubgraph.h",
+      "relativeHeaderPath": "PCGSubgraph.h",
+      "hasDynamicPins": false,
+      "propertyCount": 3,
+      "propertyNames": [
+        "SubgraphInstance",
+        "SubgraphOverride",
+        "Subgraph_DEPRECATED"
+      ],
+      "propertyCategories": [
+        "Properties"
+      ],
+      "flags": [
+        "BlueprintReadOnly",
+        "PCG_Overridable",
+        "VisibleAnywhere"
+      ]
+    },
+    {
+      "className": "UPCGBaseSubgraphSettings",
+      "baseClassName": "UPCGSettings",
+      "defaultNodeName": null,
+      "defaultNodeTitle": null,
+      "nodeTooltip": null,
+      "sourceGroup": "PCGSubgraph.h",
+      "relativeHeaderPath": "PCGSubgraph.h",
+      "hasDynamicPins": false,
+      "propertyCount": 0,
+      "propertyNames": [],
+      "propertyCategories": [],
+      "flags": []
+    }
+  ]
+}

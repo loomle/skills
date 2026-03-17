@@ -9,7 +9,7 @@ Use this recipe for small corrective edits to an existing PCG graph.
 - cleanup after a partially failed rewrite
 
 ## Preferred Mode
-Use `LOOMLE mode`.
+Use `Loomle mode`.
 
 ## Steps
 1. Query the current graph.
@@ -19,9 +19,9 @@ Use `LOOMLE mode`.
 5. Apply the smallest possible batch:
    - `disconnectPins` or `breakPinLinks` with `args.target = { nodeId, pin }`
    - then one or two `connectPins`
-6. Re-query immediately.
-7. Confirm the repaired local structure exists.
-8. Compile if the repair changed structure.
+6. Run `graph.verify`.
+7. Re-query immediately only when verify output is not enough.
+8. Confirm the repaired local structure exists.
 
 ## Avoid
 - deleting a large chain just to fix one edge

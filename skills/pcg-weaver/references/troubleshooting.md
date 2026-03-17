@@ -23,6 +23,10 @@
 - Cause: graph-level verification and scene-level behavior are different surfaces.
 - Fix: use `graph.verify` to validate the PCG asset itself, then run a separate level-instance check only if the task explicitly depends on generated world output.
 
+## Symptom: `setPinDefault` fails after disconnecting an overridable PCG input
+- Cause: this is the intended Loomle path for writing overridable PCG defaults, but current versions may still have node-specific bugs or incomplete support.
+- Fix: keep the successful disconnect, re-query the node, and continue from the observed state. Do not assume the whole batch rolled back.
+
 ## Symptom: A semantic op resolves but the inserted stage does not behave as intended
 - Cause: the resolve result was only the first half of the rewrite, or it needed narrower pin context.
 - Fix: retry `graph.ops.resolve` with `fromPin` or `toPin` when requested, execute the resolved plan, then explicitly reconnect preserved downstream edges and validate the graph with `graph.verify`.

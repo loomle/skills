@@ -10,7 +10,7 @@ Make a local PCG pipeline change with:
 - optional scene-level validation when generated output in a level matters
 
 ## Standard Loop
-1. Query the target PCG graph with `graphType="pcg"`.
+1. Query the target PCG graph with `graphType="pcg"`, or if you started from a selected level actor/component, use `context` then `graph.resolve` and continue with the returned PCG `graphRef`.
 2. Identify the exact local pipeline boundary.
 3. Record preserved upstream inputs and downstream consumers before mutating.
 4. For known stages, call `graph.ops.resolve` and prefer its `preferredPlan`, `settingsTemplate`, and `verificationHints`.
@@ -25,6 +25,13 @@ Make a local PCG pipeline change with:
    - verify status and diagnostics are acceptable
 9. If the task explicitly depends on world results, do a separate level-instance validation pass after graph verification.
 10. Repeat only if the previous batch verified cleanly.
+
+For overridable input pins, the intended edit path is often:
+- disconnect the incoming edge
+- use `setPinDefault` on that input
+- read back the node settings and run `graph.verify`
+
+Treat that path as version-sensitive. If `setPinDefault` currently fails or behaves inconsistently, keep the committed part of the batch, re-query, and continue from the observed state instead of replaying the whole edit blindly.
 
 ## Good Batch Shapes
 
@@ -44,7 +51,6 @@ Make a local PCG pipeline change with:
 - reconnect preserved downstream outputs
 - layout touched nodes
 - query and verify
-- compile
 
 ## Connection Shape Reminder
 For `connectPins`, use nested endpoint objects instead of top-level `fromNodeId` or `toNodeId`.

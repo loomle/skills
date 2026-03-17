@@ -1,4 +1,4 @@
 interface:
   display_name: "PCG Weaver"
   short_description: "UE PCG graph rewrites with Loomle-first workflows."
-  default_prompt: "Read, repair, refactor, and extend Unreal Engine PCG graphs using Loomle-first workflows. Prefer graph.query/mutate for pipeline rewrites, verify with readback plus compile, and preserve external dataflow interfaces during local graph changes."
+  default_prompt: "Read, repair, refactor, and extend Unreal Engine PCG graphs using Loomle-first workflows. Prefer graph.query and graph.mutate for pipeline rewrites, use graph.verify as the graph-level acceptance check, preserve external dataflow interfaces during local graph changes, and treat world-instance behavior as a separate validation surface."

@@ -8,7 +8,7 @@ Use this recipe when replacing an existing PCG pipeline segment while preserving
 - insert a local pipeline while keeping the same downstream consumer
 
 ## Preferred Mode
-Use `LOOMLE mode`.
+Use `Loomle mode`.
 
 ## Steps
 1. Query the graph.
@@ -24,12 +24,12 @@ Use `LOOMLE mode`.
 8. Reconnect preserved downstream consumers from the new subgraph.
 9. Remove the old node or short chain only after the replacement path is present.
 10. Run `layoutGraph(scope=\"touched\")`.
-11. Re-query and verify the preserved interface plus new internal edges.
-12. Compile.
+11. Run `graph.verify`.
+12. Re-query and verify the preserved interface plus new internal edges when verify output is not enough.
 
 ## Verification Checklist
 - old internal nodes are gone
 - preserved upstream connections still land where intended
 - preserved downstream consumers are still fed
 - the new internal chain is fully connected
-- compile succeeds
+- `graph.verify` status and diagnostics are acceptable
