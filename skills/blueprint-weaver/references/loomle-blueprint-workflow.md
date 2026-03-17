@@ -6,7 +6,7 @@ Use this recipe when editing an existing Blueprint graph interactively.
 Make a local Blueprint change with:
 - explicit readback
 - small-batch safety
-- compile validation
+- graph-level verify validation
 
 ## Standard Loop
 1. Query the target Blueprint graph.
@@ -14,13 +14,14 @@ Make a local Blueprint change with:
 3. Record preserved external inputs and outputs before mutating.
 4. For known semantic nodes, call `graph.ops.resolve` on the exact target graph and prefer its `preferredPlan`.
 5. Apply one small `graph.mutate` batch.
-6. Immediately `graph.query` again.
-7. Verify:
+6. Run `graph.verify`.
+7. If you need exact node or edge proof, immediately `graph.query` again.
+8. Verify:
    - new nodes exist
    - intended edges exist
    - removed edges are gone
    - preserved interfaces still connect correctly
-8. Compile.
+   - verify status and diagnostics are acceptable
 9. Repeat only if the previous batch verified cleanly.
 
 ## Good Batch Shapes
@@ -49,6 +50,6 @@ Make a local Blueprint change with:
 - Do not trust `changed=true` alone.
 - Prefer fresh `graph.query` over mutate optimism.
 - If a batch fails, verify what was already committed before retrying.
-- For Blueprint specifically, compile after structural edits even when the local snapshot looks correct.
+- For Blueprint specifically, prefer `graph.verify` after structural edits even when the local snapshot looks correct.
 - If `graph.query` by `graphName` is inconsistent, recover a `graphRef` from `graph.list` and continue with that.
 - If `graph.ops.resolve` reports `requires_pin_context` or another incompatibility reason, gather the narrower context or fall back instead of forcing the op.

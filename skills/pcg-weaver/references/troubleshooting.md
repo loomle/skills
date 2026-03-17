@@ -20,16 +20,16 @@
   3. remove the old stage and reconnect from the observed state
 
 ## Symptom: Pipeline shape looks right but behavior may still be broken
-- Cause: structural readback alone is insufficient for PCG edits.
-- Fix: compile after structural edits and treat runtime validation as the final check. Compare `graph.runtime.managedResources` and `inspection` before and after regenerate.
+- Cause: graph-level verification and scene-level behavior are different surfaces.
+- Fix: use `graph.verify` to validate the PCG asset itself, then run a separate level-instance check only if the task explicitly depends on generated world output.
 
 ## Symptom: A semantic op resolves but the inserted stage does not behave as intended
 - Cause: the resolve result was only the first half of the rewrite, or it needed narrower pin context.
-- Fix: retry `graph.ops.resolve` with `fromPin` or `toPin` when requested, execute the resolved plan, then explicitly reconnect preserved downstream edges and validate with `graph.runtime`.
+- Fix: retry `graph.ops.resolve` with `fromPin` or `toPin` when requested, execute the resolved plan, then explicitly reconnect preserved downstream edges and validate the graph with `graph.verify`.
 
-## Symptom: Runtime output changed but the graph still looks structurally correct
-- Cause: a parameter edge or stage behavior changed output scale without breaking the visible pipeline.
-- Fix: trust the runtime evidence, especially `managedResources.totalInstanceCount`, `generatedComponentCount`, and `inspection.nodes`, and repair from the current snapshot.
+## Symptom: A level instance behaves differently even though the graph verifies cleanly
+- Cause: the graph asset is healthy, but the scene instance, input data, or level setup changed the runtime outcome.
+- Fix: keep graph repair and scene-instance debugging separate. Do not rewrite the graph unless the graph-level evidence points back to the asset itself.
 
 ## Symptom: Local rewrite made the graph harder to read
 - Cause: touched nodes were added without a local layout pass.

@@ -8,8 +8,8 @@ description: Blueprint graph specialist for Unreal Engine. Use when tasks involv
 ## Overview
 Use this skill as the strategy layer for Unreal Blueprint graph work.
 
-- Default to `Loomle` for graph reading, local rewrites, verification, layout, and compile loops.
-- Keep edits small and verifiable: `query -> mutate -> query -> compile`.
+- Default to `Loomle` for graph reading, local rewrites, layout, and graph-level verification.
+- Keep edits small and verifiable: `query -> mutate -> graph.verify`.
 - Preserve external graph interfaces whenever replacing a local node chain or branch segment.
 
 ## Workflow
@@ -17,7 +17,7 @@ Use this skill as the strategy layer for Unreal Blueprint graph work.
 2. Choose the narrowest task recipe.
 3. Query before mutating.
 4. Execute in small verified batches.
-5. Re-query and compile after each structural change.
+5. Re-query or `graph.verify` after each structural change.
 6. Preserve project style and graph readability.
 
 ## Mutation Safety
@@ -58,13 +58,15 @@ Recommended rhythm:
 3. For known semantic nodes, call `graph.ops.resolve` on the exact target graph and prefer the returned `preferredPlan`.
 4. If adding nodes by action, fetch fresh `graph.actions` from the same asset and graph only when semantic planning does not cover the desired node.
 5. Apply a small `graph.mutate` batch.
-6. `graph.query` again and verify:
+6. Prefer `graph.verify` as the default final check for the batch.
+7. Use a fresh `graph.query` when you need exact node or edge proof beyond verify output.
+8. Verify:
    - new nodes exist
    - expected edges exist
    - removed edges are actually gone
    - preserved external interfaces still land where intended
-7. `compile`
-8. Repeat only if the previous batch verified cleanly.
+   - verify status and diagnostics are acceptable
+9. Repeat only if the previous batch verified cleanly.
 
 For a concrete Loomle-first edit loop, read [references/loomle-blueprint-workflow.md](references/loomle-blueprint-workflow.md).
 
@@ -82,8 +84,7 @@ Prefer the simplest node-creation path that is reliable in the current graph.
 Read [references/action-token-notes.md](references/action-token-notes.md) before caching or reusing node-creation context.
 
 ## 4) Run and Verify
-- Always verify with a fresh `graph.query` after every structural batch.
-- Compile after structural edits.
+- Prefer `graph.verify` after every structural batch. Use a fresh `graph.query` when you need exact node or edge proof or when verify returns unexpected diagnostics.
 - Treat `layoutGraph(scope=\"touched\")` as a readability helper, not as proof that the structure is correct.
 - Trust readback over mutate optimism if there is any disagreement.
 
@@ -99,8 +100,7 @@ Always leave behind enough evidence that another agent could confirm the edit wo
 Minimum expectations:
 - identify the target asset and graph name
 - show the local rewrite boundary
-- verify with a fresh `graph.query`
-- compile after structural edits
+- use `graph.verify` after structural edits
 
 For local refactors, prefer verifying:
 - node count changed in the expected direction
@@ -114,7 +114,7 @@ For local refactors, prefer verifying:
 - If a mutate batch fails midway, assume earlier ops may already be committed unless proven otherwise by readback.
 - If a local replacement risks disconnecting exec flow, stage the new path first and delete the old nodes only after readback confirms the new edges.
 - If a connection reports success but the graph snapshot disagrees, trust the fresh query and repair from there.
-- If compile succeeds but the graph still looks wrong, re-query exact node IDs and edges rather than relying on layout.
+- If `graph.verify` returns `status=\"ok\"` but the graph still looks wrong, re-query exact node IDs and edges rather than relying on layout.
 - If a reroute or similar op resolves only after adding `fromPin` or `toPin`, keep that context in the log so later repair batches can reproduce the same resolve path.
 
 For recurring failure patterns and concrete fixes, read [references/troubleshooting.md](references/troubleshooting.md).

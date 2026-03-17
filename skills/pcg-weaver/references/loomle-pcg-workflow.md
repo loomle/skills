@@ -6,8 +6,8 @@ Use this recipe when editing an existing PCG graph interactively.
 Make a local PCG pipeline change with:
 - explicit readback
 - small-batch safety
-- compile validation
-- runtime validation when generated output matters
+- graph-level verify validation
+- optional scene-level validation when generated output in a level matters
 
 ## Standard Loop
 1. Query the target PCG graph with `graphType="pcg"`.
@@ -15,14 +15,15 @@ Make a local PCG pipeline change with:
 3. Record preserved upstream inputs and downstream consumers before mutating.
 4. For known stages, call `graph.ops.resolve` and prefer its `preferredPlan`, `settingsTemplate`, and `verificationHints`.
 5. Apply one small `graph.mutate` batch.
-6. Immediately `graph.query` again.
-7. Verify:
+6. Run `graph.verify`.
+7. If you need exact node or edge proof, immediately `graph.query` again.
+8. Verify:
    - new nodes exist
    - intended edges exist
    - removed edges are gone
    - preserved interfaces still connect correctly
-8. Compile.
-9. If the edit affects generated runtime output, capture `graph.runtime` before and after regenerate and compare counts or executed node summaries.
+   - verify status and diagnostics are acceptable
+9. If the task explicitly depends on world results, do a separate level-instance validation pass after graph verification.
 10. Repeat only if the previous batch verified cleanly.
 
 ## Good Batch Shapes
@@ -75,4 +76,4 @@ You can also use `nodeRef` for nodes created earlier in the same batch.
 - For PCG specifically, confirm output pin names from the returned snapshot when introducing unfamiliar nodes.
 - If `graph.ops.resolve` supplied `verificationHints`, treat them as required follow-up work, not optional advice.
 - For layout or move verification, read `position` or `layout.position`; `nodePosX/nodePosY` may be null.
-- For runtime-sensitive PCG edits, prefer `graph.runtime.managedResources` and `inspection` as the final acceptance check.
+- Treat `graph.verify` as the default graph-level acceptance check. Any world-instance check happens separately and answers a different question.

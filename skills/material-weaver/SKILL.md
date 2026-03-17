@@ -8,9 +8,9 @@ description: Material graph specialist for Unreal Engine. Use when tasks involve
 ## Overview
 Use this skill as the strategy layer for Unreal Material graph work.
 
-- Default to `Loomle` for graph reading, small-batch rewrites, verification, and compile loops.
+- Default to `Loomle` for graph reading, small-batch rewrites, and graph-level verification.
 - Use bundled `UE Python` scripts when you need deterministic batch creation, command-line reruns, actor assignment, or a fallback around Material pin/runtime quirks.
-- Keep edits small and verifiable: `query -> mutate -> query -> compile`.
+- Keep edits small and verifiable: `query -> mutate -> graph.verify`.
 
 ## Workflow
 1. Confirm scope and target Material asset.
@@ -18,7 +18,7 @@ Use this skill as the strategy layer for Unreal Material graph work.
    - `LOOMLE mode` for interactive repair/refactor.
    - `UE Python mode` for deterministic generation or fallback.
 3. Execute in small verified batches.
-4. Re-query and compile after each structural change.
+4. Re-query or `graph.verify` after each structural change.
 5. Preserve project style and readability.
 
 ## Mutation Safety
@@ -57,12 +57,14 @@ Recommended rhythm:
 2. Identify the exact subgraph boundary before mutating.
 3. When adding a well-known node, call `graph.ops.resolve` first and prefer the returned `preferredPlan` over hardcoded class guesses.
 4. Apply a small `graph.mutate` batch.
-5. `graph.query` again and verify:
+5. Prefer `graph.verify` as the default final check for the batch.
+6. Use a fresh `graph.query` when you need exact node or edge proof beyond verify output.
+7. Verify:
    - new nodes exist
    - expected edges exist
    - removed edges are actually gone
-6. `compile`
-7. Repeat only if the previous step verified cleanly
+   - verify status and diagnostics are acceptable
+8. Repeat only if the previous step verified cleanly
 
 Use `graph.query` and `context` to discover graph refs instead of guessing addresses. For Material assets, prefer the address forms that already work in the current session.
 Always pass `graphType="material"` on Material `graph.query`, `graph.actions`, and `graph.mutate` calls.
@@ -98,7 +100,7 @@ Implementation rules:
 Use [scripts/material_graph_helpers.py](scripts/material_graph_helpers.py) helpers directly or copy patterns from it.
 
 ## 4) Run and Verify
-- In `Loomle mode`, always verify with a fresh `graph.query` after every structural batch.
+- In `Loomle mode`, prefer `graph.verify` after every structural batch. Use a fresh `graph.query` when you need exact node or edge proof or when verify output needs follow-up.
 - In `UE Python mode`, use `UnrealEditor-Cmd -run=pythonscript` and enforce a done marker:
   - [scripts/run_ue_python_and_check_done.sh](scripts/run_ue_python_and_check_done.sh)
 - Configure Unreal executable outside the skill:
@@ -133,8 +135,7 @@ Minimum expectations:
 - identify the target asset path
 - record the graph address actually used
 - show the intended change boundary
-- verify with a fresh `graph.query`
-- compile after structural edits
+- use `graph.verify` after structural edits
 
 For local refactors, prefer verifying:
 - node count changed in the expected direction

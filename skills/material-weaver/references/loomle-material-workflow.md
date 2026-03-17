@@ -6,7 +6,7 @@ Use this recipe when editing an existing Material graph interactively.
 Make a local Material change with:
 - explicit readback
 - small-batch safety
-- compile validation
+- graph-level verify validation
 
 ## Standard Loop
 1. Read current context if the Material is already open.
@@ -14,13 +14,14 @@ Make a local Material change with:
 3. Identify the exact node IDs and external edges around the subgraph you plan to change.
 4. If you are adding a stable semantic node like a scalar parameter or multiply, call `graph.ops.resolve` and prefer its `preferredPlan` over a hardcoded `nodeClassPath`.
 5. Apply one small `graph.mutate` batch.
-6. Immediately `graph.query` again.
-7. Verify:
+6. Run `graph.verify`.
+7. If you need exact node or edge proof, immediately `graph.query` again.
+8. Verify:
    - new nodes exist
    - intended edges exist
    - removed edges are gone
    - total node/edge counts make sense
-8. `compile`
+   - verify status and diagnostics are acceptable
 9. Repeat only if the previous batch verified cleanly.
 
 ## Good Batch Shapes

@@ -8,17 +8,17 @@ description: PCG graph specialist for Unreal Engine. Use when tasks involve read
 ## Overview
 Use this skill as the strategy layer for Unreal PCG graph work.
 
-- Default to `Loomle` for graph reading, local pipeline rewrites, verification, layout, and compile loops.
-- Keep edits small and verifiable: `query -> mutate -> query -> compile`.
+- Default to `Loomle` for graph reading, local pipeline rewrites, layout, and graph-level verification.
+- Keep edits small and verifiable: `query -> mutate -> graph.verify`.
 - Preserve external dataflow interfaces whenever replacing a local pipeline segment.
-- Use `graph.runtime` as the preferred runtime validation layer whenever the edit affects generated output, spawned actors, or instanced meshes.
+- Use scene- or instance-level validation only when the task explicitly depends on spawned runtime behavior; graph tools validate the graph asset itself, not world outcomes.
 
 ## Workflow
 1. Confirm scope and target PCG asset plus graph name.
 2. Choose the narrowest task recipe.
 3. Query before mutating.
 4. Execute in small verified batches.
-5. Re-query and compile after each structural change.
+5. Re-query or `graph.verify` after each structural change.
 6. Preserve dataflow readability and pipeline intent.
 
 ## Mutation Safety
@@ -59,13 +59,15 @@ Recommended rhythm:
 3. For known semantic stages, call `graph.ops.resolve` on the target graph and prefer the returned `preferredPlan`.
 4. If adding nodes by action, fetch fresh `graph.actions` from the same asset and graph only when semantic planning does not cover the stage you need.
 5. Apply a small `graph.mutate` batch.
-6. `graph.query` again and verify:
+6. Prefer `graph.verify` as the default final check for the batch.
+7. Use a fresh `graph.query` when you need exact node or edge proof beyond verify output.
+8. Verify:
    - new nodes exist
    - expected edges exist
    - removed edges are actually gone
    - preserved upstream and downstream interfaces still connect correctly
-7. `compile`
-8. Repeat only if the previous batch verified cleanly.
+   - verify status and diagnostics are acceptable
+9. Repeat only if the previous batch verified cleanly.
 
 For a concrete Loomle-first edit loop, read [references/loomle-pcg-workflow.md](references/loomle-pcg-workflow.md).
 Always pass `graphType="pcg"` on PCG `graph.query`, `graph.actions`, and `graph.mutate` calls.
@@ -80,14 +82,13 @@ Prefer the simplest node-creation path that is reliable in the current graph.
 - Re-query exact pins after introducing unfamiliar PCG nodes before wiring deeper stages.
 - If `graph.ops.resolve` returns `settingsTemplate` or `verificationHints`, carry them forward. They are execution guidance, not decoration.
 - For `connectPins`, use nested `args.from` and `args.to` endpoint objects with `nodeId` or `nodeRef` plus `pin`.
-- If `graph.ops.resolve` or runtime diagnostics indicate a pin-context-sensitive op, retry resolve with the narrowest `fromPin` or `toPin` you have instead of guessing a class path.
+- If `graph.ops.resolve` indicates a pin-context-sensitive op, retry resolve with the narrowest `fromPin` or `toPin` you have instead of guessing a class path.
 
 ## 4) Run and Verify
-- Always verify with a fresh `graph.query` after every structural batch.
-- Compile after structural edits.
+- Prefer `graph.verify` after every structural batch. Use a fresh `graph.query` when you need exact node or edge proof or when verify diagnostics need local inspection.
 - Treat `layoutGraph(scope=\"touched\")` as a readability helper, not as proof that the pipeline is correct.
 - Trust readback over mutate optimism if there is any disagreement.
-- When the pipeline drives runtime generation, capture a `graph.runtime` baseline before the edit and compare after regenerate. Prefer `managedResources` and `inspection` over static graph shape when validating spawned output.
+- If the task explicitly cares about world results, perform a separate scene- or instance-level validation pass after graph verification.
 
 ## 5) Layout Rules
 - Keep pipeline flow readable left to right.
@@ -101,8 +102,7 @@ Always leave behind enough evidence that another agent could confirm the edit wo
 Minimum expectations:
 - identify the target asset and graph name
 - show the local pipeline boundary
-- verify with a fresh `graph.query`
-- compile after structural edits
+- use `graph.verify` after structural edits
 
 For local refactors, prefer verifying:
 - node count changed in the expected direction
@@ -110,7 +110,7 @@ For local refactors, prefer verifying:
 - specific old edges are gone
 - specific replacement edges are present
 - preserved upstream and downstream dataflow still connect as intended
-- `graph.runtime` shows the expected before/after change for generated output, for example `totalInstanceCount`, `generatedComponentCount`, or executed node titles
+- scene-level validation is only required when the task explicitly cares about generated runtime behavior
 
 ## Troubleshooting
 - If a PCG edge does not appear after a reported success, trust fresh readback and repair from the observed state.
@@ -119,8 +119,9 @@ For local refactors, prefer verifying:
 - If a pipeline replacement disconnects the graph, rebuild from the current snapshot instead of replaying the original whole batch blindly.
 - If compile succeeds but the pipeline still looks wrong, re-query exact node IDs and edges rather than relying on layout.
 - For layout or move verification, prefer `position` or `layout.position`; `nodePosX/nodePosY` may be null.
-- If a PCG graph still executes but output counts changed unexpectedly, compare `graph.runtime.managedResources.totalInstanceCount` and `inspection.nodes` before assuming the structure edit was wrong.
+- If the verified graph still behaves unexpectedly in a level, treat that as a separate scene-instance problem rather than proof that the graph asset is invalid.
 - `setPinDefault` is not universally supported on PCG nodes. If it fails, keep the committed part of the batch, re-query, and continue from the observed state.
+- `graph.verify` can return graph-level diagnostics even when the compile step itself succeeds; treat those diagnostics as authoritative for the asset.
 
 For recurring failure patterns and concrete fixes, read [references/troubleshooting.md](references/troubleshooting.md).
 
