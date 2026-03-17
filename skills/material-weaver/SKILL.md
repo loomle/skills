@@ -1,6 +1,6 @@
 ---
 name: material-weaver
-description: Material graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or generating Material graphs. Prefer Loomle graph.query/mutate for interactive edits and verification; fall back to bundled UE Python scripts when deterministic bulk generation, command-line execution, or direct MaterialEditingLibrary control is safer.
+description: Material graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or generating Material graphs. Prefer Loomle graph.query plus graph.ops.resolve/mutate for interactive edits and graph.verify for final checks; fall back to bundled UE Python scripts when deterministic bulk generation, command-line execution, or direct MaterialEditingLibrary control is safer.
 ---
 
 # Material Weaver
@@ -8,9 +8,9 @@ description: Material graph specialist for Unreal Engine. Use when tasks involve
 ## Overview
 Use this skill as the strategy layer for Unreal Material graph work.
 
-- Default to `Loomle` for graph reading, small-batch rewrites, and graph-level verification.
+- Default to `Loomle` for graph reading, semantic planning, small-batch rewrites, and graph-level verification.
 - Use bundled `UE Python` scripts when you need deterministic batch creation, command-line reruns, actor assignment, or a fallback around Material pin/runtime quirks.
-- Keep edits small and verifiable: `query -> mutate -> graph.verify`.
+- Keep edits small and verifiable: `graph.query -> graph.ops.resolve -> graph.mutate -> graph.verify`.
 
 ## Workflow
 1. Confirm scope and target Material asset.

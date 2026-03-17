@@ -1,6 +1,6 @@
 ---
 name: blueprint-weaver
-description: Blueprint graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or extending Blueprint graphs. Prefer Loomle graph.query/mutate for interactive edits, preserve external exec/data interfaces during local rewrites, and verify every structural change with readback plus compile.
+description: Blueprint graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or extending Blueprint graphs. Prefer Loomle graph.query plus graph.ops.resolve/mutate for interactive edits, preserve external exec/data interfaces during local rewrites, and verify every structural change with graph.verify plus readback.
 ---
 
 # Blueprint Weaver
@@ -8,8 +8,8 @@ description: Blueprint graph specialist for Unreal Engine. Use when tasks involv
 ## Overview
 Use this skill as the strategy layer for Unreal Blueprint graph work.
 
-- Default to `Loomle` for graph reading, local rewrites, layout, and graph-level verification.
-- Keep edits small and verifiable: `query -> mutate -> graph.verify`.
+- Default to `Loomle` for graph reading, semantic planning, local rewrites, layout, and graph-level verification.
+- Keep edits small and verifiable: `graph.query -> graph.ops.resolve -> graph.mutate -> graph.verify`.
 - Preserve external graph interfaces whenever replacing a local node chain or branch segment.
 
 ## Workflow

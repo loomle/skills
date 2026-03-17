@@ -1,6 +1,6 @@
 ---
 name: pcg-weaver
-description: PCG graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or extending PCG graphs. Prefer Loomle graph.query/mutate for pipeline rewrites, preserve external dataflow interfaces during local changes, and verify every structural edit with readback plus compile.
+description: PCG graph specialist for Unreal Engine. Use when tasks involve reading, repairing, refactoring, or extending PCG graphs. Prefer Loomle graph.query plus graph.ops.resolve/mutate for pipeline rewrites, preserve external dataflow interfaces during local changes, and verify every structural edit with graph.verify plus readback.
 ---
 
 # PCG Weaver
@@ -8,8 +8,8 @@ description: PCG graph specialist for Unreal Engine. Use when tasks involve read
 ## Overview
 Use this skill as the strategy layer for Unreal PCG graph work.
 
-- Default to `Loomle` for graph reading, local pipeline rewrites, layout, and graph-level verification.
-- Keep edits small and verifiable: `query -> mutate -> graph.verify`.
+- Default to `Loomle` for graph reading, semantic planning, local pipeline rewrites, layout, and graph-level verification.
+- Keep edits small and verifiable: `graph.query -> graph.ops.resolve -> graph.mutate -> graph.verify`.
 - Preserve external dataflow interfaces whenever replacing a local pipeline segment.
 - Use scene- or instance-level validation only when the task explicitly depends on spawned runtime behavior; graph tools validate the graph asset itself, not world outcomes.
 
