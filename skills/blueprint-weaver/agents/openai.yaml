@@ -1,4 +1,4 @@
 interface:
   display_name: "Blueprint Weaver"
   short_description: "UE Blueprint graph refactors with Loomle-first workflows."
-  default_prompt: "Read, repair, refactor, and extend Unreal Engine Blueprint graphs using Loomle-first workflows. Prefer graph.query/mutate for local rewrites, verify with readback plus compile, and preserve external graph interfaces during subgraph changes."
+  default_prompt: "Read, repair, refactor, and extend Unreal Engine Blueprint graphs using Loomle-first workflows. Prefer graph.query plus graph.ops.resolve and graph.mutate for local rewrites, use graph.verify as the graph-level acceptance check, and preserve external graph interfaces during subgraph changes."

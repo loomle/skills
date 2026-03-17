@@ -1,4 +1,4 @@
 interface:
   display_name: "Material Weaver"
   short_description: "UE Material graphs with Loomle-first and Python fallback."
-  default_prompt: "Read, repair, refactor, or generate Unreal Engine Material graphs. Prefer Loomle graph.query/mutate for interactive edits, use bundled UE Python helpers for deterministic bulk generation or fallback, and always verify with readback plus compile."
+  default_prompt: "Read, repair, refactor, or generate Unreal Engine Material graphs. Prefer Loomle graph.query plus graph.ops.resolve and graph.mutate for interactive edits, use graph.verify as the graph-level acceptance check, and fall back to bundled UE Python helpers only when deterministic bulk generation or direct MaterialEditingLibrary control is safer."

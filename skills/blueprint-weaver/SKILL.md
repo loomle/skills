@@ -12,14 +12,6 @@ Use this skill as the strategy layer for Unreal Blueprint graph work.
 - Keep edits small and verifiable: `graph.query -> graph.ops.resolve -> graph.mutate -> graph.verify`.
 - Preserve external graph interfaces whenever replacing a local node chain or branch segment.
 
-## Workflow
-1. Confirm scope and target Blueprint asset plus graph name.
-2. Choose the narrowest task recipe.
-3. Query before mutating.
-4. Execute in small verified batches.
-5. Re-query or `graph.verify` after each structural change.
-6. Preserve project style and graph readability.
-
 ## Mutation Safety
 - Treat `graph.mutate` as potentially partial-commit unless readback proves otherwise.
 - For local branch or chain replacement, prefer:
@@ -31,6 +23,8 @@ Use this skill as the strategy layer for Unreal Blueprint graph work.
 ## Task Routing
 Pick the narrowest recipe that matches the request.
 
+- Need a broad Blueprint node inventory, class lookup, tooltip lookup, or fallback class search:
+  read [references/blueprint-node-catalog-usage.md](references/blueprint-node-catalog-usage.md)
 - Broken exec flow, bad data wire, missing node connection, or local cleanup:
   read [references/repair-recipe.md](references/repair-recipe.md)
 - Replace a branch segment, insert a local control flow chain, or preserve external interfaces during rewrite:
@@ -38,7 +32,7 @@ Pick the narrowest recipe that matches the request.
 - Build or extend a Blueprint graph with a larger planned addition:
   read [references/extend-recipe.md](references/extend-recipe.md)
 
-## 1) Confirm Scope
+## Start Here
 - Identify the target Blueprint asset path.
 - Identify the exact graph name before mutating, for example `EventGraph` or `ToggleJetpack`.
 - Identify whether the task is:
@@ -47,8 +41,10 @@ Pick the narrowest recipe that matches the request.
   - subgraph replacement
   - graph extension
 - Identify what external inputs and outputs must remain stable.
+- Default loop: `graph.query -> graph.ops.resolve -> graph.mutate -> graph.verify`.
+- Add a fresh `graph.query` only when you need exact node or edge proof beyond verify output.
 
-## 2) Loomle Mode
+## Loomle Mode
 Use this path first for Blueprint work.
 
 Recommended rhythm:
@@ -69,42 +65,35 @@ Recommended rhythm:
 
 For a concrete Loomle-first edit loop, read [references/loomle-blueprint-workflow.md](references/loomle-blueprint-workflow.md).
 
-## 3) Node Creation Guidance
+## Node Creation Guidance
 Prefer the simplest node-creation path that is reliable in the current graph.
 
+- Use the local Blueprint node catalog when you need broad class discovery, likely node titles, fallback header lookup, or a quick check of whether a node exposes properties or dynamic pins.
 - Use `graph.ops.resolve` first for stable semantic ops such as common control-flow nodes. Reuse the returned `preferredPlan` instead of hardcoding class paths when possible.
 - For edge-sensitive semantic ops such as `core.reroute`, include the narrowest available pin context. If resolve succeeds with pin context, treat the returned steps as the opening move and let the skill finish downstream reconnects and verification.
+- For variable get/set ops, pass `items[*].hints.variableName` before falling back to deterministic class-based creation.
 - Use `addNode.byClass` when deterministic construction is easier or semantic planning does not cover the node you need.
 - If `graph.ops.resolve` returns `resolved=false` with reasons like `requires_pin_context`, treat that as a signal to gather more context or fall back to graph-specific creation guidance rather than forcing the semantic op.
 - Do not assume a semantic plan fully inserts a node into an existing edge. Re-query after the planned steps and explicitly restore downstream connections before deleting old local wiring.
 
 Read [references/action-token-notes.md](references/action-token-notes.md) before choosing a fallback creation path for uncovered nodes.
 
-## 4) Run and Verify
+## Verification
 - Prefer `graph.verify` after every structural batch. Use a fresh `graph.query` when you need exact node or edge proof or when verify returns unexpected diagnostics.
 - Treat `layoutGraph(scope=\"touched\")` as a readability helper, not as proof that the structure is correct.
 - Trust readback over mutate optimism if there is any disagreement.
 
-## 5) Layout Rules
+For local refactors, prefer leaving behind:
+- the target asset and graph name
+- the local rewrite boundary
+- `graph.verify` output
+- exact proof that preserved upstream and downstream interfaces still connect as intended when the task depends on it
+
+## Layout Rules
 - Keep exec flow readable left to right.
 - Keep `then` / `else` fanout visually separated when possible.
 - Preserve nearby local context; do not trigger unnecessary whole-graph churn.
 - Prefer `layoutGraph(scope=\"touched\")` before any global layout.
-
-## 6) Validation Contract
-Always leave behind enough evidence that another agent could confirm the edit worked.
-
-Minimum expectations:
-- identify the target asset and graph name
-- show the local rewrite boundary
-- use `graph.verify` after structural edits
-
-For local refactors, prefer verifying:
-- node count changed in the expected direction
-- specific new node IDs exist
-- specific old edges are gone
-- specific replacement edges are present
-- preserved upstream and downstream interfaces still connect as intended
 
 ## Troubleshooting
 - If node creation fails, re-query the current graph context and retry with either narrower resolve context or deterministic class-based creation.

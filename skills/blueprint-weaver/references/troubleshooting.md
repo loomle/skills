@@ -22,7 +22,7 @@
 
 ## Symptom: Graph looks mostly right but behavior may still be broken
 - Cause: structural readback alone is insufficient for Blueprint edits.
-- Fix: compile after structural edits and treat compile as required validation.
+- Fix: run `graph.verify` after structural edits and treat verify as the required graph-level validation step.
 
 ## Symptom: Local rewrite made the graph harder to read
 - Cause: touched nodes were added without a local layout pass.

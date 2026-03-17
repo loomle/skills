@@ -1,0 +1,3640 @@
+{
+  "summary": {
+    "totalNodes": 114,
+    "dynamicPinNodes": 6,
+    "categories": {
+      "uncategorized": 113,
+      "Utilities|Array": 1
+    }
+  },
+  "indexPath": "references/blueprint-node-catalog-index.json",
+  "jsonPath": "references/blueprint-node-catalog.json",
+  "nodes": [
+    {
+      "className": "UK2Node_AddComponentByClass",
+      "baseClassName": "UK2Node_ConstructObjectFromClass",
+      "baseClasses": [
+        "UK2Node_ConstructObjectFromClass"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_AddComponentByClass.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_AddComponentByClass.h",
+      "relativeCppPath": "Private/K2Node_AddComponentByClass.cpp",
+      "displayTitleHint": "Add Component By Class",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_AddDelegate",
+      "baseClassName": "UK2Node_BaseMCDelegate",
+      "baseClasses": [
+        "UK2Node_BaseMCDelegate"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_AddDelegate.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_AddDelegate.h",
+      "relativeCppPath": null,
+      "displayTitleHint": "Add Delegate",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_MathExpression",
+      "baseClassName": "UK2Node_Composite",
+      "baseClasses": [
+        "UK2Node_Composite"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MathExpression.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MathExpression.h",
+      "relativeCppPath": "Private/K2Node_MathExpression.cpp",
+      "displayTitleHint": "Add Math Expression...",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "Expression",
+          "cppType": "FString",
+          "category": "Expression",
+          "meta": "EditAnywhere, Category = Expression"
+        },
+        {
+          "name": "bMadeAfterRotChange",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_Knot",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Knot.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Knot.h",
+      "relativeCppPath": "Private/K2Node_Knot.cpp",
+      "displayTitleHint": "Add Reroute Node...",
+      "tooltipHint": "Reroute Node (reroutes wires)",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {
+        "ops": [
+          "core.reroute"
+        ],
+        "requiresContext": [
+          "fromPin"
+        ]
+      },
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_FunctionResult",
+      "baseClassName": "UK2Node_FunctionTerminator",
+      "baseClasses": [
+        "UK2Node_FunctionTerminator"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_FunctionResult.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_FunctionResult.h",
+      "relativeCppPath": "Private/K2Node_FunctionResult.cpp",
+      "displayTitleHint": "Add Return Node...",
+      "tooltipHint": "The node terminates the function's execution. It returns output parameters.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_Timeline",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Timeline.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Timeline.h",
+      "relativeCppPath": "Private/K2Node_Timeline.cpp",
+      "displayTitleHint": "Add Timeline...",
+      "tooltipHint": "Timeline node allows values to be keyframed over time.\\nDouble click to open timeline editor.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "TimelineName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "TimelineGuid",
+          "cppType": "FGuid",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_AddComponent",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_AddComponent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_AddComponent.h",
+      "relativeCppPath": "Private/K2Node_AddComponent.cpp",
+      "displayTitleHint": "Add {ComponentType}",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "TemplateBlueprint",
+          "cppType": "FString",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "TemplateType",
+          "cppType": "TObjectPtr<UClass>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_AssignmentStatement",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_AssignmentStatement.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_AssignmentStatement.h",
+      "relativeCppPath": "Private/K2Node_AssignmentStatement.cpp",
+      "displayTitleHint": "Assign",
+      "tooltipHint": "Assigns Value to Variable",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_AssignDelegate",
+      "baseClassName": "UK2Node_AddDelegate",
+      "baseClasses": [
+        "UK2Node_AddDelegate"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_AssignDelegate.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_AssignDelegate.h",
+      "relativeCppPath": "Private/K2Node_AssignDelegate.cpp",
+      "displayTitleHint": "Assign {0}",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_DelegateSet",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_DelegateSet.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_DelegateSet.h",
+      "relativeCppPath": "Private/K2Node_DelegateSet.cpp",
+      "displayTitleHint": "Assign {DelegatePropertyName}",
+      "tooltipHint": "{0}\\n{1}",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "DelegatePropertyName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "DelegatePropertyClass",
+          "cppType": "TSubclassOf<class UObject>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_AsyncAction",
+      "baseClassName": "UK2Node_BaseAsyncTask",
+      "baseClasses": [
+        "UK2Node_BaseAsyncTask"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_AsyncAction.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_AsyncAction.h",
+      "relativeCppPath": "Private/K2Node_AsyncAction.cpp",
+      "displayTitleHint": "Async Action",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_LoadAsset",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_LoadAsset.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_LoadAsset.h",
+      "relativeCppPath": "Private/K2Node_LoadAsset.cpp",
+      "displayTitleHint": "Async Load Asset",
+      "tooltipHint": "Asynchronously loads a Soft Object Reference and returns object of the correct type if the load succeeds",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_LoadAssets",
+      "baseClassName": "UK2Node_LoadAsset",
+      "baseClasses": [
+        "UK2Node_LoadAsset"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_LoadAsset.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_LoadAsset.h",
+      "relativeCppPath": "Private/K2Node_LoadAsset.cpp",
+      "displayTitleHint": "Async Load Assets",
+      "tooltipHint": "Asynchronously loads a list Soft Object References and returns the objects of the correct type if the load succeeds",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_LoadAssetClass",
+      "baseClassName": "UK2Node_LoadAsset",
+      "baseClasses": [
+        "UK2Node_LoadAsset"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_LoadAsset.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_LoadAsset.h",
+      "relativeCppPath": "Private/K2Node_LoadAsset.cpp",
+      "displayTitleHint": "Async Load Class Asset",
+      "tooltipHint": "Asynchronously loads a Soft Class Reference and returns class of the correct type if the load succeeds",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_BaseAsyncTask",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_BaseAsyncTask.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_BaseAsyncTask.h",
+      "relativeCppPath": "Private/K2Node_BaseAsyncTask.cpp",
+      "displayTitleHint": "Async Task: Missing Function",
+      "tooltipHint": "{FunctionTooltip}\\n\\n{LatentString}",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "ProxyFactoryFunctionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "ProxyFactoryClass",
+          "cppType": "TObjectPtr<UClass>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "ProxyClass",
+          "cppType": "TObjectPtr<UClass>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "ProxyActivateFunctionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_DynamicCast",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_DynamicCast.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_DynamicCast.h",
+      "relativeCppPath": "Private/K2Node_DynamicCast.cpp",
+      "displayTitleHint": "Bad cast node",
+      "tooltipHint": "Tries to access object as an interface '{0}' it may implement.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "TargetType",
+          "cppType": "TSubclassOf<class UObject>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "bIsPureCast_DEPRECATED",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_BaseMCDelegate",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_BaseMCDelegate.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_BaseMCDelegate.h",
+      "relativeCppPath": null,
+      "displayTitleHint": "Base MCDelegate",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "DelegateReference",
+          "cppType": "FMemberReference",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_IfThenElse",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_IfThenElse.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_IfThenElse.h",
+      "relativeCppPath": "Private/K2Node_IfThenElse.cpp",
+      "displayTitleHint": "Branch",
+      "tooltipHint": "Branch Statement\\nIf Condition is true, execution goes to True, otherwise it goes to False",
+      "categoryHint": null,
+      "keywords": [
+        "if",
+        "bool",
+        "branch"
+      ],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {
+        "ops": [
+          "bp.flow.branch"
+        ],
+        "requiresContext": [
+          "fromPin"
+        ]
+      },
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_BreakStruct",
+      "baseClassName": "UK2Node_StructMemberGet",
+      "baseClasses": [
+        "UK2Node_StructMemberGet"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_BreakStruct.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_BreakStruct.h",
+      "relativeCppPath": "Private/K2Node_BreakStruct.cpp",
+      "displayTitleHint": "Break <unknown struct>",
+      "tooltipHint": "Adds a node that breaks an '<unknown struct>' into its member fields",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "bMadeAfterOverridePinRemoval",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_CallArrayFunction",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CallArrayFunction.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CallArrayFunction.h",
+      "relativeCppPath": "Private/K2Node_CallArrayFunction.cpp",
+      "displayTitleHint": "Call Array Function",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_CallDataTableFunction",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CallDataTableFunction.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CallDataTableFunction.h",
+      "relativeCppPath": "Private/K2Node_CallDataTableFunction.cpp",
+      "displayTitleHint": "Call Data Table Function",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_CallDelegate",
+      "baseClassName": "UK2Node_BaseMCDelegate",
+      "baseClasses": [
+        "UK2Node_BaseMCDelegate"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CallDelegate.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CallDelegate.h",
+      "relativeCppPath": null,
+      "displayTitleHint": "Call Delegate",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_CallFunctionOnMember",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CallFunctionOnMember.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CallFunctionOnMember.h",
+      "relativeCppPath": "Private/K2Node_CallFunctionOnMember.cpp",
+      "displayTitleHint": "Call Function On Member",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "MemberVariableToCallOn",
+          "cppType": "FMemberReference",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_CallMaterialParameterCollectionFunction",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CallMaterialParameterCollectionFunction.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CallMaterialParameterCollectionFunction.h",
+      "relativeCppPath": "Private/K2Node_CallMaterialParameterCollectionFunction.cpp",
+      "displayTitleHint": "Call Material Parameter Collection Function",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_CastByteToEnum",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "INodeDependingOnEnumInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CastByteToEnum.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CastByteToEnum.h",
+      "relativeCppPath": "Private/K2Node_CastByteToEnum.cpp",
+      "displayTitleHint": "Cast Byte To Enum",
+      "tooltipHint": "Byte to Enum (bad enum)",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "Enum",
+          "cppType": "TObjectPtr<UEnum>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "bSafe",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_ConstructObjectFromClass",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_ConstructObjectFromClass.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_ConstructObjectFromClass.h",
+      "relativeCppPath": "Private/K2Node_ConstructObjectFromClass.cpp",
+      "displayTitleHint": "ClassName",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_ClearDelegate",
+      "baseClassName": "UK2Node_BaseMCDelegate",
+      "baseClasses": [
+        "UK2Node_BaseMCDelegate"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_ClearDelegate.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_ClearDelegate.h",
+      "relativeCppPath": null,
+      "displayTitleHint": "Clear Delegate",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_CommutativeAssociativeBinaryOperator",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction",
+        "IK2Node_AddPinInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CommutativeAssociativeBinaryOperator.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CommutativeAssociativeBinaryOperator.h",
+      "relativeCppPath": "Private/K2Node_CommutativeAssociativeBinaryOperator.cpp",
+      "displayTitleHint": "Commutative Associative Binary Operator",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "NumAdditionalInputs",
+          "cppType": "int32",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_Copy",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Copy.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Copy.h",
+      "relativeCppPath": "Private/K2Node_Copy.cpp",
+      "displayTitleHint": "Copy",
+      "tooltipHint": "Outputs a copy of the value passed into it.",
+      "categoryHint": null,
+      "keywords": [
+        "Duplicate"
+      ],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_CreateDelegate",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CreateDelegate.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CreateDelegate.h",
+      "relativeCppPath": "Private/K2Node_CreateDelegate.cpp",
+      "displayTitleHint": "Create Event",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "SelectedFunctionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": "meta = (BlueprintSearchable = \"true\")"
+        },
+        {
+          "name": "SelectedFunctionGuid",
+          "cppType": "FGuid",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_DeadClass",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_DeadClass.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_DeadClass.h",
+      "relativeCppPath": "Private/K2Node_DeadClass.cpp",
+      "displayTitleHint": "Dead Class",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_DoOnceMultiInput",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "IK2Node_AddPinInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_DoOnceMultiInput.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_DoOnceMultiInput.h",
+      "relativeCppPath": "Private/K2Node_DoOnceMultiInput.cpp",
+      "displayTitleHint": "DoOnce MultiInput",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "NumAdditionalInputs",
+          "cppType": "int32",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "DataNode",
+          "cppType": "TObjectPtr<class UK2Node_TemporaryVariable>",
+          "category": null,
+          "meta": "transient"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_EaseFunction",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_EaseFunction.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_EaseFunction.h",
+      "relativeCppPath": "Private/K2Node_EaseFunction.cpp",
+      "displayTitleHint": "Ease",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "EaseFunctionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_EditablePinBase",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_EditablePinBase.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_EditablePinBase.h",
+      "relativeCppPath": "Private/K2Node_EditablePinBase.cpp",
+      "displayTitleHint": "Editable Pin Base",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_EnumLiteral",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "INodeDependingOnEnumInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_EnumLiteral.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_EnumLiteral.h",
+      "relativeCppPath": "Private/K2Node_EnumLiteral.cpp",
+      "displayTitleHint": "Enum Literal",
+      "tooltipHint": "Literal enum (bad enum)",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "Enum",
+          "cppType": "TObjectPtr<UEnum>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GetEnumeratorName",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetEnumeratorName.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetEnumeratorName.h",
+      "relativeCppPath": "Private/K2Node_GetEnumeratorName.cpp",
+      "displayTitleHint": "Enum to Name",
+      "tooltipHint": "Returns name of enumerator",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_GetEnumeratorNameAsString",
+      "baseClassName": "UK2Node_GetEnumeratorName",
+      "baseClasses": [
+        "UK2Node_GetEnumeratorName"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetEnumeratorNameAsString.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetEnumeratorNameAsString.h",
+      "relativeCppPath": "Private/K2Node_GetEnumeratorNameAsString.cpp",
+      "displayTitleHint": "Enum to String",
+      "tooltipHint": "Returns user friendly name of enumerator",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_EnumEquality",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_EnumEquality.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_EnumEquality.h",
+      "relativeCppPath": "Private/K2Node_EnumEquality.cpp",
+      "displayTitleHint": "Equal (Enum)",
+      "tooltipHint": "Returns true if A is equal to B (A == B)",
+      "categoryHint": null,
+      "keywords": [
+        "=="
+      ],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_MapForEach",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MapForEach.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MapForEach.h",
+      "relativeCppPath": "Private/K2Node_MapForEach.cpp",
+      "displayTitleHint": "For Each Loop (Map)",
+      "tooltipHint": "Loop over each element of a map",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "KeyName",
+          "cppType": "FString",
+          "category": "Map For Each",
+          "meta": "EditDefaultsOnly, Category = \"Map For Each\""
+        },
+        {
+          "name": "ValueName",
+          "cppType": "FString",
+          "category": "Map For Each",
+          "meta": "EditDefaultsOnly, Category = \"Map For Each\""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_SetForEach",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SetForEach.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SetForEach.h",
+      "relativeCppPath": "Private/K2Node_SetForEach.cpp",
+      "displayTitleHint": "For Each Loop (Set)",
+      "tooltipHint": "Loop over each element of a Set",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "ValueName",
+          "cppType": "FString",
+          "category": "Set For Each",
+          "meta": "EditDefaultsOnly, Category = \"Set For Each\""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_ForEachElementInEnum",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "INodeDependingOnEnumInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_ForEachElementInEnum.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_ForEachElementInEnum.h",
+      "relativeCppPath": "Private/K2Node_ForEachElementInEnum.cpp",
+      "displayTitleHint": "ForEach UNKNOWN",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "Enum",
+          "cppType": "TObjectPtr<UEnum>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_FormatText",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_FormatText.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_FormatText.h",
+      "relativeCppPath": "Private/K2Node_FormatText.cpp",
+      "displayTitleHint": "Format Text",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "PinNames",
+          "cppType": "TArray<FName>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_FunctionEntry",
+      "baseClassName": "UK2Node_FunctionTerminator",
+      "baseClasses": [
+        "UK2Node_FunctionTerminator"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_FunctionEntry.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_FunctionEntry.h",
+      "relativeCppPath": "Private/K2Node_FunctionEntry.cpp",
+      "displayTitleHint": "Function Entry",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "CustomGeneratedFunctionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "MetaData",
+          "cppType": "struct FKismetUserDeclaredFunctionMetadata",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "LocalVariables",
+          "cppType": "TArray<FBPVariableDescription>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "bEnforceConstCorrectness",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "ExtraFlags",
+          "cppType": "int32",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_FunctionTerminator",
+      "baseClassName": "UK2Node_EditablePinBase",
+      "baseClasses": [
+        "UK2Node_EditablePinBase"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_FunctionTerminator.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_FunctionTerminator.h",
+      "relativeCppPath": "Private/K2Node_FunctionTerminator.cpp",
+      "displayTitleHint": "Function Terminator",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "FunctionReference",
+          "cppType": "FMemberReference",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "SignatureClass_DEPRECATED",
+          "cppType": "TSubclassOf<class UObject>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "SignatureName_DEPRECATED",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GetArrayItem",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetArrayItem.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetArrayItem.h",
+      "relativeCppPath": "Private/K2Node_GetArrayItem.cpp",
+      "displayTitleHint": "GET",
+      "tooltipHint": "Given an array and an index, returns the item in the array at that index (since\\nit's a direct reference, you can operate directly on the item and changes made\\nto it will be reflected back in the array)",
+      "categoryHint": "Utilities|Array",
+      "keywords": [
+        "array"
+      ],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "bReturnByRefDesired",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GeneratedBoundEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GeneratedBoundEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GeneratedBoundEvent.h",
+      "relativeCppPath": "Private/K2Node_GeneratedBoundEvent.cpp",
+      "displayTitleHint": "Generated Bound Event",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "DelegatePropertyName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "DelegateOwnerClass",
+          "cppType": "TObjectPtr<UClass>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GenericCreateObject",
+      "baseClassName": "UK2Node_ConstructObjectFromClass",
+      "baseClasses": [
+        "UK2Node_ConstructObjectFromClass"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GenericCreateObject.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GenericCreateObject.h",
+      "relativeCppPath": "Private/K2Node_GenericCreateObject.cpp",
+      "displayTitleHint": "Generic Create Object",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_VariableGet",
+      "baseClassName": "UK2Node_Variable",
+      "baseClasses": [
+        "UK2Node_Variable"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_VariableGet.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_VariableGet.h",
+      "relativeCppPath": "Private/K2Node_VariableGet.cpp",
+      "displayTitleHint": "Get",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {
+        "ops": [
+          "bp.var.get"
+        ],
+        "requiresHints": [
+          "variableName"
+        ]
+      },
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "bIsPureGet_DEPRECATED",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "CurrentVariation",
+          "cppType": "EGetNodeVariation",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GetClassDefaults",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetClassDefaults.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetClassDefaults.h",
+      "relativeCppPath": "Private/K2Node_GetClassDefaults.cpp",
+      "displayTitleHint": "Get Class Defaults",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "BlueprintSubscribedTo",
+          "cppType": "TObjectPtr<UBlueprint>",
+          "category": null,
+          "meta": "Transient"
+        },
+        {
+          "name": "ShowPinForProperties",
+          "cppType": "TArray<FOptionalPinFromProperty>",
+          "category": "PinOptions",
+          "meta": "EditAnywhere, Category=PinOptions, EditFixedSize"
+        },
+        {
+          "name": "bExcludeObjectContainers",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "bExcludeObjectArrays_DEPRECATED",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GetDataTableRow",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetDataTableRow.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetDataTableRow.h",
+      "relativeCppPath": "Private/K2Node_GetDataTableRow.cpp",
+      "displayTitleHint": "Get Data Table Row",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_GetEditorSubsystem",
+      "baseClassName": "UK2Node_GetSubsystem",
+      "baseClasses": [
+        "UK2Node_GetSubsystem"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetSubsystem.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetSubsystem.h",
+      "relativeCppPath": "Private/K2Node_GetSubsystem.cpp",
+      "displayTitleHint": "Get Editor Subsystem",
+      "tooltipHint": "Get {ClassName} an Editor Subsystem",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_GetEngineSubsystem",
+      "baseClassName": "UK2Node_GetSubsystem",
+      "baseClasses": [
+        "UK2Node_GetSubsystem"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetSubsystem.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetSubsystem.h",
+      "relativeCppPath": "Private/K2Node_GetSubsystem.cpp",
+      "displayTitleHint": "Get Engine Subsystem",
+      "tooltipHint": "Get {ClassName} an Engine Subsystem",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_GetInputVectorAxisValue",
+      "baseClassName": "UK2Node_GetInputAxisKeyValue",
+      "baseClasses": [
+        "UK2Node_GetInputAxisKeyValue"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetInputVectorAxisValue.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetInputVectorAxisValue.h",
+      "relativeCppPath": "Private/K2Node_GetInputVectorAxisValue.cpp",
+      "displayTitleHint": "Get Input Vector Axis Value",
+      "tooltipHint": "Returns the current value of input axis key {AxisKey}. If input is disabled for the actor the value will be (0, 0, 0).",
+      "categoryHint": null,
+      "keywords": [
+        "Get"
+      ],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_GetSubsystemFromPC",
+      "baseClassName": "UK2Node_GetSubsystem",
+      "baseClasses": [
+        "UK2Node_GetSubsystem"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetSubsystem.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetSubsystem.h",
+      "relativeCppPath": "Private/K2Node_GetSubsystem.cpp",
+      "displayTitleHint": "Get Subsystem From PC",
+      "tooltipHint": "Get {ClassName} from Player Controller\\n\\n{ClassTooltip}",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_Self",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Self.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Self.h",
+      "relativeCppPath": "Private/K2Node_Self.cpp",
+      "displayTitleHint": "Get a reference to self",
+      "tooltipHint": "Gets a reference to this instance of the blueprint",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_StructMemberGet",
+      "baseClassName": "UK2Node_StructOperation",
+      "baseClasses": [
+        "UK2Node_StructOperation"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_StructMemberGet.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_StructMemberGet.h",
+      "relativeCppPath": "Private/K2Node_StructMemberGet.cpp",
+      "displayTitleHint": "Get members in {VariableName}",
+      "tooltipHint": "Get member variables of {VariableName}",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "ShowPinForProperties",
+          "cppType": "TArray<FOptionalPinFromProperty>",
+          "category": "PinOptions",
+          "meta": "EditAnywhere, Category=PinOptions, EditFixedSize"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GetNumEnumEntries",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "INodeDependingOnEnumInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetNumEnumEntries.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetNumEnumEntries.h",
+      "relativeCppPath": "Private/K2Node_GetNumEnumEntries.cpp",
+      "displayTitleHint": "Get number of entries in (bad enum)",
+      "tooltipHint": "Returns (bad enum)_MAX value",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "Enum",
+          "cppType": "TObjectPtr<UEnum>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GetInputAxisKeyValue",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetInputAxisKeyValue.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetInputAxisKeyValue.h",
+      "relativeCppPath": "Private/K2Node_GetInputAxisKeyValue.cpp",
+      "displayTitleHint": "Get {AxisKey}",
+      "tooltipHint": "Returns the current value of input axis key {AxisKey}. If input is disabled for the actor the value will be 0.",
+      "categoryHint": null,
+      "keywords": [
+        "Get"
+      ],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "InputAxisKey",
+          "cppType": "FKey",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GetSubsystem",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetSubsystem.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetSubsystem.h",
+      "relativeCppPath": "Private/K2Node_GetSubsystem.cpp",
+      "displayTitleHint": "Get {ClassName}",
+      "tooltipHint": "GameInstance Subsystem",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "CustomClass",
+          "cppType": "TSubclassOf<USubsystem>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GetInputAxisValue",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GetInputAxisValue.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GetInputAxisValue.h",
+      "relativeCppPath": "Private/K2Node_GetInputAxisValue.cpp",
+      "displayTitleHint": "Get {InputAxisName}",
+      "tooltipHint": "Returns the current value of input axis {0}. If input is disabled for the actor the value will be 0.",
+      "categoryHint": null,
+      "keywords": [
+        "Get"
+      ],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "InputAxisName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_InputActionEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputActionEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputActionEvent.h",
+      "relativeCppPath": "Private/K2Node_InputActionEvent.cpp",
+      "displayTitleHint": "Input Action Event",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "InputActionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "InputKeyEvent",
+          "cppType": "TEnumAsByte<EInputEvent>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_InputAxisKeyEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputAxisKeyEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputAxisKeyEvent.h",
+      "relativeCppPath": "Private/K2Node_InputAxisKeyEvent.cpp",
+      "displayTitleHint": "Input Axis Key Event",
+      "tooltipHint": "Event that provides the current value of the {0} axis once per frame when input is enabled for the containing actor.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "AxisKey",
+          "cppType": "FKey",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_InputKeyEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputKeyEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputKeyEvent.h",
+      "relativeCppPath": "Private/K2Node_InputKeyEvent.cpp",
+      "displayTitleHint": "Input Key Event",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "InputChord",
+          "cppType": "FInputChord",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "InputKeyEvent",
+          "cppType": "TEnumAsByte<EInputEvent>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_InputTouchEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputTouchEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputTouchEvent.h",
+      "relativeCppPath": "Private/K2Node_InputTouchEvent.cpp",
+      "displayTitleHint": "Input Touch Event",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "InputKeyEvent",
+          "cppType": "TEnumAsByte<EInputEvent>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_InputVectorAxisEvent",
+      "baseClassName": "UK2Node_InputAxisKeyEvent",
+      "baseClasses": [
+        "UK2Node_InputAxisKeyEvent"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputVectorAxisEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputVectorAxisEvent.h",
+      "relativeCppPath": "Private/K2Node_InputVectorAxisEvent.cpp",
+      "displayTitleHint": "Input Vector Axis Event",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_InputAction",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "IK2Node_EventNodeInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputAction.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputAction.h",
+      "relativeCppPath": "Private/K2Node_InputAction.cpp",
+      "displayTitleHint": "InputAction {InputActionName}",
+      "tooltipHint": "Event for when the keys bound to input action {0} are pressed or released.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "InputActionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_InputAxisEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputAxisEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputAxisEvent.h",
+      "relativeCppPath": "Private/K2Node_InputAxisEvent.cpp",
+      "displayTitleHint": "InputAxis {InputAxisName}",
+      "tooltipHint": "Event that provides the current value of the {0} axis once per frame when input is enabled for the containing actor.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "InputAxisName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_InputTouch",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "IK2Node_EventNodeInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputTouch.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputTouch.h",
+      "relativeCppPath": "Private/K2Node_InputTouch.cpp",
+      "displayTitleHint": "InputTouch",
+      "tooltipHint": "Event for when a finger presses, releases or is moved on a touch device.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": true,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_InstancedStruct",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InstancedStruct.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InstancedStruct.h",
+      "relativeCppPath": "Private/K2Node_InstancedStruct.cpp",
+      "displayTitleHint": "Instanced Struct",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_Composite",
+      "baseClassName": "UK2Node_Tunnel",
+      "baseClasses": [
+        "UK2Node_Tunnel"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Composite.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Composite.h",
+      "relativeCppPath": "Private/K2Node_Composite.cpp",
+      "displayTitleHint": "Invalid Graph",
+      "tooltipHint": "Collapsed composite node",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "BoundGraph",
+          "cppType": "TObjectPtr<class UEdGraph>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_TemporaryVariable",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_TemporaryVariable.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_TemporaryVariable.h",
+      "relativeCppPath": "Private/K2Node_TemporaryVariable.cpp",
+      "displayTitleHint": "Local {VariableType}",
+      "tooltipHint": "Local temporary {VariableType} variable, which is serialized in save games",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "VariableType",
+          "cppType": "struct FEdGraphPinType",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "bIsPersistent",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_MacroInstance",
+      "baseClassName": "UK2Node_Tunnel",
+      "baseClasses": [
+        "UK2Node_Tunnel"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MacroInstance.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MacroInstance.h",
+      "relativeCppPath": "Private/K2Node_MacroInstance.cpp",
+      "displayTitleHint": "Macro instance",
+      "tooltipHint": "Macro",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "MacroGraph_DEPRECATED",
+          "cppType": "TObjectPtr<class UEdGraph>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "MacroGraphReference",
+          "cppType": "FGraphReference",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "ResolvedWildcardType",
+          "cppType": "struct FEdGraphPinType",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_MakeStruct",
+      "baseClassName": "UK2Node_StructMemberSet",
+      "baseClasses": [
+        "UK2Node_StructMemberSet"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MakeStruct.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MakeStruct.h",
+      "relativeCppPath": "Private/K2Node_MakeStruct.cpp",
+      "displayTitleHint": "Make <unknown struct>",
+      "tooltipHint": "Adds a node that create an '<unknown struct>' from its members",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "bMadeAfterOverridePinRemoval",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_MakeArray",
+      "baseClassName": "UK2Node_MakeContainer",
+      "baseClasses": [
+        "UK2Node_MakeContainer"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MakeArray.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MakeArray.h",
+      "relativeCppPath": "Private/K2Node_MakeArray.cpp",
+      "displayTitleHint": "Make Array",
+      "tooltipHint": "Create an array from a series of items.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_BitmaskLiteral",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "INodeDependingOnEnumInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_BitmaskLiteral.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_BitmaskLiteral.h",
+      "relativeCppPath": "Private/K2Node_BitmaskLiteral.cpp",
+      "displayTitleHint": "Make Bitmask",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "BitflagsEnum",
+          "cppType": "TObjectPtr<UEnum>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_MakeContainer",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "IK2Node_AddPinInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MakeContainer.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MakeContainer.h",
+      "relativeCppPath": "Private/K2Node_MakeContainer.cpp",
+      "displayTitleHint": "Make Container",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "NumInputs",
+          "cppType": "int32",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_MakeMap",
+      "baseClassName": "UK2Node_MakeContainer",
+      "baseClasses": [
+        "UK2Node_MakeContainer"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MakeMap.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MakeMap.h",
+      "relativeCppPath": "Private/K2Node_MakeMap.cpp",
+      "displayTitleHint": "Make Map",
+      "tooltipHint": "Create a map from a series of key/value items.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_MakeSet",
+      "baseClassName": "UK2Node_MakeContainer",
+      "baseClasses": [
+        "UK2Node_MakeContainer"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MakeSet.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MakeSet.h",
+      "relativeCppPath": "Private/K2Node_MakeSet.cpp",
+      "displayTitleHint": "Make Set",
+      "tooltipHint": "Create a set from a series of items.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_ConvertAsset",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_ConvertAsset.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_ConvertAsset.h",
+      "relativeCppPath": "Private/K2Node_ConvertAsset.cpp",
+      "displayTitleHint": "Make Soft Reference",
+      "tooltipHint": "Takes a hard Class or Object reference and makes a Soft Reference.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_MakeVariable",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MakeVariable.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MakeVariable.h",
+      "relativeCppPath": "Private/K2Node_MakeVariable.cpp",
+      "displayTitleHint": "Make Variable",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "VariableType",
+          "cppType": "FBPVariableDescription",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_MultiGate",
+      "baseClassName": "UK2Node_ExecutionSequence",
+      "baseClasses": [
+        "UK2Node_ExecutionSequence"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_MultiGate.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_MultiGate.h",
+      "relativeCppPath": "Private/K2Node_MultiGate.cpp",
+      "displayTitleHint": "MultiGate",
+      "tooltipHint": "Executes a series of pins in order",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "DataNode",
+          "cppType": "TObjectPtr<class UK2Node_TemporaryVariable>",
+          "category": null,
+          "meta": "transient"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_EnumInequality",
+      "baseClassName": "UK2Node_EnumEquality",
+      "baseClasses": [
+        "UK2Node_EnumEquality"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_EnumInequality.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_EnumInequality.h",
+      "relativeCppPath": "Private/K2Node_EnumInequality.cpp",
+      "displayTitleHint": "Not Equal (Enum)",
+      "tooltipHint": "Returns true if A is NOT equal to B (A != B)",
+      "categoryHint": null,
+      "keywords": [
+        "!="
+      ],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_Tunnel",
+      "baseClassName": "UK2Node_EditablePinBase",
+      "baseClasses": [
+        "UK2Node_EditablePinBase"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Tunnel.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Tunnel.h",
+      "relativeCppPath": "Private/K2Node_Tunnel.cpp",
+      "displayTitleHint": "Outputs",
+      "tooltipHint": "Outputs from this graph",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "OutputSourceNode",
+          "cppType": "TObjectPtr<UK2Node_Tunnel>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "InputSinkNode",
+          "cppType": "TObjectPtr<UK2Node_Tunnel>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "MetaData",
+          "cppType": "struct FKismetUserDeclaredFunctionMetadata",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_CallParentFunction",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CallParentFunction.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CallParentFunction.h",
+      "relativeCppPath": "Private/K2Node_CallParentFunction.cpp",
+      "displayTitleHint": "Parent: {FunctionName}",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_PromotableOperator",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction",
+        "IK2Node_AddPinInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_PromotableOperator.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_PromotableOperator.h",
+      "relativeCppPath": "Private/K2Node_PromotableOperator.cpp",
+      "displayTitleHint": "Promotable Operator",
+      "tooltipHint": "{FunctionTooltip}\\n\\nTo go back to old math nodes, uncheck 'Enable Type Promotion' in the Blueprint Editor Settings. Both node types are supported.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "OperationName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "NumAdditionalInputs",
+          "cppType": "int32",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_PureAssignmentStatement",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_PureAssignmentStatement.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_PureAssignmentStatement.h",
+      "relativeCppPath": "Private/K2Node_PureAssignmentStatement.cpp",
+      "displayTitleHint": "Pure Assignment Statement",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_RemoveDelegate",
+      "baseClassName": "UK2Node_BaseMCDelegate",
+      "baseClasses": [
+        "UK2Node_BaseMCDelegate"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_RemoveDelegate.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_RemoveDelegate.h",
+      "relativeCppPath": null,
+      "displayTitleHint": "Remove Delegate",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_Select",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "INodeDependingOnEnumInterface",
+        "IK2Node_AddPinInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Select.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Select.h",
+      "relativeCppPath": "Private/K2Node_Select.cpp",
+      "displayTitleHint": "Select",
+      "tooltipHint": "Return the option at Index, (first option is indexed at 0)",
+      "categoryHint": null,
+      "keywords": [
+        "Ternary",
+        "Select"
+      ],
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "NumOptionPins",
+          "cppType": "int32",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "IndexPinType",
+          "cppType": "FEdGraphPinType",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "Enum",
+          "cppType": "TObjectPtr<UEnum>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "EnumEntries",
+          "cppType": "TArray<FName>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "EnumEntryFriendlyNames",
+          "cppType": "TArray<FText>",
+          "category": null,
+          "meta": "Transient"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_ExecutionSequence",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "IK2Node_AddPinInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_ExecutionSequence.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_ExecutionSequence.h",
+      "relativeCppPath": "Private/K2Node_ExecutionSequence.cpp",
+      "displayTitleHint": "Sequence",
+      "tooltipHint": "Executes a series of pins in order",
+      "categoryHint": null,
+      "keywords": [
+        "sequence"
+      ],
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "ops": [
+          "bp.flow.sequence"
+        ],
+        "requiresContext": [
+          "fromPin"
+        ],
+        "hasDynamicPins": true
+      },
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_VariableSetRef",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_VariableSetRef.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_VariableSetRef.h",
+      "relativeCppPath": "Private/K2Node_VariableSetRef.cpp",
+      "displayTitleHint": "Set By-Ref Var",
+      "tooltipHint": "Set the value of the connected pass-by-ref variable",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_SetVariableOnPersistentFrame",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SetVariableOnPersistentFrame.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SetVariableOnPersistentFrame.h",
+      "relativeCppPath": "Private/K2Node_SetVariableOnPersistentFrame.cpp",
+      "displayTitleHint": "Set Variable On Persistent Frame",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_SetFieldsInStruct",
+      "baseClassName": "UK2Node_MakeStruct",
+      "baseClasses": [
+        "UK2Node_MakeStruct"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SetFieldsInStruct.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SetFieldsInStruct.h",
+      "relativeCppPath": "Private/K2Node_SetFieldsInStruct.cpp",
+      "displayTitleHint": "Set members in <unknown struct>",
+      "tooltipHint": "Adds a node that modifies an '<unknown struct>'",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_StructMemberSet",
+      "baseClassName": "UK2Node_StructOperation",
+      "baseClasses": [
+        "UK2Node_StructOperation"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_StructMemberSet.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_StructMemberSet.h",
+      "relativeCppPath": "Private/K2Node_StructMemberSet.cpp",
+      "displayTitleHint": "Set members in {VariableName}",
+      "tooltipHint": "Set member variables of {VariableName}",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "ShowPinForProperties",
+          "cppType": "TArray<FOptionalPinFromProperty>",
+          "category": "PinOptions",
+          "meta": "EditAnywhere, Category=PinOptions, EditFixedSize"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_VariableSet",
+      "baseClassName": "UK2Node_Variable",
+      "baseClasses": [
+        "UK2Node_Variable"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_VariableSet.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_VariableSet.h",
+      "relativeCppPath": "Private/K2Node_VariableSet.cpp",
+      "displayTitleHint": "Set with Notify and Broadcast",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {
+        "ops": [
+          "bp.var.set"
+        ],
+        "requiresHints": [
+          "variableName"
+        ]
+      },
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_SpawnActorFromClass",
+      "baseClassName": "UK2Node_ConstructObjectFromClass",
+      "baseClasses": [
+        "UK2Node_ConstructObjectFromClass"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SpawnActorFromClass.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SpawnActorFromClass.h",
+      "relativeCppPath": "Private/K2Node_SpawnActorFromClass.cpp",
+      "displayTitleHint": "Spawn Actor from Class",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_SpawnActor",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SpawnActor.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SpawnActor.h",
+      "relativeCppPath": "Private/K2Node_SpawnActor.cpp",
+      "displayTitleHint": "SpawnActor NONE",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_StructOperation",
+      "baseClassName": "UK2Node_Variable",
+      "baseClasses": [
+        "UK2Node_Variable"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_StructOperation.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_StructOperation.h",
+      "relativeCppPath": "Private/K2Node_StructOperation.cpp",
+      "displayTitleHint": "Struct Operation",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "StructType",
+          "cppType": "TObjectPtr<UScriptStruct>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_Switch",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Switch.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Switch.h",
+      "relativeCppPath": "Private/K2Node_Switch.cpp",
+      "displayTitleHint": "Switch",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "FunctionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "FunctionClass",
+          "cppType": "TSubclassOf<class UObject>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_SwitchEnum",
+      "baseClassName": "UK2Node_Switch",
+      "baseClasses": [
+        "UK2Node_Switch",
+        "INodeDependingOnEnumInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SwitchEnum.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SwitchEnum.h",
+      "relativeCppPath": "Private/K2Node_SwitchEnum.cpp",
+      "displayTitleHint": "Switch on (bad enum)",
+      "tooltipHint": "Selects an output that matches the input value",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "Enum",
+          "cppType": "TObjectPtr<UEnum>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "EnumEntries",
+          "cppType": "TArray<FName>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "EnumFriendlyNames",
+          "cppType": "TArray<FText>",
+          "category": null,
+          "meta": "Transient"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_SwitchInteger",
+      "baseClassName": "UK2Node_Switch",
+      "baseClasses": [
+        "UK2Node_Switch"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SwitchInteger.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SwitchInteger.h",
+      "relativeCppPath": "Private/K2Node_SwitchInteger.cpp",
+      "displayTitleHint": "Switch on Int",
+      "tooltipHint": "Selects an output that matches the input value",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "StartIndex",
+          "cppType": "int32",
+          "category": "PinOptions",
+          "meta": "EditAnywhere, Category=PinOptions, meta=(NoSpinbox=true)"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_SwitchName",
+      "baseClassName": "UK2Node_Switch",
+      "baseClasses": [
+        "UK2Node_Switch"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SwitchName.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SwitchName.h",
+      "relativeCppPath": "Private/K2Node_SwitchName.cpp",
+      "displayTitleHint": "Switch on Name",
+      "tooltipHint": "Selects an output that matches the input value",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "PinNames",
+          "cppType": "TArray<FName>",
+          "category": "PinOptions",
+          "meta": "EditAnywhere, Category=PinOptions"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_SwitchString",
+      "baseClassName": "UK2Node_Switch",
+      "baseClasses": [
+        "UK2Node_Switch"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_SwitchString.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_SwitchString.h",
+      "relativeCppPath": "Private/K2Node_SwitchString.cpp",
+      "displayTitleHint": "Switch on String",
+      "tooltipHint": "Selects an output that matches the input value",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "PinNames",
+          "cppType": "TArray<FName>",
+          "category": "PinOptions",
+          "meta": "EditAnywhere, Category=PinOptions"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_GenericToText",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_GenericToText.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_GenericToText.h",
+      "relativeCppPath": "Private/K2Node_GenericToText.cpp",
+      "displayTitleHint": "To Text",
+      "tooltipHint": "Converts numeric value, enum, string, name and some basic structure to text.\\n \\u2022 The basic type are Vector, Vector2D, Rotator, Transform, LinearColor, DateTime.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_Literal",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Literal.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Literal.h",
+      "relativeCppPath": "Private/K2Node_Literal.cpp",
+      "displayTitleHint": "Unknown",
+      "tooltipHint": "Stores a reference to an actor in the level",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "ObjectRef",
+          "cppType": "TObjectPtr<class UObject>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_Variable",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Variable.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Variable.h",
+      "relativeCppPath": "Private/K2Node_Variable.cpp",
+      "displayTitleHint": "Variable",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "VariableReference",
+          "cppType": "FMemberReference",
+          "category": null,
+          "meta": "meta=(BlueprintSearchable=\"true\", BlueprintSearchableHiddenExplicit=\"true\", BlueprintSearchableFormatVersion=\"FIB_VER_VARIABLE_REFERENCE\")"
+        },
+        {
+          "name": "SelfContextInfo",
+          "cppType": "TEnumAsByte<ESelfContextInfo::Type>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "VariableSourceClass_DEPRECATED",
+          "cppType": "TSubclassOf<class UObject>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "VariableName_DEPRECATED",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_Message",
+      "baseClassName": "UK2Node_CallFunction",
+      "baseClasses": [
+        "UK2Node_CallFunction"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Message.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Message.h",
+      "relativeCppPath": "Private/K2Node_Message.cpp",
+      "displayTitleHint": "{0} (Message)",
+      "tooltipHint": "{0}\\nMessage. This does nothing if the target does not implement the required interface.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_ClassDynamicCast",
+      "baseClassName": "UK2Node_DynamicCast",
+      "baseClasses": [
+        "UK2Node_DynamicCast"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_ClassDynamicCast.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_ClassDynamicCast.h",
+      "relativeCppPath": "Private/K2Node_ClassDynamicCast.cpp",
+      "displayTitleHint": "{0} Class",
+      "tooltipHint": "Tries to access class as an interface '{0}' it may implement.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": []
+    },
+    {
+      "className": "UK2Node_TunnelBoundary",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_TunnelBoundary.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_TunnelBoundary.h",
+      "relativeCppPath": "Private/K2Node_TunnelBoundary.cpp",
+      "displayTitleHint": "{BaseName} - {TunnelBoundaryType}",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": false,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "BaseName",
+          "cppType": "FName",
+          "category": null,
+          "meta": "Transient"
+        },
+        {
+          "name": "TunnelBoundaryType",
+          "cppType": "ETunnelBoundaryType",
+          "category": null,
+          "meta": "Transient"
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_ActorBoundEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_ActorBoundEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_ActorBoundEvent.h",
+      "relativeCppPath": "Private/K2Node_ActorBoundEvent.cpp",
+      "displayTitleHint": "{DelegatePropertyName} (None)",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "DelegatePropertyName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "DelegateOwnerClass",
+          "cppType": "TObjectPtr<UClass>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "EventOwner",
+          "cppType": "TObjectPtr<class AActor>",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_ComponentBoundEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_ComponentBoundEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_ComponentBoundEvent.h",
+      "relativeCppPath": "Private/K2Node_ComponentBoundEvent.cpp",
+      "displayTitleHint": "{DelegatePropertyName} ({ComponentPropertyName})",
+      "tooltipHint": null,
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "DelegatePropertyName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "DelegateOwnerClass",
+          "cppType": "TObjectPtr<UClass>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "ComponentPropertyName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_CallFunction",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CallFunction.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CallFunction.h",
+      "relativeCppPath": "Private/K2Node_CallFunction.cpp",
+      "displayTitleHint": "{FunctionName}",
+      "tooltipHint": "Call unknown function {0} - missing from {1}",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "FunctionReference",
+          "cppType": "FMemberReference",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "CallFunctionName_DEPRECATED",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "CallFunctionClass_DEPRECATED",
+          "cppType": "TSubclassOf<class UObject>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "NodePurityOverride",
+          "cppType": "ENodePurityOverride",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_CustomEvent",
+      "baseClassName": "UK2Node_Event",
+      "baseClasses": [
+        "UK2Node_Event"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_CustomEvent.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_CustomEvent.h",
+      "relativeCppPath": "Private/K2Node_CustomEvent.cpp",
+      "displayTitleHint": "{FunctionName}{RPCString}\\nCustom Event",
+      "tooltipHint": "An event with customizable name and parameters.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": false,
+      "hasExpandNode": false,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "DeprecationMessage",
+          "cppType": "FString",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "bIsDeprecated",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "bCallInEditor",
+          "cppType": "bool",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "MetaData",
+          "cppType": "FKismetUserDeclaredFunctionMetadata",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_InputKey",
+      "baseClassName": "UK2Node",
+      "baseClasses": [
+        "UK2Node",
+        "IK2Node_EventNodeInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_InputKey.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_InputKey.h",
+      "relativeCppPath": "Private/K2Node_InputKey.cpp",
+      "displayTitleHint": "{ModifierKey} {Key}",
+      "tooltipHint": "Events for when the {0} key is pressed or released while {1} is also held.",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": true,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": true,
+      "properties": [
+        {
+          "name": "InputKey",
+          "cppType": "FKey",
+          "category": "Input",
+          "meta": "EditAnywhere, Category=\"Input\""
+        }
+      ]
+    },
+    {
+      "className": "UK2Node_Event",
+      "baseClassName": "UK2Node_EditablePinBase",
+      "baseClasses": [
+        "UK2Node_EditablePinBase",
+        "IK2Node_EventNodeInterface"
+      ],
+      "relativeHeaderPath": "Classes/K2Node_Event.h",
+      "headerPath": "/Users/Shared/Epic Games/UE_5.7/Engine/Source/Editor/BlueprintGraph/Classes/K2Node_Event.h",
+      "relativeCppPath": "Private/K2Node_Event.cpp",
+      "displayTitleHint": "{Title}\\nFrom {InterfaceClass}",
+      "tooltipHint": "{FunctionTooltip}\\n\\n{ClientString}",
+      "categoryHint": null,
+      "keywords": [],
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "hasGetMenuActions": false,
+      "hasAllocateDefaultPins": true,
+      "hasExpandNode": true,
+      "hasValidateNodeDuringCompilation": true,
+      "hasNodeProperties": false,
+      "properties": [
+        {
+          "name": "EventSignatureName_DEPRECATED",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "EventSignatureClass_DEPRECATED",
+          "cppType": "TSubclassOf<class UObject>",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "EventReference",
+          "cppType": "FMemberReference",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "CustomFunctionName",
+          "cppType": "FName",
+          "category": null,
+          "meta": ""
+        },
+        {
+          "name": "FunctionFlags",
+          "cppType": "uint32",
+          "category": null,
+          "meta": ""
+        }
+      ]
+    }
+  ]
+}

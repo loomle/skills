@@ -27,11 +27,10 @@ Use `LOOMLE mode`.
 10. Remove the old node or small chain only after the replacement path is present.
 11. Run `layoutGraph(scope=\"touched\")`.
 12. Re-query and verify the preserved interface plus new internal edges.
-13. Compile.
 
 ## Verification Checklist
 - old internal nodes are gone
 - preserved upstream connections still land where intended
 - preserved downstream consumers are still fed
 - the new internal chain is fully connected
-- compile succeeds
+- `graph.verify` status and diagnostics are acceptable

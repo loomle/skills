@@ -1,0 +1,4226 @@
+{
+  "summary": {
+    "totalNodes": 308,
+    "withSemanticHints": 12,
+    "withRootPinHints": 9,
+    "baseClasses": {
+      "UMaterialExpression": 177,
+      "UMaterialExpressionCustomOutput": 16,
+      "UMaterialExpressionTextureSampleParameter2D": 2,
+      "UMaterialExpressionExternalCodeBase": 58,
+      "UMaterialExpressionVectorParameter": 1,
+      "UMaterialExpressionGenericConstant": 1,
+      "UMaterialExpressionScalarParameter": 1,
+      "UMaterialExpressionParameter": 5,
+      "UMaterialExpressionFontSample": 1,
+      "UMaterialExpressionMaterialAttributeLayers": 1,
+      "UMaterialExpressionBlendMaterialAttributes": 1,
+      "UMaterialExpressionFunctionOutput": 1,
+      "UMaterialExpressionRerouteBase": 2,
+      "UMaterialExpressionNamedRerouteBase": 2,
+      "UMaterialExpressionTextureSample": 2,
+      "UMaterialExpressionRuntimeVirtualTextureSample": 1,
+      "UMaterialExpressionSparseVolumeTextureBase": 2,
+      "UMaterialExpressionSparseVolumeTextureSampleParameter": 1,
+      "UMaterialExpressionSparseVolumeTextureSample": 1,
+      "UMaterialExpressionStaticBoolParameter": 1,
+      "UMaterialExpressionSubstrateBSDF": 18,
+      "UMaterialExpressionSubstrateUtilityBase": 4,
+      "UMaterialExpressionTextureCollection": 1,
+      "UMaterialExpressionTextureBase": 2,
+      "UMaterialExpressionTextureSampleParameter": 6
+    }
+  },
+  "nodes": [
+    {
+      "className": "UMaterialExpressionAbs",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Abs",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAbs.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionAbsorptionMediumMaterialOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Absorption Medium Material Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAbsorptionMediumMaterialOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "TransmittanceColor"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionActorPositionWS",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Actor Position WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionActorPositionWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "OriginType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionAdd",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Add",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAdd.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.math.add"
+        ],
+        "targetRootPins": [
+          "BaseColor",
+          "Roughness",
+          "Metallic",
+          "EmissiveColor",
+          "Opacity"
+        ]
+      },
+      "propertyCount": 4,
+      "propertyNames": [
+        "A",
+        "B",
+        "ConstA",
+        "ConstB"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionAggregate",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Aggregate",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAggregate.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "Kind",
+        "UserAggregate",
+        "AttributeNames",
+        "PrototypeInput",
+        "Entries"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionAntialiasedTextureMask",
+      "baseClassName": "UMaterialExpressionTextureSampleParameter2D",
+      "displayTitleHint": "Antialiased Texture Mask",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAntialiasedTextureMask.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Threshold",
+        "Channel"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionAppendVector",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Append Vector",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAppendVector.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionArccosine",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Arccosine",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionArccosine.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionArccosineFast",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Arccosine Fast",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionArccosineFast.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionArcsine",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Arcsine",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionArcsine.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionArcsineFast",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Arcsine Fast",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionArcsineFast.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionArctangent",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Arctangent",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionArctangent.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionArctangentFast",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Arctangent Fast",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionArctangentFast.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionArctangent2",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Arctangent2",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionArctangent2.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Y",
+        "X"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionArctangent2Fast",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Arctangent2 Fast",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionArctangent2Fast.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Y",
+        "X"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionAtmosphericFogColor",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Atmospheric Fog Color",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAtmosphericFogColor.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "WorldPosition",
+        "WorldPositionOriginType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionAtmosphericLightColor",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Atmospheric Light Color",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAtmosphericLightColor.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionAtmosphericLightVector",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Atmospheric Light Vector",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionAtmosphericLightVector.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionBentNormalCustomOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Bent Normal Custom Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBentNormalCustomOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionBindlessSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Bindless Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBindlessSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Default",
+        "Bindless"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionBlackBody",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Black Body",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBlackBody.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Temp"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionBlend",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Blend",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBlend.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "A",
+        "B",
+        "Alpha",
+        "PixelAttributesBlendMode",
+        "VertexAttributesBlendMode"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionBlendMaterialAttributes",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Blend Material Attributes",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBlendMaterialAttributes.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "A",
+        "B",
+        "Alpha",
+        "PixelAttributeBlendType",
+        "VertexAttributeBlendType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionBounds",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Bounds",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBounds.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Type"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionBreakMaterialAttributes",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Break Material Attributes",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBreakMaterialAttributes.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "MaterialAttributes"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionBumpOffset",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Bump Offset",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBumpOffset.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 6,
+      "propertyNames": [
+        "Coordinate",
+        "Height",
+        "HeightRatioInput",
+        "HeightRatio",
+        "ReferencePlane",
+        "ConstCoordinate"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionCameraPositionWS",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Camera Position WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCameraPositionWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionCameraVectorWS",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Camera Vector WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCameraVectorWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionCeil",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Ceil",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCeil.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionChannelMaskParameter",
+      "baseClassName": "UMaterialExpressionVectorParameter",
+      "displayTitleHint": "Channel Mask Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionChannelMaskParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "MaskChannel",
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionClamp",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Clamp",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionClamp.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 6,
+      "propertyNames": [
+        "Input",
+        "Min",
+        "Max",
+        "ClampMode",
+        "MinDefault",
+        "MaxDefault"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionClearCoatNormalCustomOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Clear Coat Normal Custom Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionClearCoatNormalCustomOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionCloudSampleAttribute",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Cloud Sample Attribute",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCloudLayer.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionCollectionParameter",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Collection Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCollectionParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 6,
+      "propertyNames": [
+        "Collection",
+        "ParameterName",
+        "ExpressionGUID",
+        "Group",
+        "SortPriority",
+        "ParameterId"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionCollectionTransform",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Collection Transform",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCollectionTransform.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "Input",
+        "Collection",
+        "ParameterName",
+        "ParameterId",
+        "TransformType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionColorRamp",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Color Ramp",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionColorRamp.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Input",
+        "ConstInput",
+        "ColorCurve"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionComment",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Comment",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionComment.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 6,
+      "propertyNames": [
+        "SizeX",
+        "SizeY",
+        "Text",
+        "CommentColor",
+        "FontSize",
+        "bGroupMode"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionComponentMask",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Component Mask",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionComponentMask.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionComposite",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Composite",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionComposite.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "SubgraphName",
+        "InputExpressions",
+        "OutputExpressions"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionConstant",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Constant",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionConstant.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.constant.scalar"
+        ]
+      },
+      "propertyCount": 1,
+      "propertyNames": [
+        "R"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionConstantBiasScale",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Constant Bias Scale",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionConstantBiasScale.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Input",
+        "Bias",
+        "Scale"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionConstantDouble",
+      "baseClassName": "UMaterialExpressionGenericConstant",
+      "displayTitleHint": "Constant Double",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionGenericConstant.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Value"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionConstant2Vector",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Constant2 Vector",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionConstant2Vector.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "R",
+        "G"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionConstant3Vector",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Constant3 Vector",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionConstant3Vector.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.constant.vector3"
+        ]
+      },
+      "propertyCount": 1,
+      "propertyNames": [
+        "Constant"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionConstant4Vector",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Constant4 Vector",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionConstant4Vector.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Constant"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionConvert",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Convert",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionConvert.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ConvertInputs",
+        "ConvertOutputs",
+        "ConvertMappings",
+        "NodeName"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionCosine",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Cosine",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCosine.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Input",
+        "Period"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionCrossProduct",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Cross Product",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCrossProduct.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionCurveAtlasRowParameter",
+      "baseClassName": "UMaterialExpressionScalarParameter",
+      "displayTitleHint": "Curve Atlas Row Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCurveAtlasRowParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Curve",
+        "Atlas",
+        "InputTime"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionCustom",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Custom",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCustom.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 8,
+      "propertyNames": [
+        "Code",
+        "OutputType",
+        "Description",
+        "Inputs",
+        "AdditionalOutputs",
+        "AdditionalDefines",
+        "IncludeFilePaths",
+        "ShowCode"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionCustomOutput",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Custom Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionCustomOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionDBufferTexture",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "DBuffer Texture",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDBufferTexture.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Coordinates",
+        "DBufferTextureId"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDDX",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "DDX",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDDX.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Value"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDDY",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "DDY",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDDY.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Value"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDataDrivenShaderPlatformInfoSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Data Driven Shader Platform Info Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDataDrivenShaderPlatformInfoSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "InputTrue",
+        "InputFalse",
+        "DDSPIPropertyNames"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDecalColor",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Decal Color",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDecalColor.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionDecalDerivative",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Decal Derivative",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDecalDerivative.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionDecalLifetimeOpacity",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Decal Lifetime Opacity",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDecalLifetimeOpacity.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionDecalMipmapLevel",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Decal Mipmap Level",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDecalMipmapLevel.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "TextureSize",
+        "ConstWidth",
+        "ConstHeight"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDeltaTime",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Delta Time",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDeltaTime.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionDepthFade",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Depth Fade",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDepthFade.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "InOpacity",
+        "FadeDistance",
+        "OpacityDefault",
+        "FadeDistanceDefault"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDepthOfFieldFunction",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Depth Of Field Function",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDepthOfFieldFunction.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "FunctionValue",
+        "Depth"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDeriveNormalZ",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Derive Normal Z",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDeriveNormalZ.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "InXY"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDesaturation",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Desaturation",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDesaturation.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Input",
+        "Fraction",
+        "LuminanceFactors"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDistance",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Distance",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDistance.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDistanceCullFade",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Distance Cull Fade",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDistanceCullFade.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionDistanceFieldApproxAO",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Distance Field Approx AO",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDistanceFieldApproxAO.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 9,
+      "propertyNames": [
+        "Position",
+        "WorldPositionOriginType",
+        "Normal",
+        "BaseDistance",
+        "BaseDistanceDefault",
+        "Radius",
+        "RadiusDefault",
+        "NumSteps",
+        "StepScaleDefault"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDistanceFieldGradient",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Distance Field Gradient",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDistanceFieldGradient.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Position",
+        "WorldPositionOriginType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDistanceFieldsRenderingSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Distance Fields Rendering Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDistanceFieldsRenderingSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "No",
+        "Yes"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDistanceToNearestSurface",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Distance To Nearest Surface",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDistanceToNearestSurface.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Position",
+        "WorldPositionOriginType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDivide",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Divide",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDivide.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "A",
+        "B",
+        "ConstA",
+        "ConstB"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDotProduct",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Dot Product",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDotProduct.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDoubleVectorParameter",
+      "baseClassName": "UMaterialExpressionParameter",
+      "displayTitleHint": "Double Vector Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDoubleVectorParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "DefaultValue"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionDynamicParameter",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Dynamic Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionDynamicParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "ParamNames",
+        "DefaultValue",
+        "ParameterIndex"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionExponential",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Exponential",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionExponential.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionExponential2",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Exponential2",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionExponential2.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionExternalCodeBase",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "External Code Base",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionExternalCodeBase.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "ExternalCodeIdentifiers"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionEyeAdaptation",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Eye Adaptation",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionEyeAdaptation.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionEyeAdaptationInverse",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Eye Adaptation Inverse",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionEyeAdaptationInverse.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "LightValueInput",
+        "AlphaInput"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFeatureLevelSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Feature Level Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFeatureLevelSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Default"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFirstPersonOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "First Person Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFirstPersonOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "FirstPersonInterpolationAlpha",
+        "ConstFirstPersonInterpolationAlpha"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFloatToUInt",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Float To UInt",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFloatToUInt.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Input",
+        "Mode"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFloor",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Floor",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFloor.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFmod",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Fmod",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFmod.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFontSample",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Font Sample",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFontSample.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Font",
+        "FontTexturePage"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFontSampleParameter",
+      "baseClassName": "UMaterialExpressionFontSample",
+      "displayTitleHint": "Font Sample Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFontSampleParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ParameterName",
+        "ExpressionGUID",
+        "Group",
+        "SortPriority"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFontSignedDistance",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Font Signed Distance",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFontSignedDistance.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionFrac",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Frac",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFrac.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFresnel",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Fresnel",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFresnel.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "ExponentIn",
+        "Exponent",
+        "BaseReflectFractionIn",
+        "BaseReflectFraction",
+        "Normal"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFunctionInput",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Function Input",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFunctionInput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 8,
+      "propertyNames": [
+        "Preview",
+        "InputName",
+        "Description",
+        "Id",
+        "InputType",
+        "PreviewValue",
+        "SortPriority",
+        "BlendInputRelevance"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionFunctionOutput",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Function Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFunctionOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "OutputName",
+        "Description",
+        "SortPriority",
+        "A",
+        "Id"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionGIReplace",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "GIReplace",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionGIReplace.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Default",
+        "StaticIndirect",
+        "DynamicIndirect"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionGenericConstant",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Generic Constant",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionGenericConstant.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionGetMaterialAttributes",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Get Material Attributes",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionGetMaterialAttributes.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "MaterialAttributes",
+        "AttributeGetTypes"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionHairAttributes",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Hair Attributes",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionHairAttributes.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionHairColor",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Hair Color",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionHairColor.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Melanin",
+        "Redness",
+        "DyeColor"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionHsvToRgb",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Hsv To Rgb",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionHsvToRgb.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionIf",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "If",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionIf.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 8,
+      "propertyNames": [
+        "A",
+        "B",
+        "AGreaterThanB",
+        "AEqualsB",
+        "ALessThanB",
+        "EqualsThreshold",
+        "ConstB",
+        "ConstAEqualsB_DEPRECATED"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionIfThenElse",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "If Then Else",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionIfThenElse.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Condition",
+        "True",
+        "False"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionInverseLinearInterpolate",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Inverse Linear Interpolate",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionInverseLinearInterpolate.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 7,
+      "propertyNames": [
+        "A",
+        "B",
+        "Value",
+        "ConstA",
+        "ConstB",
+        "ConstValue",
+        "bClampResult"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionIsFirstPerson",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Is First Person",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionIsFirstPerson.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionIsOrthographic",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Is Orthographic",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionIsOrthographic.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionLayerStack",
+      "baseClassName": "UMaterialExpressionMaterialAttributeLayers",
+      "displayTitleHint": "Layer Stack",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLayerStack.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionLayerStack.cpp",
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "LayerInputs",
+        "AvailableLayers",
+        "AvailableBlends"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionLegacyBlendMaterialAttributes",
+      "baseClassName": "UMaterialExpressionBlendMaterialAttributes",
+      "displayTitleHint": "Legacy Blend Material Attributes",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionBlendMaterialAttributes.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "VertexAttribute_UseA",
+        "VertexAttribute_UseB",
+        "PixelAttribute_UseA",
+        "PixelAttribute_UseB",
+        "BlendFunctionType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionLength",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Length",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLength.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionLightVector",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Light Vector",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLightVector.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionLightmapUVs",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Lightmap UVs",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLightmapUVs.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionLightmassReplace",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Lightmass Replace",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLightmassReplace.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Realtime",
+        "Lightmass"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionLinearInterpolate",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Linear Interpolate",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLinearInterpolate.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.math.lerp"
+        ],
+        "targetRootPins": [
+          "BaseColor",
+          "Roughness",
+          "Metallic",
+          "EmissiveColor",
+          "Opacity"
+        ]
+      },
+      "propertyCount": 6,
+      "propertyNames": [
+        "A",
+        "B",
+        "Alpha",
+        "ConstA",
+        "ConstB",
+        "ConstAlpha"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionLocalPosition",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Local Position",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLocalPosition.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "IncludedOffsets",
+        "LocalOrigin"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionLogarithm",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Logarithm",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLogarithm.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionLogarithm10",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Logarithm10",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLogarithm10.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "X"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionLogarithm2",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Logarithm2",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionLogarithm2.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "X"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMakeMaterialAttributes",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Make Material Attributes",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMakeMaterialAttributes.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 19,
+      "propertyNames": [
+        "BaseColor",
+        "Metallic",
+        "Specular",
+        "Roughness",
+        "Anisotropy",
+        "EmissiveColor",
+        "Opacity",
+        "OpacityMask",
+        "Normal",
+        "Tangent",
+        "WorldPositionOffset",
+        "SubsurfaceColor",
+        "ClearCoat",
+        "ClearCoatRoughness",
+        "AmbientOcclusion",
+        "Refraction",
+        "PixelDepthOffset",
+        "ShadingModel",
+        "Displacement"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMapARPassthroughCameraUV",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Map ARPassthrough Camera UV",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMapARPassthroughCameraUV.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Coordinates"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMaterialAttributeLayers",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Material Attribute Layers",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMaterialAttributeLayers.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 8,
+      "propertyNames": [
+        "Input",
+        "DefaultLayers",
+        "LayerCallers",
+        "NumActiveLayerCallers",
+        "BlendCallers",
+        "NumActiveBlendCallers",
+        "OutputCaller",
+        "bIsLayerGraphBuilt"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMaterialCache",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Material Cache",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMaterialCache.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "bIsSample",
+        "Tag",
+        "Attributes",
+        "Primitive",
+        "UV"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMaterialFunctionCall",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Material Function Call",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMaterialFunctionCall.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.func.call"
+        ],
+        "targetRootPins": [
+          "BaseColor",
+          "Roughness",
+          "Metallic",
+          "Normal",
+          "EmissiveColor"
+        ]
+      },
+      "propertyCount": 4,
+      "propertyNames": [
+        "MaterialFunction",
+        "FunctionInputs",
+        "FunctionOutputs",
+        "FunctionParameterInfo"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMaterialLayerOutput",
+      "baseClassName": "UMaterialExpressionFunctionOutput",
+      "displayTitleHint": "Material Layer Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMaterialLayerOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionMaterialProxyReplace",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Material Proxy Replace",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMaterialProxyReplace.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Realtime",
+        "MaterialProxy"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMax",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Max",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMax.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "A",
+        "B",
+        "ConstA",
+        "ConstB"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMeshPaintTextureCoordinateIndex",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Mesh Paint Texture Coordinate Index",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMeshPaintTextureCoordinateIndex.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionMeshPaintTextureObject",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Mesh Paint Texture Object",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMeshPaintTextureObject.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionMeshPaintTextureReplace",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Mesh Paint Texture Replace",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMeshPaintTextureReplace.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Default",
+        "MeshPaintTexture"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMin",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Min",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMin.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "A",
+        "B",
+        "ConstA",
+        "ConstB"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionModulo",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Modulo",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionModulo.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMotionVectorWorldOffsetOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Motion Vector World Offset Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMotionVectorWorldOffsetOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionMultiply",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Multiply",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionMultiply.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.math.multiply"
+        ],
+        "targetRootPins": [
+          "BaseColor",
+          "Roughness",
+          "Metallic",
+          "EmissiveColor",
+          "Opacity"
+        ]
+      },
+      "propertyCount": 4,
+      "propertyNames": [
+        "A",
+        "B",
+        "ConstA",
+        "ConstB"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionNamedRerouteBase",
+      "baseClassName": "UMaterialExpressionRerouteBase",
+      "displayTitleHint": "Named Reroute Base",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNamedReroute.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionNamedRerouteDeclaration",
+      "baseClassName": "UMaterialExpressionNamedRerouteBase",
+      "displayTitleHint": "Named Reroute Declaration",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNamedReroute.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "Input",
+        "Name",
+        "NodeColor",
+        "VariableGuid"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionNamedRerouteUsage",
+      "baseClassName": "UMaterialExpressionNamedRerouteBase",
+      "displayTitleHint": "Named Reroute Usage",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNamedReroute.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Declaration",
+        "DeclarationGuid"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionNaniteReplace",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Nanite Replace",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNaniteReplace.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Default",
+        "Nanite"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionNeuralNetworkInput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Neural Network Input",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNeuralPostProcessNode.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "Coordinates",
+        "Input0",
+        "Mask",
+        "NeuralIndexType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionNeuralNetworkOutput",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Neural Network Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNeuralPostProcessNode.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Coordinates",
+        "NeuralIndexType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionNoise",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Noise",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNoise.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionNoise.cpp",
+      "semanticHints": {},
+      "propertyCount": 11,
+      "propertyNames": [
+        "Position",
+        "WorldPositionOriginType",
+        "FilterWidth",
+        "Scale",
+        "Quality",
+        "NoiseFunction",
+        "Levels",
+        "OutputMin",
+        "OutputMax",
+        "LevelScale",
+        "RepeatSize"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionNormalize",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Normalize",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNormalize.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "VectorInput"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionObjectBounds",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Object Bounds",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionObjectBounds.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionObjectLocalBounds",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Object Local Bounds",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionObjectLocalBounds.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionObjectOrientation",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Object Orientation",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionObjectOrientation.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionObjectPositionWS",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Object Position WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionObjectPositionWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "OriginType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionObjectRadius",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Object Radius",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionObjectRadius.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionOneMinus",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "One Minus",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionOneMinus.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.math.one_minus"
+        ],
+        "targetRootPins": [
+          "BaseColor",
+          "Roughness",
+          "Metallic",
+          "EmissiveColor",
+          "Opacity"
+        ]
+      },
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionOperator",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Operator",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionOperator.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "DynamicInputs",
+        "Operator"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPanner",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Panner",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPanner.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 7,
+      "propertyNames": [
+        "Coordinate",
+        "Time",
+        "Speed",
+        "SpeedX",
+        "SpeedY",
+        "ConstCoordinate",
+        "bFractionalPart"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionParameter",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ParameterName",
+        "ExpressionGUID",
+        "Group",
+        "SortPriority"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionParticleColor",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Color",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleColor.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleDirection",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Direction",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleDirection.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleMacroUV",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Macro UV",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleMacroUV.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleMotionBlurFade",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Motion Blur Fade",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleMotionBlurFade.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticlePositionWS",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Position WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticlePositionWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "OriginType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionParticleRadius",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Radius",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleRadius.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleRandom",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Random",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleRandom.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleRelativeTime",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Relative Time",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleRelativeTime.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleSize",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Size",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleSize.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleSpeed",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Speed",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleSpeed.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleSpriteRotation",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Sprite Rotation",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleSpriteRotation.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleSubUV",
+      "baseClassName": "UMaterialExpressionTextureSample",
+      "displayTitleHint": "Particle Sub UV",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleSubUV.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionParticleSubUVProperties",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Particle Sub UVProperties",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionParticleSubUVProperties.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPathTracingBufferTexture",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Path Tracing Buffer Texture",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPathTracingBufferTexture.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Coordinates",
+        "PathTracingBufferTextureId"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPathTracingQualitySwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Path Tracing Quality Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPathTracingQualitySwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Normal",
+        "PathTraced"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPathTracingRayTypeSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Path Tracing Ray Type Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPathTracingRayTypeSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "Main",
+        "Shadow",
+        "IndirectDiffuse",
+        "IndirectSpecular",
+        "IndirectVolume"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPerInstanceCustomData",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Per Instance Custom Data",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPerInstanceCustomData.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "DefaultValue",
+        "ConstDefaultValue",
+        "DataIndex"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPerInstanceCustomData3Vector",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Per Instance Custom Data3 Vector",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPerInstanceCustomData.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "DefaultValue",
+        "ConstDefaultValue",
+        "DataIndex"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPerInstanceFadeAmount",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Per Instance Fade Amount",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPerInstanceFadeAmount.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPerInstanceRandom",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Per Instance Random",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPerInstanceRandom.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPinBase",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Pin Base",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPinBase.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "ReroutePins",
+        "PinDirection"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPixelDepth",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Pixel Depth",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPixelDepth.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPixelNormalWS",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Pixel Normal WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPixelNormalWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPostVolumeUserFlagTest",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Post Volume User Flag Test",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPostVolumeUserFlagTest.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "BitIndex",
+        "ConstBitIndex"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPower",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Power",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPower.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Base",
+        "Exponent",
+        "ConstExponent"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionPreSkinnedLocalBounds",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Pre Skinned Local Bounds",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPreSkinnedLocalBounds.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPreSkinnedNormal",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Pre Skinned Normal",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPreSkinnedNormal.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPreSkinnedPosition",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Pre Skinned Position",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPreSkinnedPosition.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPrecomputedAOMask",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Precomputed AOMask",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPrecomputedAOMask.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionPreviousFrameSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Previous Frame Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionPreviousFrameSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "CurrentFrame",
+        "PreviousFrame"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionQualitySwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Quality Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionQualitySwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Default"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRayTracingQualitySwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Ray Tracing Quality Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRayTracingQualitySwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Normal",
+        "RayTraced"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRecordTextureStreamingInfo",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Record Texture Streaming Info",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRecordTextureStreamingInfo.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "TextureObject",
+        "Coordinates"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionReflectionCapturePassSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Reflection Capture Pass Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionReflectionCapturePassSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Default",
+        "Reflection"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionReflectionVectorWS",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Reflection Vector WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionReflectionVectorWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "CustomWorldNormal"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRequiredSamplersSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Required Samplers Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRequiredSamplersSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "InputTrue",
+        "InputFalse",
+        "RequiredSamplers"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionReroute",
+      "baseClassName": "UMaterialExpressionRerouteBase",
+      "displayTitleHint": "Reroute",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionReroute.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRerouteBase",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Reroute Base",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRerouteBase.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionRgbToHsv",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Rgb To Hsv",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRgbToHsv.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRotateAboutAxis",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Rotate About Axis",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRotateAboutAxis.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "NormalizedRotationAxis",
+        "RotationAngle",
+        "PivotPoint",
+        "Position",
+        "Period"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRotator",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Rotator",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRotator.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 6,
+      "propertyNames": [
+        "Coordinate",
+        "Time",
+        "CenterX",
+        "CenterY",
+        "Speed",
+        "ConstCoordinate"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRound",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Round",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRound.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRuntimeVirtualTextureCustomData",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Runtime Virtual Texture Custom Data",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRuntimeVirtualTextureCustomData.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionRuntimeVirtualTextureOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Runtime Virtual Texture Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRuntimeVirtualTextureOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 9,
+      "propertyNames": [
+        "BaseColor",
+        "Specular",
+        "Roughness",
+        "Normal",
+        "WorldHeight",
+        "Opacity",
+        "Mask",
+        "Displacement",
+        "Mask4"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRuntimeVirtualTextureReplace",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Runtime Virtual Texture Replace",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRuntimeVirtualTextureReplace.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Default",
+        "VirtualTextureOutput"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRuntimeVirtualTextureSample",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Runtime Virtual Texture Sample",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRuntimeVirtualTextureSample.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 13,
+      "propertyNames": [
+        "Coordinates",
+        "WorldPosition",
+        "MipValue",
+        "DDX",
+        "DDY",
+        "VirtualTexture",
+        "MaterialType",
+        "bSinglePhysicalSpace",
+        "bAdaptive",
+        "WorldPositionOriginType",
+        "TextureAddressMode",
+        "MipValueMode",
+        "bEnableFeedback"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionRuntimeVirtualTextureSampleParameter",
+      "baseClassName": "UMaterialExpressionRuntimeVirtualTextureSample",
+      "displayTitleHint": "Runtime Virtual Texture Sample Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionRuntimeVirtualTextureSampleParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ParameterName",
+        "ExpressionGUID",
+        "Group",
+        "SortPriority"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSRGBColorToWorkingColorSpace",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "SRGBColor To Working Color Space",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSRGBColorToWorkingColorSpace.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSamplePhysicsIntegerField",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Sample Physics Integer Field",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSamplePhysicsField.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "WorldPosition",
+        "WorldPositionOriginType",
+        "FieldTarget"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSamplePhysicsScalarField",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Sample Physics Scalar Field",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSamplePhysicsField.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "WorldPosition",
+        "WorldPositionOriginType",
+        "FieldTarget"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSamplePhysicsVectorField",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Sample Physics Vector Field",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSamplePhysicsField.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "WorldPosition",
+        "WorldPositionOriginType",
+        "FieldTarget"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSaturate",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Saturate",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSaturate.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.math.saturate"
+        ],
+        "targetRootPins": [
+          "BaseColor",
+          "Roughness",
+          "Metallic",
+          "EmissiveColor",
+          "Opacity"
+        ]
+      },
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionScalarBlueNoise",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Scalar Blue Noise",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionNoise.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionNoise.cpp",
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionScalarParameter",
+      "baseClassName": "UMaterialExpressionParameter",
+      "displayTitleHint": "Scalar Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionScalarParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.param.scalar"
+        ],
+        "targetRootPins": [
+          "Roughness",
+          "Metallic",
+          "Specular",
+          "Opacity"
+        ]
+      },
+      "propertyCount": 8,
+      "propertyNames": [
+        "DefaultValue",
+        "ControlType",
+        "SliderMin",
+        "SliderMax",
+        "Enumeration",
+        "EnumerationIndex",
+        "bUseCustomPrimitiveData",
+        "PrimitiveDataIndex"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSceneColor",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Scene Color",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSceneColor.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "InputMode",
+        "Input",
+        "OffsetFraction_DEPRECATED",
+        "ConstInput"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSceneDepth",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Scene Depth",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSceneDepth.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "InputMode",
+        "Input",
+        "Coordinates_DEPRECATED",
+        "ConstInput"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSceneDepthWithoutWater",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Scene Depth Without Water",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSceneDepthWithoutWater.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "InputMode",
+        "Input",
+        "ConstInput",
+        "FallbackDepth"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSceneTexelSize",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Scene Texel Size",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSceneTexelSize.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionSceneTexture",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Scene Texture",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSceneTexture.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Coordinates",
+        "SceneTextureId",
+        "bFiltered"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionScreenPosition",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Screen Position",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionScreenPosition.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionSetMaterialAttributes",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Set Material Attributes",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSetMaterialAttributes.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Inputs",
+        "AttributeSetTypes"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionShaderStageSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Shader Stage Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionShaderStageSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "PixelShader",
+        "VertexShader"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionShadingModel",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Shading Model",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionShadingModel.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "ShadingModel"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionShadingPathSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Shading Path Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionShadingPathSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Default"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionShadowReplace",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Shadow Replace",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionShadowReplace.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Default",
+        "Shadow"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSign",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Sign",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSign.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSine",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Sine",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSine.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Input",
+        "Period"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSingleLayerWaterMaterialOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Single Layer Water Material Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSingleLayerWaterMaterialOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ScatteringCoefficients",
+        "AbsorptionCoefficients",
+        "PhaseG",
+        "ColorScaleBehindWater"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSkyAtmosphereAerialPerspective",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Sky Atmosphere Aerial Perspective",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSkyAtmosphereLightIlluminance.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "WorldPosition",
+        "WorldPositionOriginType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSkyAtmosphereDistantLightScatteredLuminance",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Sky Atmosphere Distant Light Scattered Luminance",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSkyAtmosphereLightIlluminance.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionSkyAtmosphereLightDirection",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Sky Atmosphere Light Direction",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSkyAtmosphereLightDirection.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "LightIndex"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSkyAtmosphereLightDiskLuminance",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Sky Atmosphere Light Disk Luminance",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSkyAtmosphereLightIlluminance.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "LightIndex",
+        "DiskAngularDiameterOverride"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSkyAtmosphereLightIlluminance",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Sky Atmosphere Light Illuminance",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSkyAtmosphereLightIlluminance.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "LightIndex",
+        "WorldPosition",
+        "WorldPositionOriginType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSkyAtmosphereLightIlluminanceOnGround",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Sky Atmosphere Light Illuminance On Ground",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSkyAtmosphereLightIlluminance.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "LightIndex"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSkyAtmosphereViewLuminance",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Sky Atmosphere View Luminance",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSkyAtmosphereViewLuminance.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "WorldDirection"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSkyLightEnvMapSample",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Sky Light Env Map Sample",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSkyLightEnvMapSample.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Direction",
+        "Roughness"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSmoothStep",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Smooth Step",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSmoothStep.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 6,
+      "propertyNames": [
+        "Min",
+        "Max",
+        "Value",
+        "ConstMin",
+        "ConstMax",
+        "ConstValue"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSobol",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Sobol",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSobol.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "Cell",
+        "Index",
+        "Seed",
+        "ConstIndex",
+        "ConstSeed"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSparseVolumeTextureBase",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Sparse Volume Texture Base",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSparseVolumeTextureBase.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "SparseVolumeTexture"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSparseVolumeTextureObject",
+      "baseClassName": "UMaterialExpressionSparseVolumeTextureBase",
+      "displayTitleHint": "Sparse Volume Texture Object",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSparseVolumeTextureObject.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionSparseVolumeTextureObjectParameter",
+      "baseClassName": "UMaterialExpressionSparseVolumeTextureSampleParameter",
+      "displayTitleHint": "Sparse Volume Texture Object Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSparseVolumeTextureObject.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionSparseVolumeTextureSample",
+      "baseClassName": "UMaterialExpressionSparseVolumeTextureBase",
+      "displayTitleHint": "Sparse Volume Texture Sample",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSparseVolumeTextureSample.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 8,
+      "propertyNames": [
+        "Coordinates",
+        "TextureObject",
+        "MipValue",
+        "CoordinatesDX",
+        "CoordinatesDY",
+        "MipValueMode",
+        "SamplerSource",
+        "ConstMipValue"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSparseVolumeTextureSampleParameter",
+      "baseClassName": "UMaterialExpressionSparseVolumeTextureSample",
+      "displayTitleHint": "Sparse Volume Texture Sample Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSparseVolumeTextureSample.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ParameterName",
+        "ExpressionGUID",
+        "Group",
+        "SortPriority"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSpeedTree",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Speed Tree",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSpeedTree.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 9,
+      "propertyNames": [
+        "GeometryInput",
+        "WindInput",
+        "LODInput",
+        "ExtraBendWS",
+        "GeometryType",
+        "WindType",
+        "LODType",
+        "BillboardThreshold",
+        "bAccurateWindVelocities"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSphereMask",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Sphere Mask",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSphereMask.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 6,
+      "propertyNames": [
+        "A",
+        "B",
+        "Radius",
+        "Hardness",
+        "AttenuationRadius",
+        "HardnessPercent"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSphericalParticleOpacity",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Spherical Particle Opacity",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSphericalParticleOpacity.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Density",
+        "ConstantDensity"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSquareRoot",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Square Root",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSquareRoot.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionStaticBool",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Static Bool",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionStaticBool.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionStaticBoolParameter",
+      "baseClassName": "UMaterialExpressionParameter",
+      "displayTitleHint": "Static Bool Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionStaticBoolParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionStaticComponentMaskParameter",
+      "baseClassName": "UMaterialExpressionParameter",
+      "displayTitleHint": "Static Component Mask Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionStaticComponentMaskParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionStaticSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Static Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionStaticSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "A",
+        "B",
+        "Value"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionStaticSwitchParameter",
+      "baseClassName": "UMaterialExpressionStaticBoolParameter",
+      "displayTitleHint": "Static Switch Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionStaticSwitchParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionStep",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Step",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionStep.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "Y",
+        "X",
+        "ConstY",
+        "ConstX"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateAdd",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Add (Parameter Blend)",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateBSDF",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Substrate BSDF",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionSubstrateConvertMaterialAttributes",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Convert Material Attributes",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 7,
+      "propertyNames": [
+        "MaterialAttributes",
+        "WaterScatteringCoefficients",
+        "WaterAbsorptionCoefficients",
+        "WaterPhaseG",
+        "ColorScaleBehindWater",
+        "SubsurfaceProfile",
+        "ShadingModelOverride"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateConvertToDecal",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Convert To Decal",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "DecalMaterial",
+        "Coverage"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateWeight",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Coverage Weight",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "A",
+        "Weight"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateEyeBSDF",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Eye BSDF",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 9,
+      "propertyNames": [
+        "DiffuseColor",
+        "Roughness",
+        "CorneaNormal",
+        "IrisNormal",
+        "IrisPlaneNormal",
+        "IrisMask",
+        "IrisDistance",
+        "EmissiveColor",
+        "SubsurfaceProfile"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateHairBSDF",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Hair BSDF",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 7,
+      "propertyNames": [
+        "BaseColor",
+        "Scatter",
+        "Specular",
+        "Roughness",
+        "Backlit",
+        "Tangent",
+        "EmissiveColor"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateHazinessToSecondaryRoughness",
+      "baseClassName": "UMaterialExpressionSubstrateUtilityBase",
+      "displayTitleHint": "Substrate Haziness-To-Secondary-Roughness",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "BaseRoughness",
+        "Haziness"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateHorizontalMixing",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Horizontal Blend (Parameter Blend)",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Background",
+        "Foreground",
+        "Mix"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateLightFunction",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Light Function",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Color"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateMetalnessToDiffuseAlbedoF0",
+      "baseClassName": "UMaterialExpressionSubstrateUtilityBase",
+      "displayTitleHint": "Substrate Metalness-To-DiffuseAlbedo-F0",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "BaseColor",
+        "Metallic",
+        "Specular"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstratePostProcess",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Post Process",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Color",
+        "Opacity"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateSelect",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Select (Parameter Blend)",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "A",
+        "B",
+        "SelectValue",
+        "Threshold"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateShadingModels",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Shading Models",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 23,
+      "propertyNames": [
+        "BaseColor",
+        "Metallic",
+        "Specular",
+        "Roughness",
+        "Anisotropy",
+        "EmissiveColor",
+        "Normal",
+        "Tangent",
+        "SubSurfaceColor",
+        "ClearCoat",
+        "ClearCoatRoughness",
+        "Opacity",
+        "TransmittanceColor",
+        "WaterScatteringCoefficients",
+        "WaterAbsorptionCoefficients",
+        "WaterPhaseG",
+        "ColorScaleBehindWater",
+        "ClearCoatNormal",
+        "CustomTangent",
+        "ShadingModel",
+        "ThinTranslucentSurfaceCoverage",
+        "ShadingModelOverride",
+        "SubsurfaceProfile"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateSimpleClearCoatBSDF",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Simple Clear Coat",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 8,
+      "propertyNames": [
+        "DiffuseAlbedo",
+        "F0",
+        "Roughness",
+        "ClearCoatCoverage",
+        "ClearCoatRoughness",
+        "Normal",
+        "EmissiveColor",
+        "BottomNormal"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateSingleLayerWaterBSDF",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Single Layer Water BSDF",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 11,
+      "propertyNames": [
+        "BaseColor",
+        "Metallic",
+        "Specular",
+        "Roughness",
+        "Normal",
+        "EmissiveColor",
+        "TopMaterialOpacity",
+        "WaterAlbedo",
+        "WaterExtinction",
+        "WaterPhaseG",
+        "ColorScaleBehindWater"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateSlabBSDF",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Slab BSDF -",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 21,
+      "propertyNames": [
+        "DiffuseAlbedo",
+        "F0",
+        "F90",
+        "Roughness",
+        "Anisotropy",
+        "Normal",
+        "Tangent",
+        "SSSMFP",
+        "SSSMFPScale",
+        "SSSPhaseAnisotropy",
+        "EmissiveColor",
+        "SecondRoughness",
+        "SecondRoughnessWeight",
+        "FuzzRoughness",
+        "FuzzAmount",
+        "FuzzColor",
+        "GlintValue",
+        "GlintUV",
+        "SubsurfaceProfile",
+        "SpecularProfile",
+        "SubSurfaceType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateThinFilm",
+      "baseClassName": "UMaterialExpressionSubstrateUtilityBase",
+      "displayTitleHint": "Substrate Thin-Film",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "Normal",
+        "F0",
+        "F90",
+        "Thickness",
+        "IOR"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateTransmittanceToMFP",
+      "baseClassName": "UMaterialExpressionSubstrateUtilityBase",
+      "displayTitleHint": "Substrate Transmittance-To-MeanFreePath",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "TransmittanceColor",
+        "Thickness"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateUI",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate UI",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Color",
+        "Opacity"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateUnlitBSDF",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Unlit BSDF",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "EmissiveColor",
+        "TransmittanceColor",
+        "Normal"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateUtilityBase",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Substrate Utility Base",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionSubstrateVerticalLayering",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Vertical Layer (Parameter Blend)",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Top",
+        "Base",
+        "Thickness"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubstrateVolumetricFogCloudBSDF",
+      "baseClassName": "UMaterialExpressionSubstrateBSDF",
+      "displayTitleHint": "Substrate Volumetric-Fog-Cloud BSDF",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubstrate.h",
+      "relativeCppPath": "Private/Materials/MaterialExpressionSubstrate.cpp",
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "Albedo",
+        "Extinction",
+        "EmissiveColor",
+        "AmbientOcclusion"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubsurfaceMediumMaterialOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Subsurface Medium Material Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubsurfaceMediumMaterialOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "MeanFreePath",
+        "ScatteringDistribution"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSubtract",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Subtract",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSubtract.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "A",
+        "B",
+        "ConstA",
+        "ConstB"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 6,
+      "propertyNames": [
+        "Description",
+        "SwitchValue",
+        "ConstSwitchValue",
+        "Default",
+        "ConstDefault",
+        "Inputs"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTangent",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Tangent",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTangent.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Input",
+        "Period"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTangentOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Tangent Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTangentOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTemporalResponsivenessOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Temporal Responsiveness Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTemporalResponsivenessOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTemporalSobol",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Temporal Sobol",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTemporalSobol.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "Index",
+        "Seed",
+        "ConstIndex",
+        "ConstSeed"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureBase",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Texture Base",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureBase.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Texture",
+        "SamplerType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureCollection",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Texture Collection",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureCollection.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "TextureCollection"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureCollectionParameter",
+      "baseClassName": "UMaterialExpressionTextureCollection",
+      "displayTitleHint": "Texture Collection Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureCollectionParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ParameterName",
+        "ExpressionGUID",
+        "Group",
+        "SortPriority"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureCoordinate",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Texture Coordinate",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureCoordinate.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "CoordinateIndex",
+        "UTiling",
+        "VTiling"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureObject",
+      "baseClassName": "UMaterialExpressionTextureBase",
+      "displayTitleHint": "Texture Object",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureObject.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionTextureObjectFromCollection",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Texture Object From Collection",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureObjectFromCollection.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "TextureCollection",
+        "TextureCollectionObject",
+        "CollectionIndex",
+        "ConstCollectionIndex",
+        "TextureType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureObjectParameter",
+      "baseClassName": "UMaterialExpressionTextureSampleParameter",
+      "displayTitleHint": "Texture Object Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureObjectParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionTextureProperty",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Texture Property",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureProperty.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "TextureObject",
+        "Property"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureSample",
+      "baseClassName": "UMaterialExpressionTextureBase",
+      "displayTitleHint": "Texture Sample",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureSample.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.texture.sample"
+        ],
+        "targetRootPins": [
+          "BaseColor",
+          "Normal",
+          "EmissiveColor",
+          "Opacity",
+          "Roughness"
+        ]
+      },
+      "propertyCount": 12,
+      "propertyNames": [
+        "Coordinates",
+        "TextureObject",
+        "MipValue",
+        "CoordinatesDX",
+        "CoordinatesDY",
+        "AutomaticViewMipBiasValue",
+        "MipValueMode",
+        "SamplerSource",
+        "GatherMode",
+        "ChannelNames",
+        "ConstCoordinate",
+        "ConstMipValue"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureSampleParameter",
+      "baseClassName": "UMaterialExpressionTextureSample",
+      "displayTitleHint": "Texture Sample Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureSampleParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ParameterName",
+        "ExpressionGUID",
+        "Group",
+        "SortPriority"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTextureSampleParameterCube",
+      "baseClassName": "UMaterialExpressionTextureSampleParameter",
+      "displayTitleHint": "Texture Sample Parameter Cube",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureSampleParameterCube.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionTextureSampleParameterCubeArray",
+      "baseClassName": "UMaterialExpressionTextureSampleParameter",
+      "displayTitleHint": "Texture Sample Parameter Cube Array",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureSampleParameterCubeArray.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionTextureSampleParameterSubUV",
+      "baseClassName": "UMaterialExpressionTextureSampleParameter2D",
+      "displayTitleHint": "Texture Sample Parameter Sub UV",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureSampleParameterSubUV.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionTextureSampleParameterVolume",
+      "baseClassName": "UMaterialExpressionTextureSampleParameter",
+      "displayTitleHint": "Texture Sample Parameter Volume",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureSampleParameterVolume.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionTextureSampleParameter2D",
+      "baseClassName": "UMaterialExpressionTextureSampleParameter",
+      "displayTitleHint": "Texture Sample Parameter2 D",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureSampleParameter2D.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.param.texture"
+        ]
+      },
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionTextureSampleParameter2DArray",
+      "baseClassName": "UMaterialExpressionTextureSampleParameter",
+      "displayTitleHint": "Texture Sample Parameter2 DArray",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTextureSampleParameter2DArray.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionThinTranslucentMaterialOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Thin Translucent Material Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionThinTranslucentMaterialOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "TransmittanceColor",
+        "SurfaceCoverage"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTime",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Time",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTime.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Period"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTransform",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Transform",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTransform.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Input",
+        "TransformSourceType",
+        "TransformType"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTransformPosition",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Transform Position",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTransformPosition.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 9,
+      "propertyNames": [
+        "Input",
+        "TransformSourceType",
+        "TransformType",
+        "PeriodicWorldTileSize",
+        "FirstPersonInterpolationAlpha",
+        "ConstPeriodicWorldTileSize",
+        "ConstFirstPersonInterpolationAlpha",
+        "bUsesPeriodicWorldPosition",
+        "bUsesFirstPersonInterpolationAlpha"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTruncate",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Truncate",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTruncate.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTruncateLWC",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Truncate LWC",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTruncateLWC.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionTwoSidedSign",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Two Sided Sign",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionTwoSidedSign.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionUIntToFloat",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "UInt To Float",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionFloatToUInt.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionUserSceneTexture",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "User Scene Texture",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionUserSceneTexture.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "Coordinates",
+        "UserSceneTexture",
+        "bFiltered",
+        "bClamped"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionVectorNoise",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Vector Noise",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVectorNoise.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "Position",
+        "WorldPositionOriginType",
+        "NoiseFunction",
+        "Quality",
+        "TileSize"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionVectorParameter",
+      "baseClassName": "UMaterialExpressionParameter",
+      "displayTitleHint": "Vector Parameter",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVectorParameter.h",
+      "relativeCppPath": null,
+      "semanticHints": {
+        "ops": [
+          "mat.param.vector"
+        ],
+        "targetRootPins": [
+          "BaseColor",
+          "EmissiveColor"
+        ]
+      },
+      "propertyCount": 4,
+      "propertyNames": [
+        "DefaultValue",
+        "bUseCustomPrimitiveData",
+        "PrimitiveDataIndex",
+        "ChannelNames"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionVertexColor",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Vertex Color",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVertexColor.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionVertexInterpolator",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Vertex Interpolator",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVertexInterpolator.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Input"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionVertexNormalWS",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Vertex Normal WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVertexNormalWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionVertexTangentWS",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Vertex Tangent WS",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVertexTangentWS.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionViewProperty",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "View Property",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionViewProperty.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Property"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionViewSize",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "View Size",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionViewSize.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionVirtualTextureFeatureSwitch",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Virtual Texture Feature Switch",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVirtualTextureFeatureSwitch.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "No",
+        "Yes"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionVolumetricAdvancedMaterialInput",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "Volumetric Advanced Material Input",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVolumetricAdvancedMaterialInput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionVolumetricAdvancedMaterialOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Volumetric Advanced Material Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVolumetricAdvancedMaterialOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 19,
+      "propertyNames": [
+        "PhaseG",
+        "PhaseG2",
+        "PhaseBlend",
+        "MultiScatteringContribution",
+        "MultiScatteringOcclusion",
+        "MultiScatteringEccentricity",
+        "ConservativeDensity",
+        "ConstPhaseG",
+        "ConstPhaseG2",
+        "ConstPhaseBlend",
+        "PerSamplePhaseEvaluation",
+        "MultiScatteringApproximationOctaveCount",
+        "ConstMultiScatteringContribution",
+        "ConstMultiScatteringOcclusion",
+        "ConstMultiScatteringEccentricity",
+        "bGroundContribution",
+        "bGrayScaleMaterial",
+        "bRayMarchVolumeShadow",
+        "bClampMultiScatteringContribution"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionVolumetricCloudEmptySpaceSkippingInput",
+      "baseClassName": "UMaterialExpressionExternalCodeBase",
+      "displayTitleHint": "Volumetric Cloud Empty Space Skipping Input",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVolumetricAdvancedMaterialInput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UMaterialExpressionVolumetricCloudEmptySpaceSkippingOutput",
+      "baseClassName": "UMaterialExpressionCustomOutput",
+      "displayTitleHint": "Volumetric Cloud Empty Space Skipping Output",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionVolumetricAdvancedMaterialOutput.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "ContainsMatter"
+      ]
+    },
+    {
+      "className": "UMaterialExpressionWorldPosition",
+      "baseClassName": "UMaterialExpression",
+      "displayTitleHint": "World Position",
+      "relativeHeaderPath": "Public/Materials/MaterialExpressionWorldPosition.h",
+      "relativeCppPath": null,
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "WorldPositionShaderOffset"
+      ]
+    }
+  ]
+}

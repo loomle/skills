@@ -26,14 +26,13 @@ Use `LOOMLE mode` first.
 10. Remove the old node or subgraph only after the replacement path is present.
 11. Run `layoutGraph(scope=\"touched\")`.
 12. Re-query and verify the preserved interface plus new internal edges.
-13. Compile.
 
 ## Verification Checklist
 - old internal nodes are gone
 - preserved upstream connections still land in the new subgraph
 - preserved downstream consumers are still fed
 - the new internal chain is fully connected
-- compile succeeds
+- `graph.verify` status and diagnostics are acceptable
 
 ## Escalation Rule
 If the replacement gets larger than one local cluster or starts needing repeated pin probing, consider switching to `UE Python mode`.

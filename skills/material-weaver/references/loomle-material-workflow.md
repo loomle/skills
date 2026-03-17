@@ -11,8 +11,9 @@ Make a local Material change with:
 ## Standard Loop
 1. Read current context if the Material is already open.
 2. `graph.query` the root Material graph with `graphType="material"`.
-3. Identify the exact node IDs and external edges around the subgraph you plan to change.
-4. If you are adding a stable semantic node like a scalar parameter or multiply, call `graph.ops.resolve` and prefer its `preferredPlan` over a hardcoded `nodeClassPath`.
+3. If a `MaterialFunctionCall` exposes `childGraphRef`, follow that ref or use `graph.list(includeSubgraphs=true)` before rebuilding the address manually.
+4. Identify the exact node IDs and external edges around the subgraph you plan to change.
+5. If you are adding a stable semantic node like a scalar parameter or multiply, call `graph.ops.resolve` and prefer its `preferredPlan` over a hardcoded `nodeClassPath`.
 5. Apply one small `graph.mutate` batch.
 6. Run `graph.verify`.
 7. If you need exact node or edge proof, immediately `graph.query` again.
@@ -43,7 +44,6 @@ Make a local Material change with:
 - remove the old node or small chain only after the replacement path is present
 - layout touched nodes
 - query and verify
-- compile
 
 ## Verification Checklist
 - Do not trust `changed=true` alone.
@@ -51,6 +51,7 @@ Make a local Material change with:
 - If a connection reports success but does not appear in the snapshot, treat it as a failed edit.
 - For Material specifically, double-check pin names before assuming the edit logic is wrong.
 - If `graph.ops.resolve` supplied `pinHints`, treat them as first-pass wiring guidance, then verify against actual readback.
+- If you want a semantic plan to emit a root-sink connection shape, pass `items[*].hints.targetRootPin` before manually wiring into `__material_root__`.
 - For layout or move verification, read `position` or `layout.position`; `nodePosX/nodePosY` may be null.
 
 ## Material-Specific Notes

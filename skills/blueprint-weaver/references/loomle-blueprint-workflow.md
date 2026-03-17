@@ -36,6 +36,7 @@ Make a local Blueprint change with:
 - prefer the graph address form that already succeeds in the current session
 - for stable semantic nodes like a branch, prefer `graph.ops.resolve` over hardcoded class paths
 - for edge-sensitive semantic nodes like `core.reroute`, retry resolve with `fromPin` or `toPin` context before falling back
+- for variable get/set ops, provide `items[*].hints.variableName` before falling back
 - add replacement nodes
 - treat the resolved plan as the opening move, then explicitly reconnect preserved downstream edges
 - if same-batch wiring through fresh `clientRef`s fails, re-query and finish the wiring with explicit `nodeId`s
@@ -44,7 +45,6 @@ Make a local Blueprint change with:
 - remove the old node or small chain only after readback confirms the replacement path
 - layout touched nodes
 - query and verify
-- compile
 
 ## Verification Checklist
 - Do not trust `changed=true` alone.

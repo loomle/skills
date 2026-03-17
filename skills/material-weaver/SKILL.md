@@ -12,15 +12,6 @@ Use this skill as the strategy layer for Unreal Material graph work.
 - Use bundled `UE Python` scripts when you need deterministic batch creation, command-line reruns, actor assignment, or a fallback around Material pin/runtime quirks.
 - Keep edits small and verifiable: `graph.query -> graph.ops.resolve -> graph.mutate -> graph.verify`.
 
-## Workflow
-1. Confirm scope and target Material asset.
-2. Choose editing mode:
-   - `LOOMLE mode` for interactive repair/refactor.
-   - `UE Python mode` for deterministic generation or fallback.
-3. Execute in small verified batches.
-4. Re-query or `graph.verify` after each structural change.
-5. Preserve project style and readability.
-
 ## Mutation Safety
 - Treat `graph.mutate` as potentially partial-commit unless readback proves otherwise.
 - Prefer two-pass replacement for risky rewires:
@@ -33,6 +24,8 @@ Use this skill as the strategy layer for Unreal Material graph work.
 ## Task Routing
 Pick the narrowest recipe that matches the request.
 
+- Need a broad Material node inventory, expression class lookup, tooltip lookup, or fallback class search:
+  read [references/material-node-catalog-usage.md](references/material-node-catalog-usage.md)
 - Broken or missing wires, wrong root property, small local fix:
   read [references/repair-recipe.md](references/repair-recipe.md)
 - Replace an existing node chain or subgraph while preserving external inputs/outputs:
@@ -40,7 +33,7 @@ Pick the narrowest recipe that matches the request.
 - Build a Material graph mostly from scratch or produce a reusable generator:
   read [references/generate-recipe.md](references/generate-recipe.md)
 
-## 1) Confirm Scope
+## Start Here
 - Identify the target Material asset path and whether to overwrite or create a versioned copy.
 - Identify whether the task is:
   - repair
@@ -48,14 +41,17 @@ Pick the narrowest recipe that matches the request.
   - subgraph replacement
   - whole-graph generation
 - If actor assignment matters, note the target actor or level explicitly before choosing `UE Python mode`.
+- Default loop: `graph.query -> graph.ops.resolve -> graph.mutate -> graph.verify`.
+- Add a fresh `graph.query` only when you need exact node or edge proof beyond verify output.
 
-## 2) Loomle Mode
+## Loomle Mode
 Use this path first when the task is an interactive Material edit rather than a reusable batch script.
 
 Recommended rhythm:
 1. `graph.query` the Material root graph.
-2. Identify the exact subgraph boundary before mutating.
-3. When adding a well-known node, call `graph.ops.resolve` first and prefer the returned `preferredPlan` over hardcoded class guesses.
+2. If a `MaterialFunctionCall` exposes `childGraphRef`, follow that ref or use `graph.list(includeSubgraphs=true)` before rebuilding the address manually.
+3. Identify the exact subgraph boundary before mutating.
+4. When adding a well-known node, call `graph.ops.resolve` first and prefer the returned `preferredPlan` over hardcoded class guesses.
 4. Apply a small `graph.mutate` batch.
 5. Prefer `graph.verify` as the default final check for the batch.
 6. Use a fresh `graph.query` when you need exact node or edge proof beyond verify output.
@@ -72,11 +68,13 @@ When `graph.ops.resolve` returns a stable `preferredPlan`, treat that as the def
 - the op is not in the curated catalog
 - resolve returns `resolved=false`
 - the task needs a node shape that the semantic catalog does not express yet
+- Use the local Material node catalog when you need broad expression discovery, likely root-sink targets, or header/cpp lookup before choosing a fallback class.
+- If you want a semantic plan to emit an immediate root-sink connection shape, pass `items[*].hints.targetRootPin` before manually wiring into `__material_root__`.
 
 Read [references/pin-behavior-ue57.md](references/pin-behavior-ue57.md) before wiring nodes in UE 5.7.
 For a concrete Loomle-first edit recipe, read [references/loomle-material-workflow.md](references/loomle-material-workflow.md).
 
-## 3) UE Python Mode
+## UE Python Mode
 Use this path when one of these is true:
 
 - you are generating a large deterministic Material graph from scratch
@@ -99,7 +97,7 @@ Implementation rules:
 
 Use [scripts/material_graph_helpers.py](scripts/material_graph_helpers.py) helpers directly or copy patterns from it.
 
-## 4) Run and Verify
+## Verification
 - In `Loomle mode`, prefer `graph.verify` after every structural batch. Use a fresh `graph.query` when you need exact node or edge proof or when verify output needs follow-up.
 - In `UE Python mode`, use `UnrealEditor-Cmd -run=pythonscript` and enforce a done marker:
   - [scripts/run_ue_python_and_check_done.sh](scripts/run_ue_python_and_check_done.sh)
@@ -107,46 +105,21 @@ Use [scripts/material_graph_helpers.py](scripts/material_graph_helpers.py) helpe
   - set `UE_BIN` in your environment, or ensure `UnrealEditor-Cmd` is available in `PATH`
 - Treat missing marker as failure even when process exit code is 0.
 
-## 5) Layout Rules
+For local refactors, prefer leaving behind:
+- the target asset path
+- the graph address actually used
+- the intended change boundary
+- `graph.verify` output
+- exact node or edge proof only when the task depends on it
+
+For a compact mode choice table, read [references/mode-selection.md](references/mode-selection.md).
+
+## Layout Rules
 - Prefer readable left-to-right flow from upstream expressions into downstream consumers and root properties.
 - For multi-input nodes, use deterministic source ordering when pin semantics exist, for example `A`, `B`, `Alpha`.
 - Keep all expression nodes left of Material Output.
 - Treat `layoutGraph(scope=\"touched\")` as a convenience, not as proof of correctness. Re-query and inspect positions if layout quality matters.
 - For Material layout verification, prefer `position` or `layout.position` from `graph.query`; `nodePosX/nodePosY` may be null.
-
-## 6) Choosing Between LOOMLE And UE Python
-Choose `Loomle` when:
-- editing an existing Material graph interactively
-- doing local rewires or subgraph replacement
-- you want readback and compile validation after every batch
-
-Choose `UE Python` when:
-- creating a graph from scratch
-- you need a reusable script artifact
-- you need direct MaterialEditingLibrary control
-- Loomle addressing or pin-resolution becomes unreliable for the task
-
-For a compact decision table, read [references/mode-selection.md](references/mode-selection.md).
-
-## 7) Validation Contract
-Always leave behind enough evidence that another agent could confirm the edit worked.
-
-Minimum expectations:
-- identify the target asset path
-- record the graph address actually used
-- show the intended change boundary
-- use `graph.verify` after structural edits
-
-For local refactors, prefer verifying:
-- node count changed in the expected direction
-- specific new node IDs exist
-- specific old edges are gone
-- specific replacement edges are present
-
-If the task used `UE Python mode`, also require:
-- save confirmation
-- compile confirmation
-- explicit done marker or equivalent structured success line
 
 ## Troubleshooting
 - If wires appear missing with no obvious runtime failure, check pin names first.

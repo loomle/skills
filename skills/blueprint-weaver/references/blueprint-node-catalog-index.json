@@ -1,0 +1,1863 @@
+{
+  "summary": {
+    "totalNodes": 114,
+    "dynamicPinNodes": 6,
+    "categories": {
+      "uncategorized": 113,
+      "Utilities|Array": 1
+    }
+  },
+  "nodes": [
+    {
+      "className": "UK2Node_AddComponentByClass",
+      "baseClassName": "UK2Node_ConstructObjectFromClass",
+      "displayTitleHint": "Add Component By Class",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_AddComponentByClass.h",
+      "relativeCppPath": "Private/K2Node_AddComponentByClass.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_AddDelegate",
+      "baseClassName": "UK2Node_BaseMCDelegate",
+      "displayTitleHint": "Add Delegate",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_AddDelegate.h",
+      "relativeCppPath": null,
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_MathExpression",
+      "baseClassName": "UK2Node_Composite",
+      "displayTitleHint": "Add Math Expression...",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MathExpression.h",
+      "relativeCppPath": "Private/K2Node_MathExpression.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Expression",
+        "bMadeAfterRotChange"
+      ]
+    },
+    {
+      "className": "UK2Node_Knot",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Add Reroute Node...",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Knot.h",
+      "relativeCppPath": "Private/K2Node_Knot.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {
+        "ops": [
+          "core.reroute"
+        ],
+        "requiresContext": [
+          "fromPin"
+        ]
+      },
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_FunctionResult",
+      "baseClassName": "UK2Node_FunctionTerminator",
+      "displayTitleHint": "Add Return Node...",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_FunctionResult.h",
+      "relativeCppPath": "Private/K2Node_FunctionResult.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_Timeline",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Add Timeline...",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Timeline.h",
+      "relativeCppPath": "Private/K2Node_Timeline.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "TimelineName",
+        "TimelineGuid"
+      ]
+    },
+    {
+      "className": "UK2Node_AddComponent",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Add {ComponentType}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_AddComponent.h",
+      "relativeCppPath": "Private/K2Node_AddComponent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "TemplateBlueprint",
+        "TemplateType"
+      ]
+    },
+    {
+      "className": "UK2Node_AssignmentStatement",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Assign",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_AssignmentStatement.h",
+      "relativeCppPath": "Private/K2Node_AssignmentStatement.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_AssignDelegate",
+      "baseClassName": "UK2Node_AddDelegate",
+      "displayTitleHint": "Assign {0}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_AssignDelegate.h",
+      "relativeCppPath": "Private/K2Node_AssignDelegate.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_DelegateSet",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Assign {DelegatePropertyName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_DelegateSet.h",
+      "relativeCppPath": "Private/K2Node_DelegateSet.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "DelegatePropertyName",
+        "DelegatePropertyClass"
+      ]
+    },
+    {
+      "className": "UK2Node_AsyncAction",
+      "baseClassName": "UK2Node_BaseAsyncTask",
+      "displayTitleHint": "Async Action",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_AsyncAction.h",
+      "relativeCppPath": "Private/K2Node_AsyncAction.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_LoadAsset",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Async Load Asset",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_LoadAsset.h",
+      "relativeCppPath": "Private/K2Node_LoadAsset.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_LoadAssets",
+      "baseClassName": "UK2Node_LoadAsset",
+      "displayTitleHint": "Async Load Assets",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_LoadAsset.h",
+      "relativeCppPath": "Private/K2Node_LoadAsset.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_LoadAssetClass",
+      "baseClassName": "UK2Node_LoadAsset",
+      "displayTitleHint": "Async Load Class Asset",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_LoadAsset.h",
+      "relativeCppPath": "Private/K2Node_LoadAsset.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_BaseAsyncTask",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Async Task: Missing Function",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_BaseAsyncTask.h",
+      "relativeCppPath": "Private/K2Node_BaseAsyncTask.cpp",
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "ProxyFactoryFunctionName",
+        "ProxyFactoryClass",
+        "ProxyClass",
+        "ProxyActivateFunctionName"
+      ]
+    },
+    {
+      "className": "UK2Node_DynamicCast",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Bad cast node",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_DynamicCast.h",
+      "relativeCppPath": "Private/K2Node_DynamicCast.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "TargetType",
+        "bIsPureCast_DEPRECATED"
+      ]
+    },
+    {
+      "className": "UK2Node_BaseMCDelegate",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Base MCDelegate",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_BaseMCDelegate.h",
+      "relativeCppPath": null,
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "DelegateReference"
+      ]
+    },
+    {
+      "className": "UK2Node_IfThenElse",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Branch",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_IfThenElse.h",
+      "relativeCppPath": "Private/K2Node_IfThenElse.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {
+        "ops": [
+          "bp.flow.branch"
+        ],
+        "requiresContext": [
+          "fromPin"
+        ]
+      },
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_BreakStruct",
+      "baseClassName": "UK2Node_StructMemberGet",
+      "displayTitleHint": "Break <unknown struct>",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_BreakStruct.h",
+      "relativeCppPath": "Private/K2Node_BreakStruct.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "bMadeAfterOverridePinRemoval"
+      ]
+    },
+    {
+      "className": "UK2Node_CallArrayFunction",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Call Array Function",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CallArrayFunction.h",
+      "relativeCppPath": "Private/K2Node_CallArrayFunction.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_CallDataTableFunction",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Call Data Table Function",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CallDataTableFunction.h",
+      "relativeCppPath": "Private/K2Node_CallDataTableFunction.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_CallDelegate",
+      "baseClassName": "UK2Node_BaseMCDelegate",
+      "displayTitleHint": "Call Delegate",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CallDelegate.h",
+      "relativeCppPath": null,
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_CallFunctionOnMember",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Call Function On Member",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CallFunctionOnMember.h",
+      "relativeCppPath": "Private/K2Node_CallFunctionOnMember.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "MemberVariableToCallOn"
+      ]
+    },
+    {
+      "className": "UK2Node_CallMaterialParameterCollectionFunction",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Call Material Parameter Collection Function",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CallMaterialParameterCollectionFunction.h",
+      "relativeCppPath": "Private/K2Node_CallMaterialParameterCollectionFunction.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_CastByteToEnum",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Cast Byte To Enum",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CastByteToEnum.h",
+      "relativeCppPath": "Private/K2Node_CastByteToEnum.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "Enum",
+        "bSafe"
+      ]
+    },
+    {
+      "className": "UK2Node_ConstructObjectFromClass",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "ClassName",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_ConstructObjectFromClass.h",
+      "relativeCppPath": "Private/K2Node_ConstructObjectFromClass.cpp",
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_ClearDelegate",
+      "baseClassName": "UK2Node_BaseMCDelegate",
+      "displayTitleHint": "Clear Delegate",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_ClearDelegate.h",
+      "relativeCppPath": null,
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_CommutativeAssociativeBinaryOperator",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Commutative Associative Binary Operator",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CommutativeAssociativeBinaryOperator.h",
+      "relativeCppPath": "Private/K2Node_CommutativeAssociativeBinaryOperator.cpp",
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "propertyCount": 1,
+      "propertyNames": [
+        "NumAdditionalInputs"
+      ]
+    },
+    {
+      "className": "UK2Node_Copy",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Copy",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Copy.h",
+      "relativeCppPath": "Private/K2Node_Copy.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_CreateDelegate",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Create Event",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CreateDelegate.h",
+      "relativeCppPath": "Private/K2Node_CreateDelegate.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "SelectedFunctionName",
+        "SelectedFunctionGuid"
+      ]
+    },
+    {
+      "className": "UK2Node_DeadClass",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Dead Class",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_DeadClass.h",
+      "relativeCppPath": "Private/K2Node_DeadClass.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_DoOnceMultiInput",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "DoOnce MultiInput",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_DoOnceMultiInput.h",
+      "relativeCppPath": "Private/K2Node_DoOnceMultiInput.cpp",
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "propertyCount": 2,
+      "propertyNames": [
+        "NumAdditionalInputs",
+        "DataNode"
+      ]
+    },
+    {
+      "className": "UK2Node_EaseFunction",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Ease",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_EaseFunction.h",
+      "relativeCppPath": "Private/K2Node_EaseFunction.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "EaseFunctionName"
+      ]
+    },
+    {
+      "className": "UK2Node_EditablePinBase",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Editable Pin Base",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_EditablePinBase.h",
+      "relativeCppPath": "Private/K2Node_EditablePinBase.cpp",
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_EnumLiteral",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Enum Literal",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_EnumLiteral.h",
+      "relativeCppPath": "Private/K2Node_EnumLiteral.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Enum"
+      ]
+    },
+    {
+      "className": "UK2Node_GetEnumeratorName",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Enum to Name",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetEnumeratorName.h",
+      "relativeCppPath": "Private/K2Node_GetEnumeratorName.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_GetEnumeratorNameAsString",
+      "baseClassName": "UK2Node_GetEnumeratorName",
+      "displayTitleHint": "Enum to String",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetEnumeratorNameAsString.h",
+      "relativeCppPath": "Private/K2Node_GetEnumeratorNameAsString.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_EnumEquality",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Equal (Enum)",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_EnumEquality.h",
+      "relativeCppPath": "Private/K2Node_EnumEquality.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_MapForEach",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "For Each Loop (Map)",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MapForEach.h",
+      "relativeCppPath": "Private/K2Node_MapForEach.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "KeyName",
+        "ValueName"
+      ]
+    },
+    {
+      "className": "UK2Node_SetForEach",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "For Each Loop (Set)",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SetForEach.h",
+      "relativeCppPath": "Private/K2Node_SetForEach.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "ValueName"
+      ]
+    },
+    {
+      "className": "UK2Node_ForEachElementInEnum",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "ForEach UNKNOWN",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_ForEachElementInEnum.h",
+      "relativeCppPath": "Private/K2Node_ForEachElementInEnum.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Enum"
+      ]
+    },
+    {
+      "className": "UK2Node_FormatText",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Format Text",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_FormatText.h",
+      "relativeCppPath": "Private/K2Node_FormatText.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "PinNames"
+      ]
+    },
+    {
+      "className": "UK2Node_FunctionEntry",
+      "baseClassName": "UK2Node_FunctionTerminator",
+      "displayTitleHint": "Function Entry",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_FunctionEntry.h",
+      "relativeCppPath": "Private/K2Node_FunctionEntry.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "CustomGeneratedFunctionName",
+        "MetaData",
+        "LocalVariables",
+        "bEnforceConstCorrectness",
+        "ExtraFlags"
+      ]
+    },
+    {
+      "className": "UK2Node_FunctionTerminator",
+      "baseClassName": "UK2Node_EditablePinBase",
+      "displayTitleHint": "Function Terminator",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_FunctionTerminator.h",
+      "relativeCppPath": "Private/K2Node_FunctionTerminator.cpp",
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "FunctionReference",
+        "SignatureClass_DEPRECATED",
+        "SignatureName_DEPRECATED"
+      ]
+    },
+    {
+      "className": "UK2Node_GetArrayItem",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "GET",
+      "categoryHint": "Utilities|Array",
+      "relativeHeaderPath": "Classes/K2Node_GetArrayItem.h",
+      "relativeCppPath": "Private/K2Node_GetArrayItem.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "bReturnByRefDesired"
+      ]
+    },
+    {
+      "className": "UK2Node_GeneratedBoundEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "Generated Bound Event",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GeneratedBoundEvent.h",
+      "relativeCppPath": "Private/K2Node_GeneratedBoundEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "DelegatePropertyName",
+        "DelegateOwnerClass"
+      ]
+    },
+    {
+      "className": "UK2Node_GenericCreateObject",
+      "baseClassName": "UK2Node_ConstructObjectFromClass",
+      "displayTitleHint": "Generic Create Object",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GenericCreateObject.h",
+      "relativeCppPath": "Private/K2Node_GenericCreateObject.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_VariableGet",
+      "baseClassName": "UK2Node_Variable",
+      "displayTitleHint": "Get",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_VariableGet.h",
+      "relativeCppPath": "Private/K2Node_VariableGet.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {
+        "ops": [
+          "bp.var.get"
+        ],
+        "requiresHints": [
+          "variableName"
+        ]
+      },
+      "propertyCount": 2,
+      "propertyNames": [
+        "bIsPureGet_DEPRECATED",
+        "CurrentVariation"
+      ]
+    },
+    {
+      "className": "UK2Node_GetClassDefaults",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Get Class Defaults",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetClassDefaults.h",
+      "relativeCppPath": "Private/K2Node_GetClassDefaults.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "BlueprintSubscribedTo",
+        "ShowPinForProperties",
+        "bExcludeObjectContainers",
+        "bExcludeObjectArrays_DEPRECATED"
+      ]
+    },
+    {
+      "className": "UK2Node_GetDataTableRow",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Get Data Table Row",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetDataTableRow.h",
+      "relativeCppPath": "Private/K2Node_GetDataTableRow.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_GetEditorSubsystem",
+      "baseClassName": "UK2Node_GetSubsystem",
+      "displayTitleHint": "Get Editor Subsystem",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetSubsystem.h",
+      "relativeCppPath": "Private/K2Node_GetSubsystem.cpp",
+      "flags": [],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_GetEngineSubsystem",
+      "baseClassName": "UK2Node_GetSubsystem",
+      "displayTitleHint": "Get Engine Subsystem",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetSubsystem.h",
+      "relativeCppPath": "Private/K2Node_GetSubsystem.cpp",
+      "flags": [],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_GetInputVectorAxisValue",
+      "baseClassName": "UK2Node_GetInputAxisKeyValue",
+      "displayTitleHint": "Get Input Vector Axis Value",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetInputVectorAxisValue.h",
+      "relativeCppPath": "Private/K2Node_GetInputVectorAxisValue.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_GetSubsystemFromPC",
+      "baseClassName": "UK2Node_GetSubsystem",
+      "displayTitleHint": "Get Subsystem From PC",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetSubsystem.h",
+      "relativeCppPath": "Private/K2Node_GetSubsystem.cpp",
+      "flags": [],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_Self",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Get a reference to self",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Self.h",
+      "relativeCppPath": "Private/K2Node_Self.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_StructMemberGet",
+      "baseClassName": "UK2Node_StructOperation",
+      "displayTitleHint": "Get members in {VariableName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_StructMemberGet.h",
+      "relativeCppPath": "Private/K2Node_StructMemberGet.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "ShowPinForProperties"
+      ]
+    },
+    {
+      "className": "UK2Node_GetNumEnumEntries",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Get number of entries in (bad enum)",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetNumEnumEntries.h",
+      "relativeCppPath": "Private/K2Node_GetNumEnumEntries.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "Enum"
+      ]
+    },
+    {
+      "className": "UK2Node_GetInputAxisKeyValue",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Get {AxisKey}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetInputAxisKeyValue.h",
+      "relativeCppPath": "Private/K2Node_GetInputAxisKeyValue.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "InputAxisKey"
+      ]
+    },
+    {
+      "className": "UK2Node_GetSubsystem",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Get {ClassName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetSubsystem.h",
+      "relativeCppPath": "Private/K2Node_GetSubsystem.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "CustomClass"
+      ]
+    },
+    {
+      "className": "UK2Node_GetInputAxisValue",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Get {InputAxisName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GetInputAxisValue.h",
+      "relativeCppPath": "Private/K2Node_GetInputAxisValue.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "InputAxisName"
+      ]
+    },
+    {
+      "className": "UK2Node_InputActionEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "Input Action Event",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputActionEvent.h",
+      "relativeCppPath": "Private/K2Node_InputActionEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "InputActionName",
+        "InputKeyEvent"
+      ]
+    },
+    {
+      "className": "UK2Node_InputAxisKeyEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "Input Axis Key Event",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputAxisKeyEvent.h",
+      "relativeCppPath": "Private/K2Node_InputAxisKeyEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "AxisKey"
+      ]
+    },
+    {
+      "className": "UK2Node_InputKeyEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "Input Key Event",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputKeyEvent.h",
+      "relativeCppPath": "Private/K2Node_InputKeyEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "InputChord",
+        "InputKeyEvent"
+      ]
+    },
+    {
+      "className": "UK2Node_InputTouchEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "Input Touch Event",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputTouchEvent.h",
+      "relativeCppPath": "Private/K2Node_InputTouchEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "InputKeyEvent"
+      ]
+    },
+    {
+      "className": "UK2Node_InputVectorAxisEvent",
+      "baseClassName": "UK2Node_InputAxisKeyEvent",
+      "displayTitleHint": "Input Vector Axis Event",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputVectorAxisEvent.h",
+      "relativeCppPath": "Private/K2Node_InputVectorAxisEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_InputAction",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "InputAction {InputActionName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputAction.h",
+      "relativeCppPath": "Private/K2Node_InputAction.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "InputActionName"
+      ]
+    },
+    {
+      "className": "UK2Node_InputAxisEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "InputAxis {InputAxisName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputAxisEvent.h",
+      "relativeCppPath": "Private/K2Node_InputAxisEvent.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "InputAxisName"
+      ]
+    },
+    {
+      "className": "UK2Node_InputTouch",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "InputTouch",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputTouch.h",
+      "relativeCppPath": "Private/K2Node_InputTouch.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_InstancedStruct",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Instanced Struct",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InstancedStruct.h",
+      "relativeCppPath": "Private/K2Node_InstancedStruct.cpp",
+      "flags": [],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_Composite",
+      "baseClassName": "UK2Node_Tunnel",
+      "displayTitleHint": "Invalid Graph",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Composite.h",
+      "relativeCppPath": "Private/K2Node_Composite.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "BoundGraph"
+      ]
+    },
+    {
+      "className": "UK2Node_TemporaryVariable",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Local {VariableType}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_TemporaryVariable.h",
+      "relativeCppPath": "Private/K2Node_TemporaryVariable.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "VariableType",
+        "bIsPersistent"
+      ]
+    },
+    {
+      "className": "UK2Node_MacroInstance",
+      "baseClassName": "UK2Node_Tunnel",
+      "displayTitleHint": "Macro instance",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MacroInstance.h",
+      "relativeCppPath": "Private/K2Node_MacroInstance.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "MacroGraph_DEPRECATED",
+        "MacroGraphReference",
+        "ResolvedWildcardType"
+      ]
+    },
+    {
+      "className": "UK2Node_MakeStruct",
+      "baseClassName": "UK2Node_StructMemberSet",
+      "displayTitleHint": "Make <unknown struct>",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MakeStruct.h",
+      "relativeCppPath": "Private/K2Node_MakeStruct.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "bMadeAfterOverridePinRemoval"
+      ]
+    },
+    {
+      "className": "UK2Node_MakeArray",
+      "baseClassName": "UK2Node_MakeContainer",
+      "displayTitleHint": "Make Array",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MakeArray.h",
+      "relativeCppPath": "Private/K2Node_MakeArray.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_BitmaskLiteral",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Make Bitmask",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_BitmaskLiteral.h",
+      "relativeCppPath": "Private/K2Node_BitmaskLiteral.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "BitflagsEnum"
+      ]
+    },
+    {
+      "className": "UK2Node_MakeContainer",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Make Container",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MakeContainer.h",
+      "relativeCppPath": "Private/K2Node_MakeContainer.cpp",
+      "flags": [
+        "MinimalAPI",
+        "Abstract",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "propertyCount": 1,
+      "propertyNames": [
+        "NumInputs"
+      ]
+    },
+    {
+      "className": "UK2Node_MakeMap",
+      "baseClassName": "UK2Node_MakeContainer",
+      "displayTitleHint": "Make Map",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MakeMap.h",
+      "relativeCppPath": "Private/K2Node_MakeMap.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_MakeSet",
+      "baseClassName": "UK2Node_MakeContainer",
+      "displayTitleHint": "Make Set",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MakeSet.h",
+      "relativeCppPath": "Private/K2Node_MakeSet.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_ConvertAsset",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Make Soft Reference",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_ConvertAsset.h",
+      "relativeCppPath": "Private/K2Node_ConvertAsset.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_MakeVariable",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Make Variable",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MakeVariable.h",
+      "relativeCppPath": "Private/K2Node_MakeVariable.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "VariableType"
+      ]
+    },
+    {
+      "className": "UK2Node_MultiGate",
+      "baseClassName": "UK2Node_ExecutionSequence",
+      "displayTitleHint": "MultiGate",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_MultiGate.h",
+      "relativeCppPath": "Private/K2Node_MultiGate.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "DataNode"
+      ]
+    },
+    {
+      "className": "UK2Node_EnumInequality",
+      "baseClassName": "UK2Node_EnumEquality",
+      "displayTitleHint": "Not Equal (Enum)",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_EnumInequality.h",
+      "relativeCppPath": "Private/K2Node_EnumInequality.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_Tunnel",
+      "baseClassName": "UK2Node_EditablePinBase",
+      "displayTitleHint": "Outputs",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Tunnel.h",
+      "relativeCppPath": "Private/K2Node_Tunnel.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "OutputSourceNode",
+        "InputSinkNode",
+        "MetaData"
+      ]
+    },
+    {
+      "className": "UK2Node_CallParentFunction",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Parent: {FunctionName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CallParentFunction.h",
+      "relativeCppPath": "Private/K2Node_CallParentFunction.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_PromotableOperator",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "Promotable Operator",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_PromotableOperator.h",
+      "relativeCppPath": "Private/K2Node_PromotableOperator.cpp",
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "propertyCount": 2,
+      "propertyNames": [
+        "OperationName",
+        "NumAdditionalInputs"
+      ]
+    },
+    {
+      "className": "UK2Node_PureAssignmentStatement",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Pure Assignment Statement",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_PureAssignmentStatement.h",
+      "relativeCppPath": "Private/K2Node_PureAssignmentStatement.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_RemoveDelegate",
+      "baseClassName": "UK2Node_BaseMCDelegate",
+      "displayTitleHint": "Remove Delegate",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_RemoveDelegate.h",
+      "relativeCppPath": null,
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_Select",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Select",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Select.h",
+      "relativeCppPath": "Private/K2Node_Select.cpp",
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "hasDynamicPins": true
+      },
+      "propertyCount": 5,
+      "propertyNames": [
+        "NumOptionPins",
+        "IndexPinType",
+        "Enum",
+        "EnumEntries",
+        "EnumEntryFriendlyNames"
+      ]
+    },
+    {
+      "className": "UK2Node_ExecutionSequence",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Sequence",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_ExecutionSequence.h",
+      "relativeCppPath": "Private/K2Node_ExecutionSequence.cpp",
+      "flags": [
+        "MinimalAPI",
+        "DynamicPins"
+      ],
+      "semanticHints": {
+        "ops": [
+          "bp.flow.sequence"
+        ],
+        "requiresContext": [
+          "fromPin"
+        ],
+        "hasDynamicPins": true
+      },
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_VariableSetRef",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Set By-Ref Var",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_VariableSetRef.h",
+      "relativeCppPath": "Private/K2Node_VariableSetRef.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_SetVariableOnPersistentFrame",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Set Variable On Persistent Frame",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SetVariableOnPersistentFrame.h",
+      "relativeCppPath": "Private/K2Node_SetVariableOnPersistentFrame.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_SetFieldsInStruct",
+      "baseClassName": "UK2Node_MakeStruct",
+      "displayTitleHint": "Set members in <unknown struct>",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SetFieldsInStruct.h",
+      "relativeCppPath": "Private/K2Node_SetFieldsInStruct.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_StructMemberSet",
+      "baseClassName": "UK2Node_StructOperation",
+      "displayTitleHint": "Set members in {VariableName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_StructMemberSet.h",
+      "relativeCppPath": "Private/K2Node_StructMemberSet.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "ShowPinForProperties"
+      ]
+    },
+    {
+      "className": "UK2Node_VariableSet",
+      "baseClassName": "UK2Node_Variable",
+      "displayTitleHint": "Set with Notify and Broadcast",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_VariableSet.h",
+      "relativeCppPath": "Private/K2Node_VariableSet.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {
+        "ops": [
+          "bp.var.set"
+        ],
+        "requiresHints": [
+          "variableName"
+        ]
+      },
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_SpawnActorFromClass",
+      "baseClassName": "UK2Node_ConstructObjectFromClass",
+      "displayTitleHint": "Spawn Actor from Class",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SpawnActorFromClass.h",
+      "relativeCppPath": "Private/K2Node_SpawnActorFromClass.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_SpawnActor",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "SpawnActor NONE",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SpawnActor.h",
+      "relativeCppPath": "Private/K2Node_SpawnActor.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_StructOperation",
+      "baseClassName": "UK2Node_Variable",
+      "displayTitleHint": "Struct Operation",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_StructOperation.h",
+      "relativeCppPath": "Private/K2Node_StructOperation.cpp",
+      "flags": [
+        "MinimalAPI",
+        "Abstract",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "StructType"
+      ]
+    },
+    {
+      "className": "UK2Node_Switch",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Switch",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Switch.h",
+      "relativeCppPath": "Private/K2Node_Switch.cpp",
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "FunctionName",
+        "FunctionClass"
+      ]
+    },
+    {
+      "className": "UK2Node_SwitchEnum",
+      "baseClassName": "UK2Node_Switch",
+      "displayTitleHint": "Switch on (bad enum)",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SwitchEnum.h",
+      "relativeCppPath": "Private/K2Node_SwitchEnum.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "Enum",
+        "EnumEntries",
+        "EnumFriendlyNames"
+      ]
+    },
+    {
+      "className": "UK2Node_SwitchInteger",
+      "baseClassName": "UK2Node_Switch",
+      "displayTitleHint": "Switch on Int",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SwitchInteger.h",
+      "relativeCppPath": "Private/K2Node_SwitchInteger.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "StartIndex"
+      ]
+    },
+    {
+      "className": "UK2Node_SwitchName",
+      "baseClassName": "UK2Node_Switch",
+      "displayTitleHint": "Switch on Name",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SwitchName.h",
+      "relativeCppPath": "Private/K2Node_SwitchName.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "PinNames"
+      ]
+    },
+    {
+      "className": "UK2Node_SwitchString",
+      "baseClassName": "UK2Node_Switch",
+      "displayTitleHint": "Switch on String",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_SwitchString.h",
+      "relativeCppPath": "Private/K2Node_SwitchString.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "PinNames"
+      ]
+    },
+    {
+      "className": "UK2Node_GenericToText",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "To Text",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_GenericToText.h",
+      "relativeCppPath": "Private/K2Node_GenericToText.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_Literal",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Unknown",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Literal.h",
+      "relativeCppPath": "Private/K2Node_Literal.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "ObjectRef"
+      ]
+    },
+    {
+      "className": "UK2Node_Variable",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "Variable",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Variable.h",
+      "relativeCppPath": "Private/K2Node_Variable.cpp",
+      "flags": [
+        "MinimalAPI",
+        "Abstract"
+      ],
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "VariableReference",
+        "SelfContextInfo",
+        "VariableSourceClass_DEPRECATED",
+        "VariableName_DEPRECATED"
+      ]
+    },
+    {
+      "className": "UK2Node_Message",
+      "baseClassName": "UK2Node_CallFunction",
+      "displayTitleHint": "{0} (Message)",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Message.h",
+      "relativeCppPath": "Private/K2Node_Message.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_ClassDynamicCast",
+      "baseClassName": "UK2Node_DynamicCast",
+      "displayTitleHint": "{0} Class",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_ClassDynamicCast.h",
+      "relativeCppPath": "Private/K2Node_ClassDynamicCast.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 0,
+      "propertyNames": []
+    },
+    {
+      "className": "UK2Node_TunnelBoundary",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "{BaseName} - {TunnelBoundaryType}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_TunnelBoundary.h",
+      "relativeCppPath": "Private/K2Node_TunnelBoundary.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 2,
+      "propertyNames": [
+        "BaseName",
+        "TunnelBoundaryType"
+      ]
+    },
+    {
+      "className": "UK2Node_ActorBoundEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "{DelegatePropertyName} (None)",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_ActorBoundEvent.h",
+      "relativeCppPath": "Private/K2Node_ActorBoundEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "DelegatePropertyName",
+        "DelegateOwnerClass",
+        "EventOwner"
+      ]
+    },
+    {
+      "className": "UK2Node_ComponentBoundEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "{DelegatePropertyName} ({ComponentPropertyName})",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_ComponentBoundEvent.h",
+      "relativeCppPath": "Private/K2Node_ComponentBoundEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 3,
+      "propertyNames": [
+        "DelegatePropertyName",
+        "DelegateOwnerClass",
+        "ComponentPropertyName"
+      ]
+    },
+    {
+      "className": "UK2Node_CallFunction",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "{FunctionName}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CallFunction.h",
+      "relativeCppPath": "Private/K2Node_CallFunction.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "FunctionReference",
+        "CallFunctionName_DEPRECATED",
+        "CallFunctionClass_DEPRECATED",
+        "NodePurityOverride"
+      ]
+    },
+    {
+      "className": "UK2Node_CustomEvent",
+      "baseClassName": "UK2Node_Event",
+      "displayTitleHint": "{FunctionName}{RPCString}\\nCustom Event",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_CustomEvent.h",
+      "relativeCppPath": "Private/K2Node_CustomEvent.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 4,
+      "propertyNames": [
+        "DeprecationMessage",
+        "bIsDeprecated",
+        "bCallInEditor",
+        "MetaData"
+      ]
+    },
+    {
+      "className": "UK2Node_InputKey",
+      "baseClassName": "UK2Node",
+      "displayTitleHint": "{ModifierKey} {Key}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_InputKey.h",
+      "relativeCppPath": "Private/K2Node_InputKey.cpp",
+      "flags": [
+        "MinimalAPI",
+        "ShowsNodeProperties"
+      ],
+      "semanticHints": {},
+      "propertyCount": 1,
+      "propertyNames": [
+        "InputKey"
+      ]
+    },
+    {
+      "className": "UK2Node_Event",
+      "baseClassName": "UK2Node_EditablePinBase",
+      "displayTitleHint": "{Title}\\nFrom {InterfaceClass}",
+      "categoryHint": null,
+      "relativeHeaderPath": "Classes/K2Node_Event.h",
+      "relativeCppPath": "Private/K2Node_Event.cpp",
+      "flags": [
+        "MinimalAPI"
+      ],
+      "semanticHints": {},
+      "propertyCount": 5,
+      "propertyNames": [
+        "EventSignatureName_DEPRECATED",
+        "EventSignatureClass_DEPRECATED",
+        "EventReference",
+        "CustomFunctionName",
+        "FunctionFlags"
+      ]
+    }
+  ]
+}

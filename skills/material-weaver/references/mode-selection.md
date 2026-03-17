@@ -12,7 +12,7 @@ Use this table to choose between Loomle and bundled UE Python.
 | Need command-line execution through `UnrealEditor-Cmd` | `UE Python` | Native fit for this execution model |
 | Need actor assignment or asset post-processing | `UE Python` | Easier to orchestrate directly in Python |
 | Loomle pin/address behavior is blocking reliable progress | `UE Python` | Direct MaterialEditingLibrary fallback |
-| Need tight compile-and-readback loop on an existing graph | `LOOMLE` | Best interactive ergonomics |
+| Need tight verify-and-readback loop on an existing graph | `LOOMLE` | Best interactive ergonomics |
 
 ## Rule of Thumb
 - Existing graph, local change, interactive verification: use `LOOMLE`.
