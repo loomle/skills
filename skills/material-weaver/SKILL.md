@@ -67,7 +67,7 @@ Recommended rhythm:
 8. Repeat only if the previous step verified cleanly
 
 Use `graph.query` and `context` to discover graph refs instead of guessing addresses. For Material assets, prefer the address forms that already work in the current session.
-Always pass `graphType="material"` on Material `graph.query`, `graph.actions`, and `graph.mutate` calls.
+Always pass `graphType="material"` on Material `graph.query`, `graph.ops`, `graph.ops.resolve`, `graph.verify`, and `graph.mutate` calls.
 When `graph.ops.resolve` returns a stable `preferredPlan`, treat that as the default source of node-creation truth. Treat it as a semantic vocabulary layer, not as a full rewrite planner: it should decide what node to introduce and offer first-pass pin hints, while the skill still owns subgraph boundaries, preserved interfaces, and verification. Fall back to direct `addNode.byClass` only when:
 - the op is not in the curated catalog
 - resolve returns `resolved=false`

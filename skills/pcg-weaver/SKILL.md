@@ -57,7 +57,7 @@ Recommended rhythm:
 1. `graph.query` the target PCG graph.
 2. Identify the exact pipeline boundary before mutating.
 3. For known semantic stages, call `graph.ops.resolve` on the target graph and prefer the returned `preferredPlan`.
-4. If adding nodes by action, fetch fresh `graph.actions` from the same asset and graph only when semantic planning does not cover the stage you need.
+4. If semantic planning does not cover the stage you need, fall back to deterministic `addNode.byClass` only after collecting the exact current graph context.
 5. Apply a small `graph.mutate` batch.
 6. Prefer `graph.verify` as the default final check for the batch.
 7. Use a fresh `graph.query` when you need exact node or edge proof beyond verify output.
@@ -70,14 +70,13 @@ Recommended rhythm:
 9. Repeat only if the previous batch verified cleanly.
 
 For a concrete Loomle-first edit loop, read [references/loomle-pcg-workflow.md](references/loomle-pcg-workflow.md).
-Always pass `graphType="pcg"` on PCG `graph.query`, `graph.actions`, and `graph.mutate` calls.
+Always pass `graphType="pcg"` on PCG `graph.query`, `graph.ops`, `graph.ops.resolve`, `graph.verify`, and `graph.mutate` calls.
 
 ## 3) Node Creation Guidance
 Prefer the simplest node-creation path that is reliable in the current graph.
 
 - Use `graph.ops.resolve` first when the stage is a stable semantic operation. Copy the returned `preferredPlan` into `graph.mutate` instead of hardcoding class paths.
 - Treat `graph.ops.resolve` as a semantic planning layer. It can usually choose the right stage and provide first-pass settings and pins, but the skill still owns preserved interface rewiring, re-query, and downstream validation.
-- Use `addNode.byAction` when the curated action set already exposes the node you want but semantic planning does not.
 - Use `addNode.byClass` only when deterministic construction is easier or semantic/action discovery is incomplete.
 - Re-query exact pins after introducing unfamiliar PCG nodes before wiring deeper stages.
 - If `graph.ops.resolve` returns `settingsTemplate` or `verificationHints`, carry them forward. They are execution guidance, not decoration.

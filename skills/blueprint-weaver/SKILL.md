@@ -27,7 +27,6 @@ Use this skill as the strategy layer for Unreal Blueprint graph work.
   2. add the replacement nodes
   3. reconnect the preserved interfaces
   4. remove the old local chain
-- Refresh `graph.actions` in the current asset and graph before reusing `actionToken` values.
 
 ## Task Routing
 Pick the narrowest recipe that matches the request.
@@ -56,7 +55,7 @@ Recommended rhythm:
 1. `graph.query` the target Blueprint graph.
 2. Identify the exact rewrite boundary before mutating.
 3. For known semantic nodes, call `graph.ops.resolve` on the exact target graph and prefer the returned `preferredPlan`.
-4. If adding nodes by action, fetch fresh `graph.actions` from the same asset and graph only when semantic planning does not cover the desired node.
+4. If semantic planning does not cover the desired node, fall back to deterministic `addNode.byClass` from the exact current graph context.
 5. Apply a small `graph.mutate` batch.
 6. Prefer `graph.verify` as the default final check for the batch.
 7. Use a fresh `graph.query` when you need exact node or edge proof beyond verify output.
@@ -75,13 +74,11 @@ Prefer the simplest node-creation path that is reliable in the current graph.
 
 - Use `graph.ops.resolve` first for stable semantic ops such as common control-flow nodes. Reuse the returned `preferredPlan` instead of hardcoding class paths when possible.
 - For edge-sensitive semantic ops such as `core.reroute`, include the narrowest available pin context. If resolve succeeds with pin context, treat the returned steps as the opening move and let the skill finish downstream reconnects and verification.
-- Use `addNode.byAction` when you already have a valid action token for the current graph context and semantic planning does not cover the node you need.
-- Use `addNode.byClass` when deterministic construction is easier or action discovery is noisy.
-- Do not reuse Blueprint `actionToken` values across different assets or graph contexts.
+- Use `addNode.byClass` when deterministic construction is easier or semantic planning does not cover the node you need.
 - If `graph.ops.resolve` returns `resolved=false` with reasons like `requires_pin_context`, treat that as a signal to gather more context or fall back to graph-specific creation guidance rather than forcing the semantic op.
 - Do not assume a semantic plan fully inserts a node into an existing edge. Re-query after the planned steps and explicitly restore downstream connections before deleting old local wiring.
 
-Read [references/action-token-notes.md](references/action-token-notes.md) before caching or reusing node-creation context.
+Read [references/action-token-notes.md](references/action-token-notes.md) before choosing a fallback creation path for uncovered nodes.
 
 ## 4) Run and Verify
 - Prefer `graph.verify` after every structural batch. Use a fresh `graph.query` when you need exact node or edge proof or when verify returns unexpected diagnostics.
@@ -110,7 +107,7 @@ For local refactors, prefer verifying:
 - preserved upstream and downstream interfaces still connect as intended
 
 ## Troubleshooting
-- If node creation fails, refresh `graph.actions` on the current asset and graph before retrying.
+- If node creation fails, re-query the current graph context and retry with either narrower resolve context or deterministic class-based creation.
 - If a mutate batch fails midway, assume earlier ops may already be committed unless proven otherwise by readback.
 - If a local replacement risks disconnecting exec flow, stage the new path first and delete the old nodes only after readback confirms the new edges.
 - If a connection reports success but the graph snapshot disagrees, trust the fresh query and repair from there.

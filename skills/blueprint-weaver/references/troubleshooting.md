@@ -1,8 +1,8 @@
 # Troubleshooting
 
-## Symptom: Node creation fails with token-related errors
-- Cause: stale or cross-context `actionToken`.
-- Fix: refresh `graph.actions` on the current asset and graph, then retry.
+## Symptom: Node creation still fails after semantic planning
+- Cause: the node is outside the current semantic catalog, or the resolve call lacks pin/type context.
+- Fix: re-query the current graph, gather narrower context, then retry resolve or fall back to deterministic `addNode.byClass`.
 
 ## Symptom: Batch fails and the graph is left half-changed
 - Cause: mutate batches may partially commit before a later op fails.

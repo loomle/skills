@@ -13,7 +13,7 @@ Use `LOOMLE mode`.
 ## Steps
 1. Query the graph and identify the insertion point.
 2. Prefer `graph.ops.resolve` for known stages and use `preferredPlan` as the default node-creation path.
-3. Fetch fresh `graph.actions` only if semantic planning does not cover the needed stage.
+3. If semantic planning does not cover the needed stage, fall back to deterministic `addNode.byClass` only after collecting the exact current graph context.
 4. Add nodes in a small local cluster.
 5. If semantic planning returned `verificationHints`, re-query new stages before wiring downstream outputs.
 6. Connect the insertion point into the new cluster.
