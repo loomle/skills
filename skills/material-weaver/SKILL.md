@@ -52,15 +52,15 @@ Recommended rhythm:
 2. If a `MaterialFunctionCall` exposes `childGraphRef`, follow that ref or use `graph.list(includeSubgraphs=true)` before rebuilding the address manually.
 3. Identify the exact subgraph boundary before mutating.
 4. When adding a well-known node, call `graph.ops.resolve` first and prefer the returned `preferredPlan` over hardcoded class guesses.
-4. Apply a small `graph.mutate` batch.
-5. Prefer `graph.verify` as the default final check for the batch.
-6. Use a fresh `graph.query` when you need exact node or edge proof beyond verify output.
-7. Verify:
+5. Apply a small `graph.mutate` batch.
+6. Prefer `graph.verify` as the default final check for the batch.
+7. Use a fresh `graph.query` when you need exact node or edge proof beyond verify output.
+8. Verify:
    - new nodes exist
    - expected edges exist
    - removed edges are actually gone
    - verify status and diagnostics are acceptable
-8. Repeat only if the previous step verified cleanly
+9. Repeat only if the previous step verified cleanly
 
 Use `graph.query` and `context` to discover graph refs instead of guessing addresses. For Material assets, prefer the address forms that already work in the current session.
 Always pass `graphType="material"` on Material `graph.query`, `graph.ops`, `graph.ops.resolve`, `graph.verify`, and `graph.mutate` calls.
@@ -68,8 +68,9 @@ When `graph.ops.resolve` returns a stable `preferredPlan`, treat that as the def
 - the op is not in the curated catalog
 - resolve returns `resolved=false`
 - the task needs a node shape that the semantic catalog does not express yet
-- Use the local Material node catalog when you need broad expression discovery, likely root-sink targets, or header/cpp lookup before choosing a fallback class.
-- If you want a semantic plan to emit an immediate root-sink connection shape, pass `items[*].hints.targetRootPin` before manually wiring into `__material_root__`.
+
+Use the local Material node catalog when you need broad expression discovery, likely root-sink targets, or header/cpp lookup before choosing a fallback class.
+If you want a semantic plan to emit an immediate root-sink connection shape, pass `items[*].hints.targetRootPin` before manually wiring into `__material_root__`.
 
 Read [references/pin-behavior-ue57.md](references/pin-behavior-ue57.md) before wiring nodes in UE 5.7.
 For a concrete Loomle-first edit recipe, read [references/loomle-material-workflow.md](references/loomle-material-workflow.md).
